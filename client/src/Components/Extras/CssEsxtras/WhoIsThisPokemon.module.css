@@ -1,0 +1,61 @@
+.fondo{
+    background-image: url('../../../img/background/backgroindWho.png');
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    /* background: #EA4C08;
+    background: -moz-linear-gradient(45deg, #EA4C08 0%, #C3E003 31%, #FF3B01 100%);
+    background: -webkit-linear-gradient(45deg, #EA4C08 0%, #C3E003 31%, #FF3B01 100%);
+    background: linear-gradient(45deg, #EA4C08 0%, #C3E003 31%, #FF3B01 100%); */
+
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.n1{
+    display: inline;
+}
+
+.n2{
+    display: inline;
+
+}
+
+
+.cardP{
+    background-color: red;
+    filter:opacity(100%);
+}
+.img{
+    max-height: 10em;
+    background-size: cover;
+    /* filter: contrast(50%) ;
+    mix-blend-mode:darken; */
+    /* filter: contrast(1%) ; */
+    /* mix-blend-mode:black; */
+    filter: brightness(0%);
+    /* filter:   drop-shadow(50px 10px 1px black); */
+    
+}
+.imgv{
+    max-height: 10em;
+    background-size: cover;
+    /* filter: contrast(50%) ;
+    mix-blend-mode:darken; */
+    /* filter: contrast(1%) ; */
+    /* mix-blend-mode:black; */
+    filter: brightness(100%);
+    /* filter:   drop-shadow(50px 10px 1px black); */
+}
+
+
+.cardP h1{
+    color: yellow;
+
+}

@@ -1,0 +1,225 @@
+.detail{
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.detail a{
+    width: 5em;
+    left: 3.5em;
+
+    border-radius: 2px;
+
+
+    display: flex;
+    position: relative;
+    color: rgba(18, 0, 0, 0.77);
+    text-decoration: none;
+    font-weight:900;
+    letter-spacing: 0.9px;    
+
+}
+
+
+.name
+{
+    position: relative;
+    left: 1em;
+    height: 1px;
+    color: rgba(18, 0, 0, 0.77);
+
+
+}
+
+.img
+{
+    position: relative;
+    top: 0.8em;
+    left: 2em;
+    height: 8em;
+}
+
+
+
+.types
+{
+    background-color: rgb(142, 7, 7);
+    width: 7em;
+    list-style: none;
+
+    overflow: hidden;
+}
+
+
+/* 
+.Pokemon{
+    
+    
+    background-image: url('../../../img/card/PokeCard.png');
+    background-position: center;
+    background-size: 16em;
+    background-repeat: no-repeat;
+    border-radius: 50em ;
+    width: 40vh;
+
+    height: 75vh;
+    overflow: hidden;
+    margin-right: 1em;
+    
+
+
+}
+.img{
+    width: 30vh;
+    height: 9em;
+    max-height: 9em;
+} */
+
+
+
+
+
+/* Types */
+
+
+.normal{
+    background-image: url('../../../img/types_logos/normal.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.fighting{
+    background-image: url('../../../img/types_logos/fighting.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.bug{
+    background-image: url('../../../img/types_logos/bug.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.dark{
+    background-image: url('../../../img/types_logos/dark.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.dragon{
+    background-image: url('../../../img/types_logos/dragon.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.electric{
+    background-image: url('../../../img/types_logos/electric.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.fairy{
+    background-image: url('../../../img/types_logos/fairy.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+
+.fire{
+    background-image: url('../../../img/types_logos/fire.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.flying{
+    background-image: url('../../../img/types_logos/flying.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.ghost{
+    background-image: url('../../../img/types_logos/ghost.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.grass{
+    background-image: url('../../../img/types_logos/grass.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.ground{
+    background-image: url('../../../img/types_logos/ground.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.ice{
+    background-image: url('../../../img/types_logos/ice.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.poison{
+    background-image: url('../../../img/types_logos/poison.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.psychic{
+    background-image: url('../../../img/types_logos/psychic.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.rock{
+    background-image: url('../../../img/types_logos/rock.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.shadow{
+    background-image: url('../../../img/types_logos/shadow.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.steel{
+    background-image: url('../../../img/types_logos/steel.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.unknown{
+    background-image: url('../../../img/types_logos/unknown.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}
+.water{
+    background-image: url('../../../img/types_logos/water.png');
+    background-position: center;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    height: 7em; 
+}

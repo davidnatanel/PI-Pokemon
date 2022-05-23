@@ -1,0 +1,124 @@
+.SearchBar{
+    
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(220, 33, 33, 0.964);
+    box-shadow: 6px 7px 13px -2px #000000;
+}
+.filtres{
+    position:static;
+    
+    display: grid;
+    column-gap: 3em;
+    grid-template-columns: repeat( auto-fit, minmax(10px, 3.9em) );
+
+    width: 11em;
+
+
+}
+.filtres select{
+    cursor: pointer;
+    width: 15vh;
+    background-color: rgba(216, 206, 206, 0.903);
+    margin: 0.2vh;
+    border-radius: 0.5vh;
+
+}
+
+
+
+
+.link{
+}
+
+.link button{
+    cursor: pointer;
+    background-color: rgba(216, 206, 206, 0.903);
+    border: none;
+    margin: 0.5vh;
+    border-radius: 0.5vh;
+    height:2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    
+    
+    
+
+
+    
+
+}
+
+
+
+
+
+
+/* Search */
+.search {
+
+    border-radius: 10vh 5vh 5vh 10vh ;
+
+    background-color: rgba(159, 156, 156, 0.903);
+    padding-left: 3px;
+    padding-right: 5px;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search img{
+    height: 6vh;
+    
+    border-radius: 0.5vh 0vh 0vh 0.5vh;
+    margin-right: 3px;
+
+
+}
+.search input{
+    background-color: rgba(255, 255, 255, 0.701);
+    border: none;
+    border-radius: 0.5vh 0vh 0vh 0.5vh;
+    height: 3.2vh;
+}
+.search button{
+    margin-left: 8px;
+    
+    
+    background-color:  rgba(255, 255, 255, 0.701);
+    border: none;
+    border-radius: 1vh;
+    height: 5vh;
+}
+.search button img{
+    cursor: pointer;
+
+    
+    border: none;
+    border-radius: 0vh 0.5vh 0.5vh 0vh;
+    height: 5vh;
+}
+
+.Logonone{
+    visibility: hidden;
+}
+
+.Logo{
+    width: 3.7em;
+    height: 3.7em;
+    animation: rotate 2.5s infinite  ease-in-out;
+}
+@keyframes rotate{
+    
+    30%{transform:rotate(42deg);}
+
+    60%{transform:rotate(-42deg);}
+  
+
+}

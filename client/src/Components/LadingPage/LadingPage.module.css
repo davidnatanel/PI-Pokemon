@@ -1,0 +1,19 @@
+.color{
+    height: 100vh;
+    background-color: sandybrown;
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.boton{
+    
+    
+
+    background-color: blue;
+
+    width: 30em;
+    height: 50px;
+    
+}
