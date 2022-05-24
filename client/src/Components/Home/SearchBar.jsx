@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { filterType, GetPokemonsForName, GetTypes, PagesFiltre,orderPokemon } from '../../redux/actions';
+import { filterType, GetPokemonsForName, GetTypes, PagesFiltre,orderPokemon, orderByForce, Loading } from '../../redux/actions';
 import style from './CssHome/SearchBar.module.css'
 import { Link } from "react-router-dom";
 import img from '../../img/Home/Pokeball.svg'
@@ -36,7 +36,7 @@ var Change;
 
 
 
-function SearchBar({paginado}) {
+function SearchBar({paginadoo}) {
     const [input,setInput]=useState('')
     const state = useSelector(state => state.Types)
 
@@ -48,32 +48,36 @@ function SearchBar({paginado}) {
     }, [])
   
     
-    const CallPokemonId =()=>{
+    const CallPokemonName =()=>{
+         dispatch( Loading(true))
         dispatch(GetPokemonsForName(input))
+       
+        
     }
 
     const handlefiltreAZ=(e)=>{
         dispatch( PagesFiltre('AZ', e.target.value ))
-        paginado(1)
+        paginadoo(1)
 
 
     }
 
     const handlefiltreattack=(e)=>{
-        dispatch( PagesFiltre('attack', e.target.value ))
-        paginado(1)
+        dispatch( orderByForce('attack', e.target.value ))
+        
+        paginadoo(1)
     }
     
     
     const handlefiltreOrder=(e)=>{
         dispatch( orderPokemon(e.target.value))
-        paginado(1)
+        paginadoo(1)
 
     }
     const handlefiltreTypes=(e)=>{
 
         dispatch(filterType(e.target.value))
-        paginado(1)
+        paginadoo(1)
 
     }
 
@@ -131,7 +135,7 @@ function SearchBar({paginado}) {
 
             <img src={img} alt="" />
             <input type='text' onChange={(e)=>setInput(e.target.value)}></input>
-            <button onClick={()=>{CallPokemonId()}}> <img  className={style.lupa} src={lupa} alt="" /></button>
+            <button onClick={()=>{CallPokemonName()}}> <img  className={style.lupa} src={lupa} alt="" /></button>
           
             </div>
 

@@ -5,7 +5,7 @@ const {Pokemon,Types} = require('../db');
 const router = Router();
 
 async function nue(){
-let Api= await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=50`)
+let Api= await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=20`)
 
 ApiUrl=Api.data.results.map(e=> axios.get(e.url) )
 
@@ -38,20 +38,32 @@ try {
   let {name}=req.query;
 
   if(name){
-     
-      let dar= await nue() 
+    let dar;
+  
+    
+       dar= await nue() 
       mio=dar.find(e=>e.name==name)
 
       if(mio){
         return res.send(mio)
 
       }
-       let ApiLocal= await Pokemon.findOne({
+        dar= await Pokemon.findOne({
           attributes: ['id','name', 'hp','attack','defense','speed','height','weight','img','createdInDb'],
           where:{name:name}
       });
       
-      if (ApiLocal) {return  res.send(ApiLocal.dataValues)}}
+      if (dar) {return  res.send(dar.dataValues)}
+      if (!dar) {res.status(404)  }
+    
+    
+    
+      
+ 
+   
+    
+    
+    }
 
 let dar= await nue()
 

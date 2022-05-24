@@ -1,24 +1,5 @@
-import { GETTYPES,GETPOKEMONSFORNAME,GETPOKEMONSFORID,PAGESFILTRE,FILTERTYPE,GETPOKEMONS,PAGINA,ORDERPOKEMON,PAGINADOSUPER } from "./actions";
+import { GETTYPES,GETPOKEMONSFORNAME,GETPOKEMONSFORID,PAGESFILTRE,FILTERTYPE,GETPOKEMONS,ORDERPOKEMON,ORDERBYFORCE,LOADING } from "./actions";
 
-
-
-// function getNumberPages(array, ) {
-
-
-//   let nue =Math.round(array.length / 12)
-//   if(nue == 0){  return [0]}
-
-//   var element=[]
-
-
-
-//   for (let i = 0; i < Math.round(array.length / 12); i++) {
-//     element.push ( i) ;
-//   }
-
-
-//   return element
-// }
 
 let initialState={
 
@@ -31,7 +12,9 @@ let initialState={
 
     Types:[],
 
-    paginadosuper:[]
+    loading:false,
+    notFound:false
+
     
 };
 
@@ -39,11 +22,16 @@ let initialState={
 const Reducer = (state=initialState,action)=>{
 
     switch (action.type) {
-       
+      
+      
+
+      case LOADING:
+
+        return {...state, loading:action.payload };
             
         case GETTYPES:
 
-            return {...state, Types:action.payload };
+            return {...state, Types:[...action.payload] };
                 
         case GETPOKEMONSFORNAME:
 
@@ -54,23 +42,26 @@ const Reducer = (state=initialState,action)=>{
             return {...state, PokemonsDetails:[action.payload] };
 
         case  FILTERTYPE:
+          if( action.payload == 'null'  ){return state}
 
               let es=state.Pokemons.map(e=> {if( e.types && e.types.includes(action.payload) == true){return e} } )
               let lo=es.filter( e=> e !== undefined)
 
            
           
-              return {...state, paginado:lo, }
+              return {...state, paginado:[...lo], }
   
   
         case GETPOKEMONS:
           
-              return{...state, Pokemons:action.payload, paginado:action.payload}    
+              return{...state, Pokemons:action.payload, paginado:[...action.payload]}    
           
         
   
           case ORDERPOKEMON:
             let pokemonOrden;
+
+            if( !action.payload){return state}
   
               if(action.payload == "Api")
               {pokemonOrden= state.Pokemons.filter(e=>  !e.createdInDb )}
@@ -85,13 +76,22 @@ const Reducer = (state=initialState,action)=>{
         case  PAGESFILTRE:
 
         let {type,AZ}=action.payload
+
+
         if(!type,!AZ){return state}
+
+       
+
+        if( AZ === 'null'){return state}
+
+
+        let filtre;
           
        if(type == 'AZ' || AZ ){
 
         if(AZ === 'ascendentemente'  ){ 
 
-            var filtre=  state.Pokemons.sort(function (a, b) {
+             filtre=  state.Pokemons.sort(function (a, b) {
                 if (a.name.toLowerCase() > b.name.toLowerCase()) {
                   return 1;
                 }
@@ -103,7 +103,7 @@ const Reducer = (state=initialState,action)=>{
         }
 
         if(AZ === 'descendentemente' ){ 
-            var filtre=  state.Pokemons.sort(function (a, b) {
+             filtre=  state.Pokemons.sort(function (a, b) {
                 if (a.name.toLowerCase() > b.name.toLowerCase()) {
                   return 1;
                 }
@@ -115,30 +115,46 @@ const Reducer = (state=initialState,action)=>{
         }}
  
 
-        if( type == 'attack' || AZ ){
-        var filtre=  state.Pokemons.sort( (a, b)=> {
-        
-        if(AZ =='ascendentemente'){
-        if (a[type] < b[type]) {
-          return 1;
-        }
-        if (a[type] > b[type]) {
-          return -1;
-        }}
-        
-          if(AZ =='descendentemente'){
-        if (a[type] > b[type]) {
-          return 1;
-        }
-        if (a[type] < b[type]) {
-          return -1;
-        }}
-        return 0;
-        
-        })}
+        // })}
 
    
-            return {...state, paginado:filtre }
+            return {...state, paginado:[...filtre] }
+
+            
+            case ORDERBYFORCE:
+            let force =[];
+            let {attack,ZA}=action.payload
+
+
+            if(!attack,!ZA){return state}
+    
+           
+    
+            if( ZA === 'null'){return state }
+    
+
+        if( attack == 'attack' || ZA ){
+          force=  state.Pokemons.sort( (a, b)=> {
+         
+         if(ZA === 'ascendentemente'){
+         if (a[attack] < b[attack]) {
+           return 1;
+         }
+         if (a[attack] > b[attack]) {
+           return -1;
+         }}
+         
+           if(ZA === 'descendentemente'){
+         if (a[attack] > b[attack]) {
+           return 1;
+         }
+         if (a[attack] < b[attack]) {
+           return -1;
+         }}
+         return 0;})}
+         
+         return {...state, paginado:[...force] }
+
 
 
               

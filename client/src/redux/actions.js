@@ -12,18 +12,32 @@ export  const  GETPOKEMONS= "GETPOKEMONS";
 export  const  PAGINA= "PAGINA";
 export  const  ORDERPOKEMON= "ORDERPOKEMON";
 export  const  PAGINADOSUPER= "PAGINADOSUPER";
+export  const  ORDERBYFORCE= "ORDERBYFORCE";
+export  const  LOADING= "LOADING";
 
 
+export const Loading= (playandstop)=>{
+  return (dispatch)=>{
+
+  return dispatch({type:LOADING, payload:playandstop})
+
+}}
+    
 
 
 
 
 
 export const GetTypes=   ()=>{
+  
 
   return async (dispatch)=>{ 
-   axios(`/types`)     
-   .then(r=>dispatch({type:GETTYPES, payload:r.data}) 
+
+ 
+   
+    axios(`/types`)     
+   .then(r=>dispatch({type:GETTYPES, payload:r.data}) ,
+
    
    )}}
 
@@ -34,25 +48,46 @@ export const getPokemons= ()=>{
 return async(dispatch)=>{
 
 let Pokemons= await axios(`/pokemons`)
-return dispatch({type:GETPOKEMONS, payload:Pokemons.data})
+ dispatch({type:GETPOKEMONS, payload:Pokemons.data})
 
+ dispatch( Loading(false)) 
 }}
 
 
 
-export const GetPokemonsForName=(name)=>{
+export const GetPokemonsForName=  (name)=>{
+
     return(dispatch)=>{
-        
-     axios(`/pokemons?name=${name}`)
-     .then(r=>dispatch({type:GETPOKEMONSFORNAME, payload:r.data} ))
     
+        axios(`/pokemons?name=${name}`)
+        .then(r=>dispatch({type:GETPOKEMONSFORNAME, payload:r.data} ))
+   
+   
+        setTimeout(() => {
+        dispatch( Loading(false)) 
+   
+          
+        }, 1000);
+       
+
+  
+
+
     }}
 
 export const GetPokemonsForID=(id)=>{
+  
+
     return(dispatch)=>{
         
+    
+      
      axios(`/pokemons/${id}`)
      .then(r=>dispatch({type:GETPOKEMONSFORID, payload:r.data} ))
+
+ 
+
+   
     
     }}
 
@@ -61,7 +96,6 @@ export const GetPokemonsForID=(id)=>{
 
 
 export const   PagesFiltre= (type,AZ)=>{
-  
 
   return async(dispatch)=>{
          
@@ -69,6 +103,20 @@ export const   PagesFiltre= (type,AZ)=>{
  
      }
   }
+
+
+  
+
+export const   orderByForce= (type,AZ)=>{
+
+  return async(dispatch)=>{
+         
+      return dispatch({type:ORDERBYFORCE, payload:{attack:type,ZA:AZ}})
+ 
+     }
+  }
+
+  
 
   
 export const orderPokemon= (n)=>{
@@ -79,7 +127,7 @@ export const orderPokemon= (n)=>{
 }}
     
 export const  filterType=(value)=>{
-
+  console.log(value);
   return async(dispatch)=>{
 
   dispatch({type:FILTERTYPE, payload:value})

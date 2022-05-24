@@ -3,6 +3,8 @@ import { useParams } from 'react-router';
 import { GetPokemonsForID  } from '../../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import Pokemon from '../Home/Pokemon';
+import style from '../DetailOfpokemon/DetailOfpokemonCss/DetailOfpokemon.module.css'
+import styles from '../DetailOfpokemon/DetailOfpokemonCss/DetailOfpokemonbackground.module.css'
 
 
 function DetailOfPokemon() {
@@ -21,10 +23,41 @@ function DetailOfPokemon() {
     
 
     return (
-        <div>
-            DetailOfPokemon
+        <div className={styles.detail} >
 
-        {state.length && state.map(e=>  (  <Pokemon  types={e.types} gifback={e.gifback} gif={e.gif} img={e.img}    key={e.id}  attack={e.attack}  defense={e.defense} height={e.height} hp={e.hp} id={e.id} name={e.name} speed={e.speed}  weigth={e.weigth}  ></Pokemon>  )     )}
+
+
+           <div className={styles.container}>
+        {state.length && state.map(e=>  ( 
+        
+        <div className={ styles[e.types[0]]   }  >
+            {/* <button onClick={()=>{console.log(state)}}>detail</button> */}
+
+<div >
+        <div className={styles.d}>  <label htmlFor="">id<p>{e.id}</p> </label></div>
+
+        <p>{e.attack}</p>
+        <p>{e.defense}</p>
+        <p>{e.height}</p>
+        <p>{e.speed}</p>
+        <p>{e.weigth}</p>
+        <p>{e.hp}</p>
+        <p>{e.name}</p>
+        </div>
+
+        <img src={e.img} alt="" />
+
+        <ul className={style.types} >
+            {e.types && e.types.map(e=>(  <li className={style[e]}> </li> ) )}
+            </ul>
+        </div>
+        
+        
+        
+        )     )     }
+
+</div>
+
 
             
         </div>

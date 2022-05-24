@@ -1,19 +1,30 @@
+html{
+  
+    min-height: 100vh;
+}
+
+
 body{
     background-image: url('../../../img/background/lab.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    height: 100%;
+    width: cover;
     
 }
 
 .home{
     /* overflow: hidden;  */
+    height: 100%;
+   
    
 }
 
 /* Cards */
 
 .Pokemons{
+    height: cover;
     background-color: rgba(86, 69, 69, 0.441);
     border-radius: 2%;
 
