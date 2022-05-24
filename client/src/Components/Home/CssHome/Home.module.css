@@ -31,7 +31,7 @@ body{
 
     padding: 3em;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(200px, 3fr) );
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
     row-gap: 1em;
     column-gap: 8em;
     margin-left: 40px;
