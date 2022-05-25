@@ -1,180 +1,301 @@
-.PokemonContainer{
+.PokemonBody{
+    position: relative;
     background-image: url('../../../img/background/Laboratorio1.jpg');
-    /* background-color: red; */
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    background-repeat: no-repeat;
     background-size: cover;
-    align-items: center;
-    box-shadow: inset 0px -6px 15px 30px black;
-    
-
-}
-.PokemonCreater{
-    background-color: rgba(79, 75, 75, 0.834);
-    width: 80vh;
-    height: 80vh;
-    padding: 1em;
-    border-radius: 1em;
-    box-shadow: 6px 7px 13px 0px #000000;
-    
-}
-.detailsPokemon{
-    background-color: rgba(171, 148, 148, 0.556);
+    background-repeat: no-repeat;
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(170px, 2fr) );
-    column-gap: 4em;
-    row-gap: 1em;
-    border-radius: 1em 1em 0em 0em;
+    height: 100%;
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 1em 1em 4em 0.2em ;
+    
+}
+
+.PokemonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    
+    height: 40.5em;
+
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit,minmax(100px,500px));
+
+}
+
+
+
+.PokemonCreater{
+    border-radius: 1em;
+    box-shadow: 1em 1em 1em 0.2em;
+    margin: 0.5em;
+    background-color: rgba(249, 29, 29, 0.937);
+    height: 36em;
+    width: 29em;
+
+    display: grid;
+    grid-template-rows: repeat(auto-fit,minmax(1fr,1fr));
+    overflow: hidden;
+    padding: 1em;
+
+}
+
+
+
+
+
+.detailsPokemon
+{
+    /* background-color: rgb(162, 25, 187); */
+    width: 29em;
+    height: 20em;
+    overflow: hidden;
+    display: grid;
     
 
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    
+    column-gap: 1em;
 
 }
 
-.PokemonCreater label{
+.detailsPokemon div{
+
+    height: max-content;
+    width: 100%;
+    background-color: rgb(239, 239, 239);
+    border-radius: 1em 6em;
+    overflow: hidden;
+}
+
+
+.detailsPokemon label{
+    
     display: block;
-    border: 1em;
-
+    background-color: rgba(95, 204, 206, 0.787);
+    height: max-content;
+    text-align: center;
     width: 4em;
+    border-radius: 5px 50px;
+    color: rgba(14, 81, 83, 0.787);
+    font-weight: bold;
+    letter-spacing: 1px;
+
 }
-.PokemonCreater input{
-    background-color: rgba(216, 206, 206, 0.903);
+
+.detailsPokemon input
+{
+    background-color: rgb(174, 216, 217);
+
     border: none;
-    border-radius: 0.2em;
-    height: 1.5em;
-    padding: 0.2em;
-    margin: 6px;
+    padding: 2px;
+    height: max-content;
 
-}
-.PokemonCreater input::placeholder{
-    color: rgb(54, 29, 29);
-}
+    border-radius: 0em 1em 0em 0em;
 
 
-
-
-
-
-
-.error{
-
-    border: 10px solid red;
-}
-.filled{
-    border: 10px solid green;
-
+ 
 }
 
-.ViewPokemonCreated{
-    padding-top: 1em;
-    box-sizing: content-box;
-    height: 80vh;
-    width: 70vh;
-    background-color: rgba(171, 148, 148, 0.556);
+.detailsPokemon input::placeholder{
+    color: rgb(10, 73, 75);
+}
+
+
+/* verrrrrrrrrr */
+.Types
+{  
+    /* overflow: hidden; */
+    width: 9em;
+    height: 7em;
+  
+    display: flex;
+   
+     /* animation-name: ani;
+    animation-duration: 2s;
+    animation-duration: infinite; */
+}
+ 
+ /* @keyframes ani {
+    2%{margin-left: 12em;}
+    
+}  */
+ /* verrrrrrrrr */
+
+
+.Types div{
+    background-color: rgba(95, 204, 206, 0.787);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    height: 7.9em;
+
+}
+.Types img{
+    height: 100%;
+    width: 4em;
+}
+.Types img:hover
+{  
+    cursor: pointer;
+    /* overflow: hidden; */
+    background-color: rgb(174, 216, 217);
+
+   
+}
+
+
+
+.TypesContainer
+{
+    background-color: rgba(99, 221, 223, 0.787);
+
+
+
+    overflow-x: scroll;
+    margin-left: -1em;
+}
+
+
+.button{
+
+    width: 30em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    box-shadow: 6px 7px 13px 0px #000000;
 }
+.button input{
+    height: 3em;
+    width: 10em;
 
-.img1{
+    background-color: rgb(174, 216, 217);
+
+    font-weight:bolder;
+    font-size: large;
+    letter-spacing: 1px;
+    color: rgb(10, 73, 75);
+
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.button input:hover{
+    transform: scale(1.1);
     
-    height: 10em;
-    max-height: 10em;
-    width: 10em;
-    border: 1em  rgb(72, 69, 69) groove;
-
-
 }
 
-.img1noexist{
-    max-height: 10em;
-    height: 10em;
-    width: 10em;
 
+/*  */
 
-}
-.ViewPokemonCreated div img{
-    background-color: rgb(238, 186, 186);
-    height: 1em;
-    width: 1em;
+.ViewPokemonCreated{
+    border-radius: 10px;
+    
+    background-color: rgb(14, 47, 48);
+
+    height: 38em;
+    width: 29em;
+    box-shadow: 2em 2em 2em 0.1em;
+    margin-left: 0.6em;
+    
 }
 
 .detailsView{
-    overflow: hidden;
-    width: 20em;
     height: 20em;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-    border-radius: 0.5em 0.5em 0.5em 0.5em;
-    background-color: rgb(89, 76, 125);
+    width: 29em;
+    background-color: rgb(49, 105, 105);
     display: grid;
-    grid-template-rows: repeat( auto-fill, minmax(32px, 2fr) );
-    
-   
 
-
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
 
 }
-.detailsView p{
-    width: 90%;
-    height: 2em;
+
+.detailsView div{
     margin: 1em;
+    height: 1.5em;
+
+    display: flex;
+}
+
+.detailsView div label{
+    background-color: rgb(251, 74, 74);
+    display:block;
+    width: 4em;
+    height: 25.9px;
+    border-radius: 1em 0em 0em 0em;
+    color: rgb(197, 231, 236);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    
+}
+
+
+
+.detailsView p{
     overflow: hidden;
-    
-    color: beige;
-    
-    background-color: rgb(176, 185, 91);
+    display: block;
+    background-color: bisque;
+    border-radius: 0em 1em 0em 0em;
 
-}
-/* ////////////////// */
-
-.Types{
-    background-color: red;
-    height: 12em;
-    overflow-y: scroll;
-    display: grid;
-    grid-template-columns: auto auto auto;
+    width: 9em;
+    height: 1.6em;
     
 
 }
 
-.Types div{
-    position: relative;
-    background-color: yellow;
-    height: 3em;
-    width: 5em;
-    border: 10px solid black;
 
-}
-.Types div input{
-    z-index: 1;
-    position:absolute;
-    height: 2em;
-    width: 2em;
 
-    left: 6em;    
+.ViewTypes{
+    background-color: antiquewhite;
+    height: 5.8em;
+    width: 29em;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     
-    
-
-   
 }
 
-.Types div img{
-    z-index: 0;
 
-    position:absolute;
-    height: 9em;
+.ViewTypes img{
+    background-size: 4.9em;
+    background-position: center ;
     width: 6em;
+    height: 6em;
 
-    top: -2em;
-    right: 0px ;
-   
 }
+.img1{
+    box-sizing: border-box;
+    box-sizing: content-box;
+
+    margin: 10px;
+    height: 8em;
+    width: 10em;
+    min-height: 8em;
+    max-height:8em ;
+    background-color: rgb(49, 105, 105);
+
+
+    border: 1em ridge  rgb(6, 34, 30);
+    ;
+}
+
+
+
+
+
+
+
+
+
 
 
 

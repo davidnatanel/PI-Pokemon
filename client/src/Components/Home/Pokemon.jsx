@@ -29,23 +29,31 @@ function Pokemon({attack, defense, height,hp,id,name, speed, weigth ,types,img,g
     var TypesColor=(types[0])
     
 const PokemonCard=styled.div`
-position: relative;
-
-
- background-position: center;
+    
+    position: relative;
+    background-position: center;
     background-size:250px;
     background-repeat: no-repeat;
 
     width: 20em;
-    height: 12em;
+    height: 14em;
     border-radius: 3em 0em 0em 3em;
-
-
 
     display: flex;
     justify-content: space-between;
     align-content: center;
     flex-direction: row;
+    box-shadow:  12px 16px 20px 10px #000000c8;
+    /* box-shadow: inset 12px 12px 20px 2px rgba(19, 7, 7, 0.185); */
+
+    
+
+
+    &:hover{
+       
+        transform: scale(1.2);
+        
+    }
 
 
 `;

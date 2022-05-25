@@ -1,115 +1,1493 @@
 .detail{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  /* color del fondo */
+  background-color: #ffffff00;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-
-
 }
 
-
-.detail img{
-  height: 30em;
-  width: 30em;
-  grid-column: 1/3;
-  grid-row: 1/5;
-  
-}
-.d{
-  background-color: red;
-  grid-template-areas: 'data';
-  
-  grid-column: 3/5;
-  grid-row: 1/3;
-  
-}
- 
 .grass {
+
   background: #00ca91;
 
   border: 1em ridge #114b3a ;
   display: grid;
+ 
+
+
   grid-template-areas: 
-  "img img  data data "
-  "img img  data data "
-  "img img  data data "
-  "type type type type"
+  " . . ."
+  " . . ."
+  " . . ."
   ;
+
+  height: 35em;
+  width: 20;
+  overflow: hidden;
+  
+}
+.grass div img{
+  width: 15em;
+  height: 15em;
+  margin: 2em;
+  padding-right: 1.2em;
+
+  filter:   drop-shadow(60px 20px 1px #114b3a);
+
+}
+
+/* grass */
+
+
+
+
+
+.grass > .viewDetail{
+  /* grid-area: data; */
+  display: flex;
+  flex-direction: column;
+  width: 12em;
+  row-gap: 1em;
+
+  padding: 1em;
+}
+
+.grass > .viewDetail div{
+  margin-left: 1em;
+  display: flex;
+  border: 6px #114b3a ridge ;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 10em;
+  height: 1.4em;
+}
+
+.grass > .viewDetail  p{
+
+  background-color: #114b3a;
+  width: 4em;  
+  width: 7em;
+}
+.grass > .viewDetail label{
+  background-color: #00ca91;
+
+  width: 4em;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* //gra */
+
+
+/* Fire */
+.fire {
+  background: #e95c4d;
+
+
+  border: 1em ridge #e63e2c ;
+  display: grid;
+ 
+
+
+  grid-template-areas: 
+  " . . ."
+  " . . ."
+  " . . ."
+  ;
+
+  height: 35em;
+  width: 20;
+  overflow: hidden;
 
   
 }
-/* // */
 
-.bug {
+.fire div img{
+  width: 15em;
+  height: 15em;
+  margin: 2em;
+  padding-right: 1.2em;
+
+  filter:   drop-shadow(60px 20px 1px #e63e2c);
+
+}
+
+
+
+
+.fire > .viewDetail{
+  
+  display: flex;
+  flex-direction: column;
+  width: 12em;
+  row-gap: 1em;
+
+  padding: 1em;
+}
+
+.fire > .viewDetail div{
+  margin-left: 1em;
+  display: flex;
+  border: 6px #94180a93 ridge ;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 10em;
+  height: 1.4em;
+}
+
+.fire > .viewDetail  p{
+
+  background-color: #94180a93;
+  width: 4em;  
+  width: 7em;
+}
+.fire > .viewDetail label{
+  background-color: #e95c4d;
+
+  width: 4em;
+
+}
+/* Fire */
+
+
+
+
+
+
+
+
+
+/* Bug */
+
+  .bug {
     background: #aedf78;
+  
+  
+    border: 1em ridge #2b5103a0 ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
+  }
+  
+  .bug div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #2b5103a0);
+  
+  }
+  
+  
+  
+  
+  .bug > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .bug > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #2b5103a0 ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .bug > .viewDetail  p{
+  
+    background-color: #2b5103a0;
+    width: 4em;  
+    width: 7em;
+  }
+  .bug > .viewDetail label{
+    background-color: #aedf78;
+  
+    width: 4em;
+  
   }
 
 
+/*  */
+
+
+
+
+/* Water */
+ 
   .water {
     background: #43ccff;
+  
+  
+    border: 1em ridge #01445db6 ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
+  }
+  
+  .water div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #01445db6);
+  
+  }
+  
+  
+  
+  
+  .water > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .water > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #01445db6 ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .water > .viewDetail  p{
+  
+    background-color: #01445db6;
+    width: 4em;  
+    width: 7em;
+  }
+  .water > .viewDetail label{
+    background-color: #43ccff;
+  
+    width: 4em;
+  
   }
  
+/* Water */
 
-  .fire {
-    background: #e95c4d;
-  }
+  
+/* Normal */
+  
+  
   
   .normal {
     background: #a5a5a5;
+  
+  
+    border: 1em ridge #5453538d ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
   
+  .normal div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #5453538d);
+  
+  }
+  
+  
+  
+  
+  .normal > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .normal > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #5453538d ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .normal > .viewDetail  p{
+  
+    background-color: #5453538d;
+    width: 4em;  
+    width: 7em;
+  }
+  .normal > .viewDetail label{
+    background-color: #a5a5a5;
+  
+    width: 4em;
+  
+  }
+/* Normal */
+/* Poison ver*/
+  
+
   .poison {
     background: #611380;
+  
+  
+    border: 1em ridge #8609b8bc ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
   
+  .poison div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #8609b8bc);
+  
+  }
+  
+  
+  
+  
+  .poison > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .poison > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #8609b8bc ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .poison > .viewDetail  p{
+  
+    background-color: #8609b8bc;
+    width: 4em;  
+    width: 7em;
+  }
+  .poison > .viewDetail label{
+    background-color: #611380;
+  
+    width: 4em;
+  
+  }
+/* Poison */
+/* Eletric */
+  
+
   .electric {
     background: #f9be00;
+  
+  
+    border: 1em ridge #9c7b11de ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
+  
+  .electric div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #9c7b11de);
+  
+  }
+  
+  
+  
+  
+  .electric > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .electric > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #9c7b11de ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .electric > .viewDetail  p{
+  
+    background-color: #9c7b11de;
+    width: 4em;  
+    width: 7em;
+  }
+  .electric > .viewDetail label{
+    background-color: #f9be00;
+  
+    width: 4em;
+  
+  }
+/* Eletric */
+
+/* Ground */
+
+  
   .ground {
     background: #bfac21;
+  
+  
+    border: 1em ridge #938307f9 ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
+  
+  .ground div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #938307f9);
+  
+  }
+  
+  
+  
+  
+  .ground > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .ground > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #938307f9 ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .ground > .viewDetail  p{
+  
+    background-color: #938307f9;
+    width: 4em;  
+    width: 7em;
+  }
+  .ground > .viewDetail label{
+    background-color: #bfac21;
+  
+    width: 4em;
+  
+  }
+/* Ground */
+
+
+/* Fairy */
+
+  
   
   .fairy {
     background: #f87ea7;
+  
+  
+    border: 1em ridge #d24d79cd ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
   
+  .fairy div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #d24d79cd);
+  
+  }
+  
+  
+  
+  
+  .fairy > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .fairy > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #d24d79cd ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .fairy > .viewDetail  p{
+  
+    background-color: #d24d79cd;
+    width: 4em;  
+    width: 7em;
+  }
+  .fairy > .viewDetail label{
+    background-color: #f87ea7;
+  
+    width: 4em;
+  
+  }
+/* Fairy */
+  
+
+/* Fairy */
+
+ 
   .fighting {
     background: #d2151b;
+  
+  
+    border: 1em ridge #f03137d6 ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
+  
+  .fighting div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #f03137d6);
+  
+  }
+  
+  
+  
+  
+  .fighting > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .fighting > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #f03137d6 ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .fighting > .viewDetail  p{
+  
+    background-color: #f03137d6;
+    width: 4em;  
+    width: 7em;
+  }
+  .fighting > .viewDetail label{
+    background-color: #d2151b;
+  
+    width: 4em;
+  
+  }
+
+/* Fairy */
+
+/* PSYCHIC */
+
+ 
   .psychic {
     background: #8a0532;
+  
+  
+    border: 1em ridge #b5023edd ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
   
+  .psychic div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #b5023edd);
+  
+  }
+  
+  
+  
+  
+  .psychic > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .psychic > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #b5023edd ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .psychic > .viewDetail  p{
+  
+    background-color: #b5023edd;
+    width: 4em;  
+    width: 7em;
+  }
+  .psychic > .viewDetail label{
+    background-color: #8a0532;
+  
+    width: 4em;
+  
+  }
+/* PSYCHIC */
+/* Ghost */
+  
+
   .ghost {
     background: #8e55a4;
-  }
-  .rock {
-    background: #776a3e;
-  }
-  .ice {
-    background: #66d1e5;
-  }
-  .flying {
-    background: #5eb9b2;
-  }
-  .dark {
-    background: #2d221c;
+  
+  
+    border: 1em ridge #80379daf ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
   
+  .ghost div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #80379daf);
+  
+  }
+  
+  
+  
+  
+  .ghost > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .ghost > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #80379daf ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .ghost > .viewDetail  p{
+  
+    background-color: #80379daf;
+    width: 4em;  
+    width: 7em;
+  }
+  .ghost > .viewDetail label{
+    background-color: #8e55a4;
+  
+    width: 4em;
+  
+  }
+
+/* Ghost */
+
+/* Rock */
+
+  
+  
+  .rock {
+    background: #776a3e;
+  
+  
+    border: 1em ridge #947b27 ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
+  }
+  
+  .rock div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #947b27);
+  
+  }
+  
+  
+  
+  
+  .rock > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .rock > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #947b27 ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .rock > .viewDetail  p{
+  
+    background-color: #947b27;
+    width: 4em;  
+    width: 7em;
+  }
+  .rock > .viewDetail label{
+    background-color: #776a3e;
+  
+    width: 4em;
+  
+  }
+
+/* Rock */
+
+
+/* Ice */
+
+  
+
+  .ice {
+    background: #66d1e5;
+  
+  
+    border: 1em ridge #66d1e5 ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
+  }
+  
+  .ice div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #66d1e5);
+  
+  }
+  
+  
+  
+  
+  .ice > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .ice > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #66d1e5 ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .ice > .viewDetail  p{
+  
+    background-color: #66d1e5;
+    width: 4em;  
+    width: 7em;
+  }
+  .ice > .viewDetail label{
+    background-color: #66d1e5;
+  
+    width: 4em;
+  
+  }
+
+
+
+/* Ice */
+
+
+
+/* Flying */
+
+  .flying {
+    background: #5eb9b2;
+  
+  
+    border: 1em ridge #18a79b ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
+  }
+  
+  .flying div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #18a79b);
+  
+  }
+  
+  
+  
+  
+  .flying > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .flying > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #18a79b ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .flying > .viewDetail  p{
+  
+    background-color: #18a79b;
+    width: 4em;  
+    width: 7em;
+  }
+  .flying > .viewDetail label{
+    background-color: #5eb9b2;
+  
+    width: 4em;
+  
+  }
+
+/* Flying ver */
+/* Dark */
+
+  
+  .dark {
+    background: #2d221c;
+  
+  
+    border: 1em ridge #2d221c ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
+  }
+  
+  .dark div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #2d221c);
+  
+  }
+  
+  
+  
+  
+  .dark > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .dark > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #2d221c ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .dark > .viewDetail  p{
+  
+    background-color: #2d221c;
+    width: 4em;  
+    width: 7em;
+  }
+  .dark > .viewDetail label{
+    background-color: #2d221c;
+  
+    width: 4em;
+  
+  }
+
+/* Dark */
+  
+
+/* Dragon */
+
+
+
   .dragon {
     background: #29036a;
+  
+  
+    border: 1em ridge #29036a ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
+  
+  .dragon div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #29036a);
+  
+  }
+  
+  
+  
+  
+  .dragon > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .dragon > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #29036a ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .dragon > .viewDetail  p{
+  
+    background-color: #29036a;
+    width: 4em;  
+    width: 7em;
+  }
+  .dragon > .viewDetail label{
+    background-color: #29036a;
+  
+    width: 4em;
+  
+  }
+
+
+  /* Dragon */
+  
+  /* Steel */
+
   
   .steel {
     background: #7b8e8a;
-  }
-  .unknown {
-    background: #454545;
+  
+  
+    border: 1em ridge #7b8e8a ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
   
+  .steel div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #7b8e8a);
+  
+  }
+  
+  
+  
+  
+  .steel > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .steel > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #7b8e8a ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .steel > .viewDetail  p{
+  
+    background-color: #7b8e8a;
+    width: 4em;  
+    width: 7em;
+  }
+  .steel > .viewDetail label{
+    background-color: #7b8e8a;
+  
+    width: 4em;
+  
+  }
+
+  /* Steel */
+
+  /* Unknown */
+
+  .unknown {
+    background: #454545;
+  
+  
+    border: 1em ridge #454545 ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
+  }
+  
+  .unknown div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #454545);
+  
+  }
+  
+  
+  
+  
+  .unknown > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .unknown > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #454545 ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .unknown > .viewDetail  p{
+  
+    background-color: #454545;
+    width: 4em;  
+    width: 7em;
+  }
+  .unknown > .viewDetail label{
+    background-color: #454545;
+  
+    width: 4em;
+  
+  }
+
+
+  /* Unknown */
+
+
+  /* Shadow */
+  
+ 
   .shadow {
     background: #4f4f4f;
+  
+  
+    border: 1em ridge #4f4f4f ;
+    display: grid;
+   
+  
+  
+    grid-template-areas: 
+    " . . ."
+    " . . ."
+    " . . ."
+    ;
+  
+    height: 35em;
+    width: 20;
+    overflow: hidden;
+  
+    
   }
+  
+  .shadow div img{
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    padding-right: 1.2em;
+  
+    filter:   drop-shadow(60px 20px 1px #4f4f4f);
+  
+  }
+  
+  
+  
+  
+  .shadow > .viewDetail{
+    
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+    row-gap: 1em;
+  
+    padding: 1em;
+  }
+  
+  .shadow > .viewDetail div{
+    margin-left: 1em;
+    display: flex;
+    border: 6px #4f4f4f ridge ;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 10em;
+    height: 1.4em;
+  }
+  
+  .shadow > .viewDetail  p{
+  
+    background-color: #4f4f4f;
+    width: 4em;  
+    width: 7em;
+  }
+  .shadow > .viewDetail label{
+    background-color: #4f4f4f;
+  
+    width: 4em;
+  
+  }
+  /* Shadow */
 
   /* //////////// */
   .bug ul{
@@ -122,11 +1500,16 @@
   }
   /*  */
   .grass ul {
-    width: 20em;
-    background: #027856b7;    
+    width: 100%;
+    /* background: #027856b7;     */
 display: flex; 
+column-gap: 1em;
 }
-  
+.grass ul li {
+  border: 1em  ridge #114b3a;
+  margin: 10px;
+  list-style: none;
+}
 
   /*  */
 

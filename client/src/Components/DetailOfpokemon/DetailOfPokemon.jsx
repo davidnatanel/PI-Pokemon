@@ -23,44 +23,44 @@ function DetailOfPokemon() {
     
 
     return (
-        <div className={styles.detail} >
 
+<div className={styles.detail}>
 
-
-           <div className={styles.container}>
         {state.length && state.map(e=>  ( 
         
         <div className={ styles[e.types[0]]   }  >
-            {/* <button onClick={()=>{console.log(state)}}>detail</button> */}
-
-<div >
-        <div className={styles.d}>  <label htmlFor="">id<p>{e.id}</p> </label></div>
-
-        <p>{e.attack}</p>
-        <p>{e.defense}</p>
-        <p>{e.height}</p>
-        <p>{e.speed}</p>
-        <p>{e.weigth}</p>
-        <p>{e.hp}</p>
-        <p>{e.name}</p>
-        </div>
-
-        <img src={e.img} alt="" />
+        
+        
+        <div className={style.content}>
+        <img src={e.img} className={style.image} alt="" />
 
         <ul className={style.types} >
             {e.types && e.types.map(e=>(  <li className={style[e]}> </li> ) )}
             </ul>
-        </div>
+            </div>
         
+        
+            {/* <button onClick={()=>{console.log(state)}}>detail</button> */}
+
+        <div className={styles.viewDetail}>
+        <div className={styles.d}>  <label htmlFor="">id</label><p>{e.id}</p></div>
+        <div className={styles.d}>  <label htmlFor="">attack</label><p>{e.attack}</p></div>
+        <div className={styles.d}>  <label htmlFor="">defense</label><p>{e.defense}</p></div>
+        <div className={styles.d}>  <label htmlFor="">height</label><p>{e.height}</p> </div>
+        <div className={styles.d}>  <label htmlFor="">speed</label><p>{e.speed}</p></div>
+        <div className={styles.d}>  <label htmlFor="">weigth</label><p>{e.weigth}</p></div>
+        <div className={styles.d}>  <label htmlFor="">hp</label><p>{e.hp}</p></div>
+        <div className={styles.d}>  <label htmlFor="">name</label><p>{e.name}</p></div>
+
+    
+        </div></div>
         
         
         )     )     }
 
+
 </div>
-
-
             
-        </div>
     );
 }
 

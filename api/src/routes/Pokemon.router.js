@@ -5,7 +5,7 @@ const {Pokemon,Types} = require('../db');
 const router = Router();
 
 async function nue(){
-let Api= await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=20`)
+let Api= await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=100`)
 
 ApiUrl=Api.data.results.map(e=> axios.get(e.url) )
 

@@ -1,19 +1,86 @@
-.color{
-    height: 100vh;
-    background-color: sandybrown;
+.container{
+
+
     display: flex;
-
-    justify-content: center;
     flex-direction: column;
-    
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
-.boton{
+
+.video{
+
+
+    position:absolute;
+    right: 0px;
+    max-height: 100vh;
+
+
+
+}
+.videoCopia{
+
+    position:absolute;
+    left: 0px;
+    max-height: 100vh;
+
+
+}
+
+.rigth{}
+.left{}
+.start{
+    height: 5vw;
+    width: 39vw;
+}
+
+.button{
+
+    left: 470px;
+    top: 82vh;
+
     
+    position:absolute;
+    cursor: pointer;
+    
+    width: 34.3em;
+    height: 7em;
+    box-shadow: rgb(93, 93, 93) 0px 0px 0px 5px, rgb(92, 92, 92) 0px 10px 27px -8px inset, rgb(190, 29, 43) 0px -10px 27px -8px inset, 5px 5px 17px 5px rgba(0,0,0,0.09);
     
 
-    background-color: blue;
+}
 
-    width: 30em;
-    height: 50px;
-    
+.button:hover{
+
+    transform: scale(1.1);
+
+}
+
+.pokemon{
+
+    position: absolute;
+}
+
+.PikachuRun{
+    position: absolute;
+    width: 8em;
+    height: 8em;
+
+    top: 390px;
+    left: -2px;
+    animation-name: Run;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Run{
+
+    0%{ left: -20px;}
+ 
+    100%{ left: 90.5%;}
+
+    /* 50%{ left: 50%; }
+    100%{ left: calc(100%+20px);  } */
+
 }

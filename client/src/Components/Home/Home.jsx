@@ -57,13 +57,14 @@ function Home(props) {
 
             <div className={style.Pokemons}>    
             
-            { loading ? <img src={LM} alt="" />:  
+            {/* { loading ? <img src={LM} alt="" />:   */}
 
             
             
-             currentPokemons.map(e=>  (          
-            <Pokemon  id={e.id}attack={e.attack} gifback={e.gifback} gif={e.gif} img={e.img} types={e.types}  name={e.name}   ></Pokemon>  )      )
-            }
+             {currentPokemons && currentPokemons.map(e=>  ( <Pokemon  id={e.id}attack={e.attack} gifback={e.gifback} gif={e.gif} img={e.img} types={e.types}  name={e.name}   ></Pokemon>  )      ) }
+            
+            
+            
             </div>
 
 

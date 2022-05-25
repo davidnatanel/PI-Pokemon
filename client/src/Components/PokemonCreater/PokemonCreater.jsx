@@ -88,16 +88,14 @@ function PokemonCreater(props) {
 
 
     return (
-        state ?
+        // state ?
 
 
-        <div className={Styled.PokemonContainer} >
+        <div className={Styled.PokemonBody} >
 
-            <button onClick={()=>{console.log(error,input)}}>x</button>
           
-
+         <div className={Styled.PokemonContainer}>
             <form className={Styled.PokemonCreater} onSubmit={(e)=>{OnSubmit(e) }}>
-            Crea tu Pokemon
 
             <div className={Styled.detailsPokemon}>
                 <PokemonInput 
@@ -197,26 +195,19 @@ function PokemonCreater(props) {
 
                 />
             </div>
-            
-      
 
-            {/* <div className={Styled.Types}>
-            
-            {state && state.map(e=>(<label key={e.id} value="Api">  <input   type="checkbox" value={e.name} name={e.name}  onChange={(e)=>{changeCheck(e)} }  />{e.name}</label>  ))}
-            
-            </div> */}
-            
 
-            
+        
+            <div className={Styled.TypesContainer}>
 
-            <div className={Styled.Types}>
-            
+        <div className={Styled.Types}>    
             {state && state.map(e=>( <div key={e.id}> <img className={Styled[e.name]}></img>  <input   type="checkbox" value={e.name} name={e.name}  onChange={(e)=>{changeCheck(e)} }  /> </div>  ))}
-            
+            </div>
            </div>
 
-           <input  className={Styled.button}   disabled={Object.entries(error).length === 0 ?false:true   } type="submit" value="Submit" />
-
+            <div className={Styled.button}   >
+           <input  disabled={Object.entries(error).length === 0 ?false:true   } type="submit" value="Crear" />
+           </div>
 
 
             </form>
@@ -227,23 +218,35 @@ function PokemonCreater(props) {
                 
             <img className={Styled.img1}  src={   input.img?input.img:LM } alt="" />
             <div className={Styled.detailsView}>
-            <p>{input.name}</p>
-            <p>{input.hp}</p>
-            <p>{input.defense}</p>
-            <p>{input.attack}</p>
-            <p>{input.speed}</p>
-            <p>{input.weigth}</p>
-            <p>{input.heigth}</p>
-            </div>
-            {input.types &&  input.types.map(e=> < img key={e.id} className={Styled[e.name]}></img>)}
+           <div> <label htmlFor="">name</label> <p>{input.name}</p></div>
+            <div><label htmlFor="">hp</label>     <p>{input.hp}</p></div>
+            <div><label htmlFor="">defense</label>     <p>{input.defense}</p></div>
+            <div><label htmlFor="">attack</label>     <p>{input.attack}</p></div>
+            <div><label htmlFor="">speed</label>     <p>{input.speed}</p></div>
+            <div><label htmlFor="">weigth</label>     <p>{input.weigth}</p></div>
+            <div><label htmlFor="">heigth</label> <   p>{input.heigth}</p></div>
 
+         
+            
+            
+            
+            
+           
+            </div>
+
+            <div className={Styled.ViewTypes}>
+
+            {  input.types.map(e=> < img key={e.id} className={Styled[e]}/>  )}
+
+            </div>
 
             </div>
             
 
-         
+        </div>
 
-        </div>: <img src={LM} alt="" />
+        </div>
+        // : <img src={LM} alt="" />
     );
 }
 
