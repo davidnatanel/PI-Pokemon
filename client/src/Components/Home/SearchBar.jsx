@@ -49,8 +49,10 @@ function SearchBar({paginadoo}) {
   
     
     const CallPokemonName =()=>{
-         dispatch( Loading(true))
+        dispatch( Loading(true))
         dispatch(GetPokemonsForName(input))
+
+
        
         
     }

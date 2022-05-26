@@ -28,8 +28,7 @@
 
 }
 
-.rigth{}
-.left{}
+
 .start{
     height: 5vw;
     width: 39vw;
@@ -39,17 +38,29 @@
 
     left: 470px;
     top: 82vh;
+    background-color: rgba(240, 248, 255, 0);
 
+    border:10px solid black ;
     
     position:absolute;
     cursor: pointer;
     
     width: 34.3em;
     height: 7em;
-    box-shadow: rgb(93, 93, 93) 0px 0px 0px 5px, rgb(92, 92, 92) 0px 10px 27px -8px inset, rgb(190, 29, 43) 0px -10px 27px -8px inset, 5px 5px 17px 5px rgba(0,0,0,0.09);
+    animation: button 1s alternate infinite;
     
 
 }
+
+@keyframes button {
+    0%{transform: scale(0.9);}
+    20%{transform: scale(1.2);}
+}
+
+
+
+
+
 
 .button:hover{
 
@@ -70,7 +81,7 @@
     top: 390px;
     left: -2px;
     animation-name: Run;
-    animation-duration: 1s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
 }
 
@@ -83,4 +94,44 @@
     /* 50%{ left: 50%; }
     100%{ left: calc(100%+20px);  } */
 
+}
+
+.left{
+    left: 23em;
+    bottom: 2em;
+
+    
+    position:absolute;
+    cursor: pointer;
+    
+    width: 5em;
+    height: 5em;
+    animation: arrowF 1s alternate infinite;
+
+
+}
+
+.right{
+    right: 21em;
+    bottom: 2em;
+
+    
+    position:absolute;
+    cursor: pointer;
+    
+    width: 5em;
+    height: 5em;
+    animation: arrowR 1s alternate infinite;
+    
+}
+
+@keyframes arrowR {
+    0%{transform: scale(1.1);}
+    20%{transform: scale(1.5);}
+}
+
+
+@keyframes arrowF {
+    0%{transform: scale(1.1);}
+    20%{transform: scale(1.5);}
 }

@@ -8,22 +8,15 @@ try {
     
     let TipesApi =await axios.get(`https://pokeapi.co/api/v2/type/`)
 
-
     Tip =TipesApi.data.results.map(e=>   {return{type:e.name }}    )
 
-    Tip.forEach((element) => {
-        Types.findOrCreate({
-            where:{
-                name:element.type
-            }
-        })
-
-        
-    });
+    Tip.forEach((element) => {  Types.findOrCreate({where:{name:element.type}})});
 
     let ApiLocal= await Types.findAll();
     
     res.send(ApiLocal)
+
+
 } catch (error) {
 next(error)
 }

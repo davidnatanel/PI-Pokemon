@@ -24,6 +24,14 @@
     padding: 2px;
 }
 
+.detail a:hover{
+    background-color: rgba(244, 248, 248, 0.726);
+
+
+
+
+}
+
 
 .name
 {

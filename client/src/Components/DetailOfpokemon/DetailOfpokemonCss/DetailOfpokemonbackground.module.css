@@ -4,10 +4,18 @@
   overflow: hidden;
 
   /* color del fondo */
-  background-color: #ffffff00;
+  background: url('../../../img/background/Detail.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 1em 0em 60px 2em;
+}
+
+.bottun{
+  background-color: red;
 }
 
 .grass {
@@ -40,6 +48,23 @@
 
 }
 
+
+.boton{
+  height: 3em;
+  width: 9em;
+
+  border: 10px ridge rgba(0, 0, 0, 0.722) ;
+  cursor: pointer;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  background-color: rgba(244, 244, 244, 0);
+  border-radius: 0.5em;
+
+}
+
+.boton:hover{
+  transform: scale(1.1);
+}
 /* grass */
 
 

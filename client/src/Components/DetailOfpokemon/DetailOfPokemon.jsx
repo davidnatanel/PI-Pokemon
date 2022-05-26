@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Pokemon from '../Home/Pokemon';
 import style from '../DetailOfpokemon/DetailOfpokemonCss/DetailOfpokemon.module.css'
 import styles from '../DetailOfpokemon/DetailOfpokemonCss/DetailOfpokemonbackground.module.css'
+import { Link } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 
 function DetailOfPokemon() {
@@ -23,6 +25,7 @@ function DetailOfPokemon() {
     
 
     return (
+        style?
 
 <div className={styles.detail}>
 
@@ -52,6 +55,7 @@ function DetailOfPokemon() {
         <div className={styles.d}>  <label htmlFor="">hp</label><p>{e.hp}</p></div>
         <div className={styles.d}>  <label htmlFor="">name</label><p>{e.name}</p></div>
 
+        <Link to='/Home'><button className={style.bottun}>Home</button></Link>
     
         </div></div>
         
@@ -59,7 +63,7 @@ function DetailOfPokemon() {
         )     )     }
 
 
-</div>
+</div>:<Loading></Loading>
             
     );
 }

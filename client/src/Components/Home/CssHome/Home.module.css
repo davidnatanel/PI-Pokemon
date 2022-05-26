@@ -47,17 +47,32 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    max-height: 2.7em;
+    
+
+    
 }
 
 .List li{
     border-radius: 1vh;
     display: inline;
-    background-color: rgba(216, 206, 206, 0.903);
+    background-color: rgba(230, 225, 225, 0.903);
     margin: 1vh;
     padding: 1vh;
     cursor: pointer;
+
+    font-weight: bold;
     
 }
+
+.List li:hover{
+    background-color: rgba(220, 33, 33, 0.964);
+    box-shadow: 1px 1px 10px 1.2px red ;
+    color: rgba(236, 215, 215, 0.903);
+    
+}
+
+    
 .footer{
     margin: 0;
     padding: 0;

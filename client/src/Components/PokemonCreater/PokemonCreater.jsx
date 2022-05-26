@@ -6,6 +6,7 @@ import { GetTypes } from '../../redux/actions';
 import Styled from './PokemonCreaterCss/PokemonCreater.module.css'
 import PokemonInput from './PokemonInput';
 import LM from '../../gif/LoadingM.gif'
+import { Link } from 'react-router-dom';
 
 
 function PokemonCreater(props) {
@@ -49,12 +50,14 @@ function PokemonCreater(props) {
     const changeCheck=(e)=>{
         var nombre=e.target.name
 
+        if(input.types.length < 2)
+         {
             if(!input.types.includes(e.target.name)){setInput({...input, types:[...input.types,e.target.name] })}
             if(!e.target.checked ){
                
                 let filt=input.types.filter(e=> e !==nombre)
-                 setInput({input,types:[...filt]})
-            }
+                 setInput({...input,types:[...filt]})
+            }}
         
     }
     
@@ -205,9 +208,25 @@ function PokemonCreater(props) {
             </div>
            </div>
 
-            <div className={Styled.button}   >
+            <div className={Object.entries(error).length === 0 ?Styled.button:Styled.buttonerror }   >
+
+
            <input  disabled={Object.entries(error).length === 0 ?false:true   } type="submit" value="Crear" />
+
            </div>
+
+           
+           {error.name? <p>{error.name}</p>:null}
+           {error.hp? <p>{error.hp}</p>:null}
+           {error.attack? <p>{error.attack}</p>:null}
+           {error.defense? <p>{error.defense}</p>:null}
+           {error.speed? <p>{error.speed}</p>:null}
+           {error.heigth? <p>{error.heigth}</p>:null}
+           {error.weigth? <p>{error.weigth}</p>:null}
+           {error.types? <p>{error.types}</p>:null}
+           {error.img? <p>{error.img}</p>:null}
+
+          
 
 
             </form>
@@ -225,6 +244,7 @@ function PokemonCreater(props) {
             <div><label htmlFor="">speed</label>     <p>{input.speed}</p></div>
             <div><label htmlFor="">weigth</label>     <p>{input.weigth}</p></div>
             <div><label htmlFor="">heigth</label> <   p>{input.heigth}</p></div>
+            <Link to='/Home'><button>Home</button></Link>
 
          
             
@@ -241,7 +261,7 @@ function PokemonCreater(props) {
             </div>
 
             </div>
-            
+        
 
         </div>
 

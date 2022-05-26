@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import style from './LadingPage.module.css'
 import video from '../LadingPage/video/videoplayback.mp4'
-import left from '../LadingPage/video/left.png'
-import rigth from '../LadingPage/video/right.png'
 import start from '../LadingPage/video/start.png'
 import pokemon from '../LadingPage/video/pokemon.png'
 import PikachuRun from '../LadingPage/video/PikachuRun.gif'
+import left from '../LadingPage/video/left.png'
+import right from '../LadingPage/video/right.png'
 
 
 
@@ -23,6 +23,8 @@ function LadingPage(props) {
             {/* <div><img src={left}  className={style.left} alt="" /></div>
             <div><img src={rigth} className={style.rigth} alt="" /></div> */}
            
+           <img src={right} className={style.right}alt="" />
+           <img src={left} className={style.left} alt="" />
             <img src={pokemon} className={style.pokemon} alt="" />
 
             <Link to='Home'>

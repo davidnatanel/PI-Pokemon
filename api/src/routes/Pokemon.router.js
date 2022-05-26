@@ -4,8 +4,8 @@ const {Pokemon,Types} = require('../db');
 
 const router = Router();
 
-async function nue(){
-let Api= await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=100`)
+async function GetPokemonsApi(){
+let Api= await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=50`)
 
 ApiUrl=Api.data.results.map(e=> axios.get(e.url) )
 
@@ -14,7 +14,6 @@ ApiUrl=Api.data.results.map(e=> axios.get(e.url) )
     let nue=e.data   
 
     return {
-
                 id:nue.id,
                 name:nue.name,
                 weigth:nue.weight,
@@ -32,29 +31,61 @@ ApiUrl=Api.data.results.map(e=> axios.get(e.url) )
               return  objApi }
 
 
+
+
 router.get('/',async (req,res,next)=>{
 try {
 
   let {name}=req.query;
 
   if(name){
-    let dar;
-  
-    
-       dar= await nue() 
-      mio=dar.find(e=>e.name==name)
+      let pokemonFound;
 
-      if(mio){
-        return res.send(mio)
+      pokemonFound= await GetPokemonsApi() 
+      pokemonFoundApi=pokemonFound.find(e=>e.name==name)
+
+      if(pokemonFoundApi){
+        return res.send(pokemonFoundApi)
 
       }
-        dar= await Pokemon.findOne({
+      pokemonFound= await Pokemon.findOne({
           attributes: ['id','name', 'hp','attack','defense','speed','height','weight','img','createdInDb'],
+          include:{
+            attributes:['name'],
+            model:Types,
+         
+          }
+            
+            ,
           where:{name:name}
+
       });
+
       
-      if (dar) {return  res.send(dar.dataValues)}
-      if (!dar) {res.status(404)  }
+
+      let ResultOfApiLocal={
+        id:pokemonFound.dataValues.id,
+        name:pokemonFound.dataValues.name,
+        weigth:pokemonFound.dataValues.weight,
+        height:pokemonFound.dataValues.height,
+        hp:pokemonFound.dataValues.hp,
+        attack:pokemonFound.dataValues.attack,
+        defense:pokemonFound.dataValues.defense,
+        speed:pokemonFound.dataValues.speed,
+        img:pokemonFound.dataValues.img,
+        types:pokemonFound.dataValues.Types.map(e=>e.dataValues.name),
+        createdInDb:pokemonFound.dataValues.createdInDb
+
+
+
+      }
+
+      console.log("2",ResultOfApiLocal);
+
+      
+      
+      if (ResultOfApiLocal) {return  res.send(ResultOfApiLocal)}
+      if (!ResultOfApiLocal) {res.status(404)  }
     
     
     
@@ -65,7 +96,7 @@ try {
     
     }
 
-let dar= await nue()
+let dar= await GetPokemonsApi()
 
 let ApiLocalprueba= await Pokemon.findAll(
   {include:{
@@ -114,12 +145,12 @@ router.get('/:idPokemon', async (req,res,next)=>{
 
     if(idPokemon){
       
-        let dar= await nue()
+        let dar= await GetPokemonsApi()
 
-        mio=dar.find(e=>e.id==idPokemon)
+        GetPokemonsApiforId=dar.find(e=>e.id==idPokemon)
 
-        if(mio){
-          return res.send(mio)
+        if(GetPokemonsApiforId){
+          return res.send(GetPokemonsApiforId)
 
         }
             
@@ -136,6 +167,7 @@ router.get('/:idPokemon', async (req,res,next)=>{
         
         let ResultOfApiLocal=ApiLocalprueba.map(e=> {
           let nue =e.dataValues 
+          console.log(e.dataValues.id )
         
           return {
               id:nue.id,
@@ -150,7 +182,6 @@ router.get('/:idPokemon', async (req,res,next)=>{
               types:nue.Types.map(e=>e.dataValues.name)
         
             }} )
-
 
 
           if (ResultOfApiLocal) {
@@ -169,7 +200,6 @@ router.get('/:idPokemon', async (req,res,next)=>{
 })
 
 router.post('/',async (req,res,next)=>{
-  console.log("1",req.body);
 
 try {
     let {name,hp,attack,defense,speed,height,weight,img,types} =req.body;
@@ -196,54 +226,46 @@ try {
 router.delete('/',async (req,res,next)=>{
 
   
+     try {
+          
+     await Pokemon.destroy({where:{createdInDb:true}})
 
- await Pokemon.destroy(
-  {
-    where:{createdInDb:true}
-  }
-)
-
-
-
-try {res.sendStatus(204)} catch (error) {next(error)}})
+     res.sendStatus(204)
+    }      
+      catch (error) 
+      {next(error)}})
 
 
 
 router.delete('/:id',async (req,res,next)=>{
   const {id}=req.params;
+  try {
+    await Pokemon.destroy(
+    {where:{id}})
 
-  await Pokemon.destroy(
-   {
-     where:{id}
-   }
- )
- 
- 
- 
- try {res.sendStatus(204)} catch (error) {next(error)}})
+    res.sendStatus(204)
+    } catch (error)
+    {next(error)}})
 
 
 
 
 
 router.put('/:id',async (req,res,next)=>{
-
   const {id}=req.params;
-  // const {createdInDb}=req.body;
-  
-  const PokemonDb= await Pokemon.findByPk(id)
-  
-  // PokemonDb.createdInDb=createdInDb;
+  try { 
+      const PokemonDb= await Pokemon.findByPk(id)
+      
+      PokemonDb.set(req.body)
 
-  PokemonDb.set(req.body)
+      await PokemonDb.save()
+    
+      res.send(PokemonDb)
 
-  await PokemonDb.save()
-
-
-
- 
- try {res.send(PokemonDb)} catch (error) {next(error)}})
-//1:15
+    } catch (error) 
+      {next(error)}}
+      
+ )
 
 module.exports = router;
 // Model.destroy({

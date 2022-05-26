@@ -1,9 +1,33 @@
+@font-face {
+    font-family: Pokemons;
+    src: url('../../../img/fonts/pokemon-normal.ttf');
+}
+
+.fonts{
+    -webkit-text-stroke: 3.5px rgb(0, 0, 255);
+    font-size:4em;
+    color: rgb(251, 255, 0);
+    font-family:Pokemons;
+    letter-spacing: 1px;
+    background-color: rgb(243, 62, 62);
+    margin-top: 0.9em;
+    margin-right: 0.9em;
+
+    border-radius: 1em;
+
+    box-shadow: 0.9em 1em 1em 0em black;
+
+}
+
 .fondo{
-    background-image: url('../../../img/background/backgroindWho.png');
+    box-sizing: border-box;
+    box-sizing:content-box;
+    background-image: url('../../../img/background/whoitis.jpg');
 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 
 
     /* background: #EA4C08;
@@ -18,33 +42,53 @@
     
 }
 
-.n1{
-    display: inline;
+.container{
+   
+    height: 30em;
+    width: 70%;
+    display: flex;
 }
 
-.n2{
-    display: inline;
 
+.pokemonTrue{
+    width: 100%;
+    
 }
+
+
 
 
 .cardP{
-    background-color: red;
+    margin-right: 0.9em;
+
     filter:opacity(100%);
 }
 .img{
-    max-height: 10em;
+    height: 15em;
+    max-height: 15em;
     background-size: cover;
     /* filter: contrast(50%) ;
     mix-blend-mode:darken; */
     /* filter: contrast(1%) ; */
     /* mix-blend-mode:black; */
     filter: brightness(0%);
+    box-shadow: 1em 1em 1em 1em black;
+
     /* filter:   drop-shadow(50px 10px 1px black); */
     
 }
+.letter
+{display: block;
+    color: rgb(251, 255, 0);
+    font-size: 2em;
+    font-family:Pokemons;
+    letter-spacing: 10px;
+}
+.letternone
+{display: none;}
+
 .imgv{
-    max-height: 10em;
+    max-height: 15em;
     background-size: cover;
     /* filter: contrast(50%) ;
     mix-blend-mode:darken; */
@@ -58,4 +102,52 @@
 .cardP h1{
     color: yellow;
 
+
 }
+.opcions{
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.opcions div{
+    
+    -webkit-text-stroke: 1px  rgb(109, 38, 38);
+    color: rgb(251, 255, 0);
+    font-size: 1.6em;
+    font-family:Pokemons;
+
+    border: 8px solid rgb(109, 38, 38);
+
+    border-radius: 2em 0em 2em 0em;
+
+    background-color: rgb(241, 229, 229);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0.9em 1em 0.8em 0em black;
+
+}
+
+.opcions div h1{
+
+    width: 8em;
+    height: 1.7em;
+    cursor: pointer;
+    
+}
+
+.opcions div:hover{
+    transform: scale(1.1);
+    background-color: rgb(235, 80, 80);
+
+    
+}
+
+.Right{
+    color: rgb(251, 255, 0);
+    font-size: 4em;
+    text-shadow: 10px 10px 3px   red;
+
+}
+
