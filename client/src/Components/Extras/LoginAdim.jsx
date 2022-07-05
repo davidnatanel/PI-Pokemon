@@ -38,16 +38,14 @@ function LoginAdim(props) {
     axios.put(`/${put.id}`, {
 
         hp:hp,attack:attack,defense:defense
-      })
+            
+    })
+
     .then(response => {
         setData( response.data );
-    })
+             })
           }
         
-
-
-
-
     const handleInput=(e)=>{setInput({...input,[e.target.name]:e.target.value})}
 
     const handleSubmit=(e)=>{
@@ -103,7 +101,7 @@ function LoginAdim(props) {
                 <input type="submit" className={style.I3}  onClick={(e)=>{ handleDeleteAll(e)  }}/>
 
 
-                <label htmlFor="" className={style.L3}> actulizar por Id</label>
+                <label htmlFor="" className={style.L3}> actualizar por Id</label>
                 <input type="text"className={style.I4} name='id' onChange={(e)=>{ handleInputput(e) }}  />
                 <input type="number"className={style.I5} name='hp' onChange={(e)=>{ handleInputput(e) }}  />
                 <input type="number"className={style.I6} name='attack' onChange={(e)=>{ handleInputput(e) }}  />

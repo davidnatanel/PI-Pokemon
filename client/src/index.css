@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --Light-Gray: rgb(214, 214, 214);
+  --Aureolin: rgb(255, 238, 50);
+  --Cyber-Yellow: rgb(255, 209, 0);
+  --Eerie-Black: rgb(32, 32, 32);
+  --Jet: rgb(51, 53, 51);
+
+
+}

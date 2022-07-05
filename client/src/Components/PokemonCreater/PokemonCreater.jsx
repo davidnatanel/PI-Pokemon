@@ -49,14 +49,29 @@ function PokemonCreater(props) {
 
     const changeCheck=(e)=>{
         var nombre=e.target.name
+        console.log("e1");
 
         if(input.types.length < 2)
          {
+
             if(!input.types.includes(e.target.name)){setInput({...input, types:[...input.types,e.target.name] })}
             if(!e.target.checked ){
                
                 let filt=input.types.filter(e=> e !==nombre)
-                 setInput({...input,types:[...filt]})
+                
+
+              
+        
+
+
+                 setInput({
+                    ...input
+                    ,types: [...filt]
+                
+                })
+
+
+                    
             }}
         
     }
@@ -95,7 +110,7 @@ function PokemonCreater(props) {
 
 
         <div className={Styled.PokemonBody} >
-
+<button onClick={()=>{console.log(input)}}>ss</button>
           
          <div className={Styled.PokemonContainer}>
             <form className={Styled.PokemonCreater} onSubmit={(e)=>{OnSubmit(e) }}>

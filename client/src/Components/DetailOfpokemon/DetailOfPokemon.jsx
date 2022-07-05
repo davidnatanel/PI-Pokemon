@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { GetPokemonsForID  } from '../../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,38 +7,44 @@ import style from '../DetailOfpokemon/DetailOfpokemonCss/DetailOfpokemon.module.
 import styles from '../DetailOfpokemon/DetailOfpokemonCss/DetailOfpokemonbackground.module.css'
 import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
+import axios from 'axios';
 
 
 function DetailOfPokemon() {
     const {id} =useParams();
     const state = useSelector(state => state.PokemonsDetails)
+    const [pokemon,setPokemon]= useState(null)
 
     const dispatch =useDispatch()
 
 
     useEffect(() => {
         
-        dispatch(GetPokemonsForID(id))
+        // dispatch(GetPokemonsForID(id))
+
+        axios(`/pokemons/${id}`)
+        .then(e=>  setPokemon(e.data)  )
+
 
         
     }, [])
     
 
     return (
-        style?
+        pokemon?
 
 <div className={styles.detail}>
 
-        {state.length && state.map(e=>  ( 
+       
         
-        <div className={ styles[e.types[0]]   }  >
+        <div className={ styles[pokemon.types[0]]   }  >
         
         
         <div className={style.content}>
-        <img src={e.img} className={style.image} alt="" />
+        <img src={pokemon.img} className={style.image} alt="" />
 
         <ul className={style.types} >
-            {e.types && e.types.map(e=>(  <li className={style[e]}> </li> ) )}
+            {pokemon.types && pokemon.types.map(e=>(  <li className={style[e]}> </li> ) )}
             </ul>
             </div>
         
@@ -46,21 +52,21 @@ function DetailOfPokemon() {
             {/* <button onClick={()=>{console.log(state)}}>detail</button> */}
 
         <div className={styles.viewDetail}>
-        <div className={styles.d}>  <label htmlFor="">id</label><p>{e.id}</p></div>
-        <div className={styles.d}>  <label htmlFor="">attack</label><p>{e.attack}</p></div>
-        <div className={styles.d}>  <label htmlFor="">defense</label><p>{e.defense}</p></div>
-        <div className={styles.d}>  <label htmlFor="">height</label><p>{e.height}</p> </div>
-        <div className={styles.d}>  <label htmlFor="">speed</label><p>{e.speed}</p></div>
-        <div className={styles.d}>  <label htmlFor="">weigth</label><p>{e.weigth}</p></div>
-        <div className={styles.d}>  <label htmlFor="">hp</label><p>{e.hp}</p></div>
-        <div className={styles.d}>  <label htmlFor="">name</label><p>{e.name}</p></div>
+        <div className={styles.d}>  <label htmlFor="">id</label><p>{pokemon.id}</p></div>
+        <div className={styles.d}>  <label htmlFor="">attack</label><p>{pokemon.attack}</p></div>
+        <div className={styles.d}>  <label htmlFor="">defense</label><p>{pokemon.defense}</p></div>
+        <div className={styles.d}>  <label htmlFor="">height</label><p>{pokemon.height}</p> </div>
+        <div className={styles.d}>  <label htmlFor="">speed</label><p>{pokemon.speed}</p></div>
+        <div className={styles.d}>  <label htmlFor="">weigth</label><p>{pokemon.weigth}</p></div>
+        <div className={styles.d}>  <label htmlFor="">hp</label><p>{pokemon.hp}</p></div>
+        <div className={styles.d}>  <label htmlFor="">name</label><p>{pokemon.name}</p></div>
 
         <Link to='/Home'><button className={style.bottun}>Home</button></Link>
     
         </div></div>
         
         
-        )     )     }
+   
 
 
 </div>:<Loading></Loading>

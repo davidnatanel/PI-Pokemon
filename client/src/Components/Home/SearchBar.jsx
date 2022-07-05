@@ -50,6 +50,9 @@ function SearchBar({paginadoo}) {
     
     const CallPokemonName =()=>{
         dispatch( Loading(true))
+
+
+        if(input.length > 2)
         dispatch(GetPokemonsForName(input))
 
 

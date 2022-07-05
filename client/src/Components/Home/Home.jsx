@@ -35,7 +35,7 @@ function Home(props) {
 
 
     return (
-        currentPokemons?
+    
 
 
         <div className={style.home}>
@@ -50,17 +50,18 @@ function Home(props) {
             Pokemons={paginado}
             paginado={paginadoo}
             ></Paginado>
-
+            
 
             <div className={style.Pokemons}>    
             
             
-             {currentPokemons && currentPokemons.map(e=>  ( <Pokemon  id={e.id}attack={e.attack} gifback={e.gifback} gif={e.gif} img={e.img} types={e.types}  name={e.name}   ></Pokemon>  )      ) }
+            {currentPokemons.length? currentPokemons.map(e=>  ( <Pokemon  id={e.id}attack={e.attack} gifback={e.gifback} gif={e.gif} img={e.img} types={e.types}  name={e.name}   ></Pokemon>  )      ) :<Loading></Loading>  }
             
             
             
             </div>
 
+           
 
                     
             <div className={style.footer}>
@@ -75,9 +76,7 @@ function Home(props) {
             </div>
                 
             
-            </div> :
-
-<Loading></Loading>
+            </div> 
 
     );
 }
