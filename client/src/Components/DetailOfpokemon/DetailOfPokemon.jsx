@@ -31,27 +31,32 @@ function DetailOfPokemon() {
     
 
     return (
-        pokemon?
+        // pokemon?
 
-<div className={styles.detail}>
+ <div className={styles.detail}>
 
-       
-        
-        <div className={ styles[pokemon.types[0]]   }  >
-        
-        
-        <div className={style.content}>
-        <img src={pokemon.img} className={style.image} alt="" />
+{!pokemon?<Loading></Loading> :(
+      
+      <div className={ styles[pokemon.types[0]]   }  >
 
-        <ul className={style.types} >
-            {pokemon.types && pokemon.types.map(e=>(  <li className={style[e]}> </li> ) )}
-            </ul>
+        <div className={styles.content}>
+
+            <div>
+                <img src={pokemon.img} className={style.image} alt="" />
             </div>
-        
-        
-            {/* <button onClick={()=>{console.log(state)}}>detail</button> */}
 
-        <div className={styles.viewDetail}>
+            <div>
+                <ul className={style.types} >
+                {pokemon.types && pokemon.types.map(e=>(  <li className={style[e]}> </li> ) )}
+                </ul>
+            </div>
+
+        </div>
+
+
+    <div className={styles.viewDetail}>
+        
+
         <div className={styles.d}>  <label htmlFor="">id</label><p>{pokemon.id}</p></div>
         <div className={styles.d}>  <label htmlFor="">attack</label><p>{pokemon.attack}</p></div>
         <div className={styles.d}>  <label htmlFor="">defense</label><p>{pokemon.defense}</p></div>
@@ -61,18 +66,34 @@ function DetailOfPokemon() {
         <div className={styles.d}>  <label htmlFor="">hp</label><p>{pokemon.hp}</p></div>
         <div className={styles.d}>  <label htmlFor="">name</label><p>{pokemon.name}</p></div>
 
-        <Link to='/Home'><button className={style.bottun}>Home</button></Link>
-    
-        </div></div>
-        
-        
-   
+        <div>
+            <Link to='/Home'><button className={style.bottun}>Home</button></Link>
+        </div>
+     </div>
 
 
-</div>:<Loading></Loading>
+        
+        </div>
+)}
+
+      {/* 
+      
+        
+        
+        
+        
+
+       
+        
+        
+    */}
+
+
+</div>
             
     );
 }
+
 
 export default DetailOfPokemon;
 
