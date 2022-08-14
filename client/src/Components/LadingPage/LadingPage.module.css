@@ -1,137 +1,82 @@
+body{
+    margin: 0px;
+}
 .container{
 
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    box-sizing: border-box;
+    background-color: red;
     height: 100vh;
-    overflow: hidden;
-}
-
-.video{
-
-
-    position:absolute;
-    right: 0px;
-    max-height: 100vh;
-
-
-
-}
-.videoCopia{
-
-    position:absolute;
-    left: 0px;
-    max-height: 100vh;
-
-
-}
-
-
-.start{
-    height: 5vw;
-    width: 39vw;
+    width: 100vw;
+    box-shadow: 0px 0px 90px 25px inset ;
+    overflow: hidden;    
+    display: flex;
+    align-self: center;
+    background-image: url('../../img/background/wallpaperflare.com_wallpaper.jpg');
+    background-position: center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    
+        /* background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; */
+    flex-direction: column;
 }
 
 .button{
+background-color: rgba(175, 159, 159, 0.267);
+-webkit-text-stroke: 2px rgba(255, 33, 4, 0.829);
+height: 70px;
+width: 200px;
+font-size: 35px;
+font-weight: bolder;
+color: transparent;
+border: 2.5px solid rgba(255, 255, 255, 0.452);
+margin-bottom: 20px;
+color: rgb(252, 252, 0);
+border-radius: 5px;
+}
+.poke{
+    display: flex;
+    z-index: 20;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 1s;
+    animation-name: poke;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+    border-radius: 100px;
+}
 
-    left: 470px;
-    top: 82vh;
-    background-color: rgba(240, 248, 255, 0);
+.container a{
+margin-top: 20px;
 
-    border:10px solid black ;
-    
-    position:absolute;
-    cursor: pointer;
-    
-    width: 34.3em;
-    height: 7em;
-    animation: button 1s alternate infinite;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-@keyframes button {
-    0%{transform: scale(0.9);}
-    20%{transform: scale(1.2);}
+@keyframes poke {
+    0%{transform: rotate(-360deg)}
 }
-
-
-
-
-
 
 .button:hover{
 
-    transform: scale(1.1);
-
-}
-
-.pokemon{
-
-    position: absolute;
-}
-
-.PikachuRun{
-    position: absolute;
-    width: 8em;
-    height: 8em;
-
-    top: 390px;
-    left: -2px;
-    animation-name: Run;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes Run{
-
-    0%{ left: -20px;}
- 
-    100%{ left: 90.5%;}
-
-    /* 50%{ left: 50%; }
-    100%{ left: calc(100%+20px);  } */
-
-}
-
-.left{
-    left: 23em;
-    bottom: 2em;
-
-    
-    position:absolute;
-    cursor: pointer;
-    
-    width: 5em;
-    height: 5em;
-    animation: arrowF 1s alternate infinite;
-
-
-}
-
-.right{
-    right: 21em;
-    bottom: 2em;
-
-    
-    position:absolute;
-    cursor: pointer;
-    
-    width: 5em;
-    height: 5em;
-    animation: arrowR 1s alternate infinite;
-    
-}
-
-@keyframes arrowR {
-    0%{transform: scale(1.1);}
-    20%{transform: scale(1.5);}
-}
-
-
-@keyframes arrowF {
-    0%{transform: scale(1.1);}
-    20%{transform: scale(1.5);}
+background-color: rgba(235, 225, 225, 0.267);
+-webkit-text-stroke: 0.5px rgb(252, 0, 0);
+height: 70px;
+width: 200px;
+font-size: 35px;
+font-weight: bolder;
+color: transparent;
+border: 2.5px solid rgba(255, 255, 255, 0.452);
+margin-bottom: 20px;
+color:  rgba(255, 33, 4, 0.829);
+border-radius: 5px;
+cursor: pointer;
 }

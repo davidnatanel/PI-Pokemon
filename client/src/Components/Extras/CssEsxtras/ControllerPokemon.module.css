@@ -2,6 +2,7 @@
 .container2{
 
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,12 +15,11 @@
 .form2{
     position: relative;
     background-color: rgb(249, 29, 29);
-
     height: 30em;
-    width: 40em;
+    width: 400px;
+    overflow: hidden;
     padding: 1em;
     border-radius: 10px;
-
     box-shadow:  20px 20px 50px 5px;
 
 }
@@ -57,7 +57,7 @@ font-weight: bold;
     border: none;
     font-weight: bolder;
     font-size: large;
-    width: 10%;
+    width: 20%;
     height: 50%;
 }
 .I1{
@@ -96,7 +96,7 @@ font-weight: bold;
     border: none;
     font-weight: bolder;
     font-size: large;
-    width: 10%;
+    width: 30%;
     height: 50%;
 }
 
@@ -120,7 +120,7 @@ font-weight: bold;
     height: 40%;
     display: flex;
     justify-content: center;
-    column-gap: 10px;
+    column-gap: 20px;
     
 
 
@@ -135,7 +135,7 @@ font-weight: bold;
     align-self: center;
 }
 .form2change2 div div{
-    margin-top: 4px;
+    margin-top: 6px;
 
     display: flex;
     flex-direction: column;
