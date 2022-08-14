@@ -10,6 +10,8 @@ function WhoIsThisPokemon(props) {
     const[firstoption,setFirstoption]=useState(null)
     const[secondoption,setSecondoption]=useState(null)
     const[thirdoption,setThirdoption]=useState(null)
+    const[supermixin,setSupermixin]=useState([])
+    const[mezclado,setMezclado]=useState(Math.ceil(Math.random()*  supermixin.length))
 
 
     const dispatch =useDispatch()
@@ -17,9 +19,17 @@ function WhoIsThisPokemon(props) {
     useEffect(async ()  => {
       await dispatch( getPokemons()) 
       dispatch( orderPokemon('Api'))
-      setFirstoption(Math.ceil(Math.random()*  50))
-      setSecondoption(Math.ceil(Math.random()*  50))
-      setThirdoption(Math.ceil(Math.random()*  50))
+      var generador =Math.ceil(Math.random()*  state.length)
+
+      var nomixin =[]
+      nomixin.push(generador)
+      nomixin.push(generador+1 )
+      nomixin.push(generador+5)
+      var mixin= nomixin.sort(()=> Math.random() - 0.5);
+      setSupermixin(mixin)
+      setFirstoption(mixin[0])
+      setSecondoption(mixin[1])
+      setThirdoption(mixin[2])
     }, [])
     
 
@@ -27,16 +37,16 @@ function WhoIsThisPokemon(props) {
         <div className={style.fondo}>
         <div className={style.container}>
           
-
+<button onClick={()=>console.log(mezclado,secondoption,thirdoption)}>sii</button>
         <div className={style.pokemonTrue}>
 
-        {state[firstoption] &&  <div key={state[firstoption].id} className={style.cardP}>   <img className={ match == state[firstoption].name?style.imgv:style.img} src={state[firstoption].img}/>  <h1 className={ match == state[firstoption].name?style.letter:style.letternone}>{state[firstoption].name}</h1>     </div>    }
+        {state[mezclado] &&  <div key={state[mezclado].id} className={style.cardP}>   <img className={ match == state[mezclado].name?style.imgv:style.img} src={state[mezclado].img}/>  <h1 className={ match == state[mezclado].name?style.letter:style.letternone}>{state[mezclado].name}</h1>     </div>    }
        
        
         <div className={style.fonts} >who is this pokemon?</div>
         </div>
 
- { state[firstoption]? match === state[firstoption].name && <p className={style.Right}>Right</p>:null  } 
+ { state[mezclado]? match === state[mezclado].name && <p className={style.Right}>Right</p>:null  } 
 
         <div className={style.opcions}>
         {state[firstoption] &&  <div key={state[firstoption].id}   onClick={()=>{Setmatch(state[firstoption].name)}}>  <h1>{state[firstoption].name}</h1>     </div>    }

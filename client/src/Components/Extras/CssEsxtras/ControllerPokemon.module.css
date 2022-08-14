@@ -1,0 +1,191 @@
+
+.container2{
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form2 input:hover{
+    cursor: pointer;
+}
+
+.form2{
+    position: relative;
+    background-color: rgb(249, 29, 29);
+
+    height: 30em;
+    width: 40em;
+    padding: 1em;
+    border-radius: 10px;
+
+    box-shadow:  20px 20px 50px 5px;
+
+}
+
+.form2id{
+    height: 20%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+    grid-row-gap: 5px;
+    grid-row-gap: 5px;
+    row-gap: 5px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 1em 6em;
+    overflow: hidden;
+}
+.form2id label{
+    margin-right: 10px;
+    border-radius: 1em 1em 1em 1em;
+    padding: 0.5em;
+    background-color: rgb(219, 194, 194);
+
+color: rgba(14, 81, 83, 0.787);
+font-weight: bold;
+}
+.form2id input:last-child{
+    margin-left: 0.5em;
+    background-color: rgba(108, 156, 156, 0.671);
+
+
+    color: rgb(10, 73, 75);
+    border-radius: 10px;
+    border: none;
+    font-weight: bolder;
+    font-size: large;
+    width: 10%;
+    height: 50%;
+}
+.I1{
+
+background-color: rgba(108, 156, 156, 0.671);
+    width: 150px;
+    border: none;
+    padding: 2px;
+    height: max-content;
+    border-radius: 0em 1em 0em 0em;
+    align-self: center;
+
+}
+
+.form2DeletedAll{
+    height: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.form2DeletedAll label {
+    margin-right: 10px;
+    border-radius: 1em 1em 1em 1em;
+    padding: 0.5em;
+    background-color: rgb(239, 239, 239);
+color: rgba(14, 81, 83, 0.787);
+font-weight: bold;
+
+}
+.form2DeletedAll input {
+    
+    background-color: rgb(174, 216, 217);
+    color: rgb(10, 73, 75);
+    border-radius: 10px;
+    border: none;
+    font-weight: bolder;
+    font-size: large;
+    width: 10%;
+    height: 50%;
+}
+
+.form2change{
+    height: 60%;
+}
+
+.form2change1{
+    border-radius: 10px;
+    background-color: rgb(239, 239, 239);
+
+    color: rgba(14, 81, 83, 0.787);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 20%;
+    margin: 5px;
+}
+.form2change2{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    
+
+
+}
+.form2change2 input{
+    background-color: rgba(108, 156, 156, 0.671);
+    width: 150px;
+    border: none;
+    padding: 2px;
+    height: max-content;
+    border-radius: 0em 1em 0em 0em;
+    align-self: center;
+}
+.form2change2 div div{
+    margin-top: 4px;
+
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 5px;
+    row-gap: 5px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 1em 6em;
+    width: 200px;
+    overflow: hidden;
+}
+.form2change2 div div label{
+    display: block;
+    background-color: rgba(95, 204, 206, 0.787);
+    height: max-content;
+    text-align: center;
+    width: 100px;
+    border-radius: 5px 50px;
+    color: rgba(14, 81, 83, 0.787);
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+
+.form2change4{
+    height: 40%;
+    align-items: center;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form2change4 input:first-child{
+    background-color: rgb(174, 216, 217);
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.form2change4 input{
+    
+    background-color: rgb(174, 216, 217);
+    color: rgb(10, 73, 75);
+    border-radius: 10px;
+    border: none;
+    font-weight: bolder;
+    font-size: large;
+    width: 50%;
+    height: 50%;
+
+}

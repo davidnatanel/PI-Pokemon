@@ -14,7 +14,6 @@ function Pokemon({attack, defense, height,hp,id,name, speed, weigth ,types,img,g
 console.log(attack, defense, height,hp,id,name, speed, weigth ,types,img,gif, gifback)
     
 const PokemonCard=styled.div`
-    
     position: relative;
     background-position: center;
     background-size:250px;

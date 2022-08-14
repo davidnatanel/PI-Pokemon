@@ -7,6 +7,8 @@ import Pokemon from './Pokemon';
 import { Link } from "react-router-dom";
 import Paginado from './Paginado';
 import Loading from '../Loading/Loading';
+import git from '../../img/IconosFooter/github.svg';
+import linkedin from '../../img/IconosFooter/linkedin.svg';
 
 
 
@@ -36,48 +38,56 @@ function Home(props) {
 
     return (
     
+<div className={style.container}>
+<div className={style.home}>
 
 
-        <div className={style.home}>
-
-
-            <SearchBar  
-            paginadoo={paginadoo}
-            />
-                                
-            <Paginado            
-            PokemonsPerPages={PokemonsPerPages} 
-            Pokemons={paginado}
-            paginado={paginadoo}
-            ></Paginado>
-            
-
-            <div className={style.Pokemons}>    
-            
-            
-            {currentPokemons.length? currentPokemons.map(e=>  ( <Pokemon  id={e.id}attack={e.attack} gifback={e.gifback} gif={e.gif} img={e.img} types={e.types}  name={e.name}   ></Pokemon>  )      ) :<Loading></Loading>  }
-            
-            
-            
-            </div>
-
-           
-
+<SearchBar  
+paginadoo={paginadoo}
+/>
                     
-            <div className={style.footer}>
-                <div>
-                    <p>made in David</p>
-                </div>
-                
-                <ul>
-                    <li>gitHub</li>
-                    <li>Linkedin</li>
-                </ul>
-            </div>
-                
-            
-            </div> 
+<Paginado            
+PokemonsPerPages={PokemonsPerPages} 
+Pokemons={paginado}
+paginado={paginadoo}
+></Paginado>
 
+
+<div className={style.Pokemons}>    
+
+
+{currentPokemons.length? currentPokemons.map(e=>  ( <Pokemon  id={e.id}attack={e.attack} gifback={e.gifback} gif={e.gif} img={e.img} types={e.types}  name={e.name}   ></Pokemon>  )      ) :<Loading></Loading>  }
+
+
+
+</div>
+
+
+
+
+    
+
+</div> 
+        
+<div className={style.footer}>
+    <div>
+        <p>made in David</p>
+    </div>
+    
+    <ul >
+        <a  href="www.linkedin.com/in/david-natanael-gomez">
+            
+            <img style={{width:'50px', height:'50px'}} src={git} alt="" />
+        </a>
+        <a href='https://github.com/davidnatanel'>
+            
+            <img style={{width:'50px',height:'50px'}} src={linkedin} alt="" />
+        </a>
+    </ul>
+</div>
+</div>
+
+     
     );
 }
 

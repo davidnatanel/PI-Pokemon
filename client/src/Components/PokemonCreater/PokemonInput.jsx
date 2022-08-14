@@ -63,7 +63,7 @@ const Change=(e)=>{
         <div>
             <label  htmlFor=''>{name}</label>
             <input 
-            placeholder={ name } name={name} type={type}  onChange={(e)=> {Change(e)}  }/>
+            placeholder={ `  ${name}...` } name={name} type={type}  onChange={(e)=> {Change(e)}  }/>
             
             
 

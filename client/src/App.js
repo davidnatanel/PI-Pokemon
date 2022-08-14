@@ -1,6 +1,6 @@
 
 
-import { Route, Routes } from 'react-router';
+import { Navigate, Route, Routes } from 'react-router';
 import './App.css';
 import LadingPage from './Components/LadingPage/LadingPage';
 import Home from './Components/Home/Home';
@@ -9,6 +9,7 @@ import DetailOfPokemon from './Components/DetailOfpokemon/DetailOfPokemon';
 import WhoIsThisPokemon from './Components/Extras/WhoIsThisPokemon';
 import Error404 from './Components/Error404/Error404';
 import LoginAdim from './Components/Extras/LoginAdim';
+import ControllerPokemon from './Components/Extras/ControllerPokemon';
 
 
 
@@ -20,7 +21,7 @@ function App() {
       
           
     <Routes>
-      <Route   path='/' element= {<LadingPage/>} />
+      <Route   path='/' element= {<LadingPage/>}  />
       
       <Route exact path='/Home' element= {<Home/>} />
       
@@ -28,6 +29,7 @@ function App() {
       <Route exact path='/Home/DetailOfPokemon/:id' element= {<DetailOfPokemon/>} />
       <Route exact path='/Home/quienEsEstePokemon' element= {<WhoIsThisPokemon/>} />
       <Route exact path='/admin' element= {<LoginAdim/>} />
+      <Route exact path='/ControllerPokemon' element={<ControllerPokemon/>}/>
 
       
       <Route exact path='*' element= {<Error404/>} />

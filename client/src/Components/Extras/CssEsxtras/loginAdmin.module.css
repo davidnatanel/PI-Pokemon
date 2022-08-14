@@ -1,4 +1,9 @@
 
+
+
+
+/* Container 2 */
+
 .container{
     height: 100vh;
 
@@ -10,178 +15,90 @@
 
 .form{
     position: relative;
-    background-color: gray;
-    box-shadow: 1em 1em 1em 1em black;
-    border-radius: 0.2em;
-    height: 12em;
-    width: 19em;
-    padding-right: 8em;
+    background-color: rgba(249, 29, 29, 0.937);
+    box-shadow: 10px 20px 20px 10px black;
+    border-radius: 10px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+  
+
+}
+
+.containerform{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
     
-    display: grid;
-    grid-template-areas: 
-    "l1 i1"
-    "l2 i2"
-    "S  S"
-    ;
 
 }
-
-.l1{
-    grid-area: l1;
-    position:absolute;
-    right: 0;
-    margin: 0.5em;
-
-
-
-}
-.l2{
-    grid-area: l2;
-    position:absolute;
-    right: 0;
-    margin: 0.5em;
+.containerform div{
+    gap: 20px;}
+.containerform div div  {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 5px;
+    row-gap: 5px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 1em 6em;
+    width: 200px;
+    overflow: hidden;
 }
 
-.i1{
-    grid-area: i1;
-    position:absolute;
-    
-    width: 10em;
-    margin: 1em;
 
-
+.containerform div div  label
+{    display: block;
+    background-color: rgba(95, 204, 206, 0.787);
+    height: max-content;
+    text-align: center;
+    width: 100px;
+    border-radius: 5px 50px;
+    color: rgba(14, 81, 83, 0.787);
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 2px;}
+.containerform div div  input{
+background-color: rgba(108, 156, 156, 0.671);
+    width: 150px;
+    border: none;
+    padding: 2px;
+    height: max-content;
+    border-radius: 0em 1em 0em 0em;
+    align-self: center;}
+.containerinput{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 
 }
-.i2{
-    grid-area: i2;
-    position:absolute;
+.containerbutton{
+    height: 50%;
 
-    width: 10em;
-    margin: 1em;
-
-
-
-}
-
-.S{
-    grid-area: S;
-    position:absolute;
-    right: 4em;
-}
-
-/* Container 2 */
-
-.container2{
-
-    background-color: rgb(65, 34, 34);
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
-    
-}
-
-.form2{
-    position: relative;
-    background-color: aqua;
-
-    height: 20em;
-    width: 40em;
-    padding: 2em;
-
-
-    
-    display: grid;
-    grid-template-areas: 
-    "L1 I1 I2 .  .  ."
-    "L2 I3 .  .  .  ."
-    "L3 I4 I5 I6 I7 I8"
-    ;
-}
-
-
-
-.L1{
-    grid-area: L1;
-    position:absolute;
-    
+    flex-direction: column;
 
 }
 
-
-.I1{
-    grid-area: I1;
-    position:absolute;
-  
+.containerbutton input{
+    height: 2em;
+    width: 8em;
+    background-color: rgb(174, 216, 217);
+    font-weight: bolder;
+    font-size: large;
+    letter-spacing: 1px;
+    color: rgb(10, 73, 75);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
 }
-
-.I2{
-    grid-area: I2;
-    position:absolute;
-    
-  
-}
-
-
-.L2{
-    grid-area: L2;
-    position:absolute;
-
-
-}
-
-.I3{
-    grid-area: I3;
-    position:absolute;
-
-}
-
-
-.L3{
-    grid-area: L3;
-    position:absolute;
-    
-    
-
-}
-
-
-.I4{
-    grid-area: I4;
-    position:absolute;
-    
- 
-}
-
-
-.I5{
-    grid-area: I5;
-    position:absolute;
-   
-}
-
-.I6{
-    grid-area: I6;
-    position:absolute;
-    
-}
-
-
-.I7{
-    grid-area: I7;
-    position:absolute;
-
-}
-
-
-.I8{
-    grid-area: I8;
-    position:absolute;
-    
-}
-
-
-
-

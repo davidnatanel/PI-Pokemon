@@ -1,33 +1,27 @@
+@media screen and (max-width:700px) {
+    .PokemonBody{
+    display: flex;
+    flex-direction: column;
+
+    }
+    .PokemonCreater{
+        height: 10px;
+        overflow: hidden;
+    }
+}
+
 .PokemonBody{
     position: relative;
     background-image: url('../../../img/background/Laboratorio1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    display: grid;
-    height: 100%;
-    width: 100%;    
+    height: 100vh;
+    width: 100vw;    
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: inset 1em 1em 4em 0.2em ;
-    overflow: hidden;
     
-}
-
-.PokemonContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    /* background-color: rebeccapurple; */
-    width: 100%;
-    
-    height: 40.5em;
-
-    display: grid;
-    grid-gap: 2em;
-    grid-template-columns: repeat(auto-fit,minmax(100px,500px));
-
 }
 
 
@@ -44,6 +38,8 @@
     grid-template-rows: repeat(auto-fit,minmax(1fr,1fr));
     overflow: hidden;
     padding: 1em;
+    justify-content: center;
+
 
 }
 
@@ -53,64 +49,89 @@
 
 .detailsPokemon
 {
+    
     /* background-color: rgb(162, 25, 187); */
-    width: 29em;
-    height: 20em;
-    overflow: hidden;
-    display: grid;
-    
+ display: flex;
+justify-content: center;
 
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    
-    column-gap: 1em;
 
 }
 
-.detailsPokemon div{
+.detailsPokemon input{
 
-    height: max-content;
-    width: 100%;
-    background-color: rgb(239, 239, 239);
-    border-radius: 1em 6em;
-    overflow: hidden;
-}
-
-
-.detailsPokemon label{
-    
-    display: block;
-    background-color: rgba(95, 204, 206, 0.787);
-    height: max-content;
-    text-align: center;
-    width: 4em;
-    border-radius: 5px 50px;
-    color: rgba(14, 81, 83, 0.787);
-    font-weight: bold;
-    letter-spacing: 1px;
-
-}
-
-.detailsPokemon input
-{
-    background-color: rgb(174, 216, 217);
-
+    background-color: rgba(108, 156, 156, 0.671);
+width:150px;
     border: none;
     padding: 2px;
     height: max-content;
 
     border-radius: 0em 1em 0em 0em;
+    align-self: center;
+    
 
-
- 
 }
-
-
-
 .detailsPokemon input::placeholder{
-    color: rgb(10, 73, 75);
+
+    color: rgba(7, 51, 53, 0.89);
+
+}
+.detailsPokemon label{
+    display: block;
+    background-color: rgba(95, 204, 206, 0.787);
+    height: max-content;
+    text-align: center;
+    width: 100px;
+    border-radius: 5px 50px;
+    color: rgba(14, 81, 83, 0.787);
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 2px;
+    
 }
 
 
+
+.detailsPokemonrigth{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+height: cover;
+}
+.detailsPokemonleft{
+
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    height: cover;
+}
+
+.detailsPokemonrigth div{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 1em 6em;
+width: 200px;
+overflow: hidden;
+
+}
+
+.detailsPokemonleft div{
+    overflow: hidden;
+width: 200px;
+
+    row-gap: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(239, 239, 239);
+    border-radius: 1em 6em;
+    
+
+}
 
 /* verrrrrrrrrr */
 .Types
@@ -132,15 +153,57 @@
 }  */
  /* verrrrrrrrr */
 
+ .TypesContainer
+ {
+    background-color: rgb(239, 239, 239);
+
+     overflow-x: scroll;
+     display: flex;
+     margin: 10px;
+     
+ }
+
+ .TypesContainer::-webkit-scrollbar{
+    background-color: rgb(239, 239, 239);
+
+ }
+ .TypesContainer::-webkit-scrollbar-thumb{
+    background-color: rgba(14, 81, 83, 0.787);
+    border-radius: 10px;
+ }
+ .TypesContainer::-webkit-scrollbar-thumb:active{
+    border: 2px solid black;
+ }
+
+
+ .TypesContainer::-webkit-scrollbar-track{
+    background-color: rgb(174, 216, 217);
+
+
+ }
+ /* .TypesContainer::-webkit-scrollbar-button{
+    background-color: rgba(99, 221, 223, 0.787);
+    border: 2px solid rgba(14, 81, 83, 0.787);
+
+ } */
+ .Types{
+    background-color: rgba(14, 81, 83, 0.787);
+
+    width: max-content ;
+    
+ }
 
 .Types div{
-    background-color: rgba(95, 204, 206, 0.787);
+    width: contain    ;
+/* background-color: gray; */
+    /* background-color: rgba(95, 204, 206, 0.787); */
     display: flex;
     flex-direction: column;
-    height: 7.9em;
+    height: 8em;
 
 }
 .Types img{
+    
     height: 100%;
     width: 4em;
 }
@@ -152,18 +215,15 @@
 
    
 }
-
-
-
-.TypesContainer
-{
-    background-color: rgba(99, 221, 223, 0.787);
-
-
-
-    overflow-x: scroll;
-    margin-left: -1em;
+.Types div div{
+    height:fit-content;
+    padding: 10px;
+    background-color: rgb(174, 216, 217);
+    border: 1px solid  gray;
 }
+
+
+
 
 
 .button{
@@ -227,18 +287,19 @@
 }
 
 .detailsView{
+    position: relative;
     height: 20em;
-    width: 29em;
+    width: 10;
     background-color: rgb(49, 105, 105);
-    display: grid;
+    display: flex;
+    justify-content: center;
 
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
 
 }
 
 .detailsView div{
     margin: 1em;
-    height: 1.5em;
+    height: 300px;
 
     display: flex;
 }
@@ -246,14 +307,29 @@
 .detailsView div label{
     background-color: rgb(251, 74, 74);
     display:block;
-    width: 4em;
+    width: 5em;
     height: 25.9px;
-    border-radius: 1em 0em 0em 0em;
+    border-radius: 0.5em 0em 0em 0em;
     color: rgb(197, 231, 236);
     font-weight: bold;
     letter-spacing: 0.5px;
     
 }
+
+.detailsView div a{    
+    display: flex;
+    justify-content: center;
+}
+.detailsView div a button{
+    height: 30px;
+    width: 50px;
+    margin: 5px;
+    background-color: rgb(251, 74, 74);
+    border: 2px solid rgb(197, 231, 236);
+    color: rgb(197, 231, 236);
+    border-radius: 5px;
+}
+
 
 
 
@@ -265,7 +341,32 @@
 
     width: 9em;
     height: 1.6em;
+    text-align: center;
+}
+
+
+.detailsViewleft{
+    width: 200px;
+    height: 200px;
+
+    background-color: rgb(6, 34, 30);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em 1em 0.5em 1em;
+
+}
+.detailsViewrigth{
+    width: 200px;
+    height: 200px;
     
+
+
+    background-color: rgb(6, 34, 30);
+    border-radius: 0.5em 1em 0.5em 1em;
+
+    display: flex;
+    flex-direction: column;
+
 
 }
 
@@ -282,9 +383,47 @@
     justify-content: center;
     align-items: center;
 
+    position: relative;
     
 }
 
+.errortypes2{
+    position: absolute;
+    font-size: larger;
+    font-weight: bolder;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+
+    /* background-color: rgba(180, 179, 189, 0.445); */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top:30px ;
+    padding-bottom:30px ;
+    
+}
+.errortypes2 p{
+   color: red;
+   font-size: larger;
+   animation-name:errorr ;
+   animation-duration: 2s;
+   animation-iteration-count:infinite;
+   animation-direction:alternate;
+
+
+}
+
+@keyframes errorr {
+    0%{transform: translateX(10px);}
+   100%{transform: translateX(-10px);}
+   
+    
+}
+.ViewPokemonCreatedcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .ViewTypes img{
     background-size: 4.9em;
@@ -300,8 +439,11 @@
     margin: 10px;
     height: 8em;
     width: 10em;
-    min-height: 8em;
     max-height:8em ;
+    min-height:8em ;
+
+    max-width:10em ;
+    min-width:10em ;
     background-color: rgb(49, 105, 105);
 
 
@@ -315,9 +457,34 @@
 
 
 
+.errorInput{
+    
+    background-color: rgb(239, 239, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 5em;
 
 
+}
+.errorInput p{
+    animation-name:error ;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    font-size: 30px;
+    animation-direction:alternate;
+    color: red;
+    font-size: bolder;
 
+}
+
+@keyframes error {
+    0%{transform: translateX(10px);}
+   100%{transform: translateX(-10px);}
+   
+    
+}
 
 
 
@@ -354,7 +521,7 @@
 .dragon{
     background-image: url('../../../img/types_logos/dragon.png');
     background-position: center;
-    background-size: 6em;
+    background-size: 4em;
     background-repeat: no-repeat;
     height: 7em; 
 }

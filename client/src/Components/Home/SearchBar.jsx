@@ -39,6 +39,23 @@ var Change;
 function SearchBar({paginadoo}) {
     const [input,setInput]=useState('')
     const state = useSelector(state => state.Types)
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
+
+    const cambiarTamaño=()=>{
+        setHeight(window.innerHeight);
+        setWidth(window.innerWidth);
+    }
+    useEffect(() => {
+      window.addEventListener('resize',cambiarTamaño)
+    
+      return () => {
+        window.removeEventListener('resize',cambiarTamaño)
+
+      }
+    }, [])
+    
+
 
     const dispatch =useDispatch()
   
@@ -93,64 +110,131 @@ function SearchBar({paginadoo}) {
     return (
         
         <div className={style.SearchBar}>
+                     {  width < 700?
+                      <div className={style.reposiveContainer}> 
 
-            <img  className={Change?style.Logo:style.Logonone } src={ Change}></img>
-          
+                 <div className={style.reposiveContainerleft} >   
+                    <img className={Change ? style.Logo : style.Logonone} src={Change}></img>
+
+                    <div className={style.search}>
+                    <img src={img} alt="" />
+                    <input type='text' onChange={(e) => setInput(e.target.value)}></input>
+                    <button onClick={() => { CallPokemonName(); } }> <img className={style.lupa} src={lupa} alt="" /></button>
+                    </div>
+                  
+                    <div className={style.link}>
+
+                        <Link to='PokemonCreate'><button>Crear Pokemon</button></Link>
+                        <Link to='quienEsEstePokemon'><button>VideoGame</button> </Link>
+
+                    </div>
+
+                </div>
+                <div className={style.reposiveContainerright}>
+                <div className={style.filtresresponsive}>
+
+<select name="Type" onChange={e => { handlefiltreTypes(e); } }>
+
+    <option value="null">Type</option>
+
+    {state && state.map(e => (<option key={e.id} value={e.name}>{e.name}</option>))}
+</select>
+
+
+<select name="Order" onChange={e => { handlefiltreOrder(e); } }>
+
+    <option value="null">Ordenar</option>
+    <option value="Api">Api</option>
+    <option value="Created">Created</option>
+
+</select>
+
+
+
+<select name="alfabético" onChange={e => { handlefiltreAZ(e); } }>
+
+    <option value="null">alfabético</option>
+    <option value="ascendentemente">ascendentemente</option>
+    <option value="descendentemente">descendentemente</option>
+
+</select>
+
+
+<select name="Fuerza" onChange={e => { handlefiltreattack(e); } }>
+
+    <option value="null">Fuerza</option>
+    <option value="ascendentemente">ascendentemente</option>
+    <option value="descendentemente">descendentemente</option>
+
+</select>
+</div>
+                </div>
+
+
+                     </div>
+             
+
+
+                     
+                     :
+
+            <><img className={Change ? style.Logo : style.Logonone} src={Change}></img>
+            
             <div className={style.filtres}>
-            
-            <select name="Type"  onChange={e=>{  handlefiltreTypes(e) } } >
-           
-            <option   value="null">Type</option>
-           
-            {state && state.map(e=>(<option key={e.id}  value={e.name}  >{e.name}</option>))}
-            </select> 
+
+                    <select name="Type" onChange={e => { handlefiltreTypes(e); } }>
+
+                        <option value="null">Type</option>
+
+                        {state && state.map(e => (<option key={e.id} value={e.name}>{e.name}</option>))}
+                    </select>
 
 
-            <select name="Order"    onChange={e=>{ handlefiltreOrder(e) } }  >
-           
-            <option   value="null">Ordenar</option>
-            <option value="Api">Api</option>
-            <option value="Created">Created</option>
-           
-            </select> 
+                    <select name="Order" onChange={e => { handlefiltreOrder(e); } }>
 
-            
+                        <option value="null">Ordenar</option>
+                        <option value="Api">Api</option>
+                        <option value="Created">Created</option>
 
-            <select name="alfabético" onChange={e=>{ handlefiltreAZ(e)}   }  >
-          
-            <option   value="null">alfabético</option>
-            <option value="ascendentemente">ascendentemente</option>
-            <option value="descendentemente">descendentemente</option>
-           
-            </select> 
+                    </select>
 
 
-            <select name="Fuerza"   onChange={e=>{ handlefiltreattack(e)   }   }   > 
-          
-            <option   value="null">Fuerza</option>
-            <option   value="ascendentemente">ascendentemente</option>
-            <option   value="descendentemente">descendentemente</option>
-          
-            </select> 
-            </div>
-            
+
+                    <select name="alfabético" onChange={e => { handlefiltreAZ(e); } }>
+
+                        <option value="null">alfabético</option>
+                        <option value="ascendentemente">ascendentemente</option>
+                        <option value="descendentemente">descendentemente</option>
+
+                    </select>
+
+
+                    <select name="Fuerza" onChange={e => { handlefiltreattack(e); } }>
+
+                        <option value="null">Fuerza</option>
+                        <option value="ascendentemente">ascendentemente</option>
+                        <option value="descendentemente">descendentemente</option>
+
+                    </select>
+                </div>
                 
+                
+                <div className={style.search}>
 
-            <div className={style.search} > 
+                        <img src={img} alt="" />
+                        <input type='text' onChange={(e) => setInput(e.target.value)}></input>
+                        <button onClick={() => { CallPokemonName(); } }> <img className={style.lupa} src={lupa} alt="" /></button>
 
-            <img src={img} alt="" />
-            <input type='text' onChange={(e)=>setInput(e.target.value)}></input>
-            <button onClick={()=>{CallPokemonName()}}> <img  className={style.lupa} src={lupa} alt="" /></button>
-          
-            </div>
+                    </div>
+                    
+                    <div className={style.link}>
 
+                        <Link to='PokemonCreate'><button>Crear Pokemon</button></Link>
+                        <Link to='quienEsEstePokemon'><button>VideoGame</button> </Link>
 
-            <div className={style.link}>
-
-            <Link to='PokemonCreate'><button>Crear Pokemon</button></Link>
-            <Link to='quienEsEstePokemon'><button>VideoGame</button> </Link>
-
-            </div>
+                    </div></>
+         }
+   
 
 
         </div>
@@ -158,3 +242,11 @@ function SearchBar({paginadoo}) {
 }
 
 export default SearchBar
+
+{/* <div className={style.iconsidebar}>
+<div className={style.bars__menu} >
+<span className={style.line1__barsmenu}></span>
+<span className={style.line2__barsmenu}></span>
+<span className={style.line3__barsmenu}></span>
+</div>
+</div> */}
