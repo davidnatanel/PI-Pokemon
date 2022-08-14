@@ -14,6 +14,20 @@ const router = Router();
 router.use('/pokemons',PokemonRouter)
 router.use('/types',TypeRouter)
 
+router.post('/admin',(req,res,next)=>{
+    const {user,password} =req.body;
+    console.log(user,password)
+ try {
+    if(!user, !password)return res.send({msg:"Fail"})
+    if(user == 'david' && password == "12345")return res.send({msg:"true"})
+
+
+    
+ } catch (error) {
+    console.log(error);
+ }
+})
+
 
 
 module.exports = router;
