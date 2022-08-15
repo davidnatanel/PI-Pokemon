@@ -92,6 +92,7 @@ function SearchBar({paginadoo}) {
     
     
     const handlefiltreOrder=(e)=>{
+       if (e.target.value == 'Order' || e.target.value ==  'null') return
         dispatch( orderPokemon(e.target.value))
         paginadoo(1)
 

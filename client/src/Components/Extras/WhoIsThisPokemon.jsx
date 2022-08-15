@@ -1,66 +1,95 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { getPokemons, orderPokemon } from '../../redux/actions';
 import style from './CssEsxtras/WhoIsThisPokemon.module.css'
+var indice= 0;
+var item= 0;
+var si = []
 
 function WhoIsThisPokemon(props) {
-    const[match,Setmatch]=useState("")
+  
+  const[pokemonInGame,setPokemonInGame]=useState([])
 
-    const state = useSelector(state => state.paginado)
-    const[firstoption,setFirstoption]=useState(null)
-    const[secondoption,setSecondoption]=useState(null)
-    const[thirdoption,setThirdoption]=useState(null)
-    const[supermixin,setSupermixin]=useState([])
-    const[mezclado,setMezclado]=useState(Math.ceil(Math.random()*  supermixin.length))
+  const[pokemon,setPokemon]=useState([])
+  const[match,setMatch]=useState()
+  const[selection,setSelection]=useState()
+    
 
-
-    const dispatch =useDispatch()
-
-    useEffect(async ()  => {
-      await dispatch( getPokemons()) 
-      dispatch( orderPokemon('Api'))
-      var generador =Math.ceil(Math.random()*  state.length)
-
-      var nomixin =[]
-      nomixin.push(generador)
-      nomixin.push(generador+1 )
-      nomixin.push(generador+5)
-      var mixin= nomixin.sort(()=> Math.random() - 0.5);
-      setSupermixin(mixin)
-      setFirstoption(mixin[0])
-      setSecondoption(mixin[1])
-      setThirdoption(mixin[2])
+    useEffect( ()  => {
+      async function s (){  
+        let Pokemons= await axios(`/pokemons`)
+        let Pokemonsfilter=await Pokemons.data.filter(e=>!e.createdInDb )
+          console.log(Pokemonsfilter)
+        await  setPokemon([...Pokemonsfilter])
+      }    
+    s()
     }, [])
+    useEffect(() => {
+
+      async function generate(){
+            for (let i = 0; i < 3; i++) { 
+            var indice=Math.floor(Math.random() * pokemon.length)
+              item = await pokemon[indice]    
+              if(item)si.push(item)  
+                
+                setPokemonInGame([...pokemonInGame,...si])
+            }
+       
+         }
+            generate()
+         
+    }, [pokemon])
+    
+    useEffect(() => {
+      indice =Math.floor(Math.random() * pokemonInGame.length)
+   
+      setMatch(indice)
+    }, [pokemonInGame])
     
 
     return (
         <div className={style.fondo}>
+            <Link to='/Home'><button className={style.backTohome}>Home</button></Link>
+
+{   match?
         <div className={style.container}>
+
+
+          <div className={style.containerleft}>
+
+            <div>
+            <img className={ selection == pokemonInGame[match].name ? style.sure:style.image} src={match && pokemonInGame[match].img} alt="" />
+            </div>
+
+            <div>
+            <p className={style.fonts} >who is this pokemon?</p>            
+            </div>
+          </div>
           
-<button onClick={()=>console.log(mezclado,secondoption,thirdoption)}>sii</button>
-        <div className={style.pokemonTrue}>
+          <div className={style.containerrigth}>
+            {pokemonInGame && pokemonInGame.map( (e,i) =>( <div key={i} className={style.letter} onClick={()=>{setSelection(e.name)}}><p >{e.name}</p></div>  ))}
+          </div>
+          
+        {selection == pokemonInGame[match].name &&  Rigth(match,pokemonInGame)}
 
-        {state[mezclado] &&  <div key={state[mezclado].id} className={style.cardP}>   <img className={ match == state[mezclado].name?style.imgv:style.img} src={state[mezclado].img}/>  <h1 className={ match == state[mezclado].name?style.letter:style.letternone}>{state[mezclado].name}</h1>     </div>    }
-       
-       
-        <div className={style.fonts} >who is this pokemon?</div>
-        </div>
-
- { state[mezclado]? match === state[mezclado].name && <p className={style.Right}>Right</p>:null  } 
-
-        <div className={style.opcions}>
-        {state[firstoption] &&  <div key={state[firstoption].id}   onClick={()=>{Setmatch(state[firstoption].name)}}>  <h1>{state[firstoption].name}</h1>     </div>    }
-
-
-        {state[secondoption] &&  <div key={state[secondoption].id}  onClick={()=>{Setmatch(state[secondoption].name)}}> <h1>{state[secondoption].name}</h1>     </div>    }
-
-        {state[thirdoption] &&  <div key={state[thirdoption].id}  onClick={()=>{Setmatch(state[thirdoption].name)}}>  <h1>{state[thirdoption].name}</h1>     </div>    }
-        </div>
-        </div>
-            
+        </div>:<h1>Loading</h1>
+            }
             
         </div>
     );
 }
 
 export default WhoIsThisPokemon;
+
+
+function Rigth(match,pokemonInGame) {
+  return(
+  <div  className={style.right}>
+  <img className={ style.sure} src={match && pokemonInGame[match].img} alt="" />
+
+<h1  >well</h1>
+<button onClick={()=>window.location.reload()}>Try again</button>
+  </div>)
+}

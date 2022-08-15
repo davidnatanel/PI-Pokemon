@@ -8,17 +8,13 @@
 .detail a{
     width: 5em;
     left: 3.5em;
-
     border-radius: 2px;
-
-
     display: flex;
     position: relative;
     color: rgba(18, 0, 0, 0.77);
     text-decoration: none;
     font-weight:900;
     letter-spacing: 0.9px;    
-
     border: 2px solid ;
     border-radius: 10px;
     padding: 2px;
@@ -26,10 +22,6 @@
 
 .detail a:hover{
     background-color: rgba(244, 248, 248, 0.726);
-
-
-
-
 }
 
 
@@ -39,8 +31,8 @@
     left: 1em;
     height: 1px;
     color: rgba(18, 0, 0, 0.77);
-
-
+    font-size: 20px;
+    text-align: center;
 }
 
 .img
@@ -49,6 +41,8 @@
     top: 0.8em;
     left: 2em;
     height: 8em;
+    width: 140px;
+    max-width: 140px;
 }
 
 
@@ -56,43 +50,16 @@
 .types
 {
     background-color: rgb(142, 7, 7);
-    width: 7em;
+    width: 100px;
     list-style: none;
-
     overflow: hidden;
 }
-
-
-/* 
-.Pokemon{
-    
-    
-    background-image: url('../../../img/card/PokeCard.png');
-    background-position: center;
-    background-size: 16em;
-    background-repeat: no-repeat;
-    border-radius: 50em ;
-    width: 40vh;
-
-    height: 75vh;
-    overflow: hidden;
-    margin-right: 1em;
-    
-
-
+.buttonSeeMore{
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: large;
 }
-.img{
-    width: 30vh;
-    height: 9em;
-    max-height: 9em;
-} */
-
-
-
-
-
-/* Types */
-
 
 .normal{
     background-image: url('../../../img/types_logos/normal.png');

@@ -56,7 +56,8 @@ paginado={paginadoo}
 <div className={style.Pokemons}>    
 
 
-{currentPokemons.length? currentPokemons.map(e=>  ( <Pokemon  id={e.id}attack={e.attack} gifback={e.gifback} gif={e.gif} img={e.img} types={e.types}  name={e.name}   ></Pokemon>  )      ) :<Loading></Loading>  }
+{currentPokemons.length? currentPokemons.map(e=>  ( <Pokemon   key={e.id}id={e.id}attack={e.attack} gifback={e.gifback} gif={e.gif} img={e.img} types={e.types}  name={e.name}   ></Pokemon>  )      ) :
+<Loading></Loading>  }
 
 
 

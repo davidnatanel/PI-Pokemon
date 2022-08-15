@@ -47,7 +47,7 @@ function DetailOfPokemon() {
 
             <div>
                 <ul className={style.types} >
-                {pokemon.types && pokemon.types.map(e=>(  <li className={style[e]}> </li> ) )}
+                {pokemon.types && pokemon.types.map((e,i)=>(  <li key={i} className={style[e]}> </li> ) )}
                 </ul>
             </div>
 
@@ -76,17 +76,6 @@ function DetailOfPokemon() {
         </div>
 )}
 
-      {/* 
-      
-        
-        
-        
-        
-
-       
-        
-        
-    */}
 
 
 </div>

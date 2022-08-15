@@ -11,15 +11,13 @@ import Poke from '../../img/card/deivid.png'
 
 function Pokemon({attack, defense, height,hp,id,name, speed, weigth ,types,img,gif, gifback}) {
 
-console.log(attack, defense, height,hp,id,name, speed, weigth ,types,img,gif, gifback)
     
 const PokemonCard=styled.div`
     position: relative;
     background-position: center;
     background-size:250px;
     background-repeat: no-repeat;
-
-    width: 20em;
+width: 300px;
     height: 14em;
     border-radius: 3em 0em 0em 3em;
 
@@ -54,13 +52,12 @@ const PokemonCard=styled.div`
             <div className={style.detail}>
             <h1 className={style.name } >{name} </h1>
             {img && <img className={style.img} src={img} alt="" />}
-            <Link key={id} to= {`DetailOfPokemon/${id}`} > <botton>See more</botton></Link>
+            <Link key={id} to= {`DetailOfPokemon/${id}`} > <button className={style.buttonSeeMore}>See more</button></Link>
             </div>
 
-            {/* {attack? <p>attack: {attack}</p>:null} */}
             
             <ul className={style.types} >
-            {types? <li> {types.map(e=>( <div className={style[e]}/> ) )}</li> :null}
+            {types? <li> {types.map((e,i)=>( <div key={i} className={style[e]}/> ) )}</li> :null}
             </ul>
 
             

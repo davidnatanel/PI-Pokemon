@@ -7,13 +7,11 @@
 }
 
 body{
-    background-image: url('../../../img/background/lab.png');
+    /* background-image: url('../../../img/background/lab.png'); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-   
-    
-}
+    background-image: linear-gradient(to left bottom, #37050c, #742a14, #a36000, #b8a200, #a8eb12);}
 
 .home{
     

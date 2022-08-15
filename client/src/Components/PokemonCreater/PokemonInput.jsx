@@ -10,8 +10,8 @@ const validate =(input)=>{
 
 
     else if(!input.img ){error.img='img is required'}
-    else if (!/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/.test(input.img)) 
-    {error.img='img is invalid'}
+    // else if (!/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/.test(input.img)) 
+    // {error.img='img is invalid'}
     
     else if(!input.hp ){error.hp='hp is required'}
     else if (input.hp > 100 || input.hp < 0)
