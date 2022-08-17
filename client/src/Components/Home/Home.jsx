@@ -76,7 +76,7 @@ paginado={paginadoo}
     </div>
     
     <ul >
-        <a  href="www.linkedin.com/in/david-natanael-gomez">
+        <a  href="https://www.linkedin.com/in/david-natanael-gomez/">
             
             <img style={{width:'50px', height:'50px'}} src={git} alt="" />
         </a>
