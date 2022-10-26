@@ -11,7 +11,7 @@ import dotenv from 'dotenv';
 dotenv.config()
 
 
-axios.defaults.baseURL = process.env.REACT_APP_HOST || process.env.REACT_APP_API_URL ;
+axios.defaults.baseURL = 'https://pi-pokemon-production-5e72.up.railway.app' ;
 
 ReactDOM.render(
   <Provider store={Store}>
