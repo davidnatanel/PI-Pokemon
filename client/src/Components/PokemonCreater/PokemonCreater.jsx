@@ -7,19 +7,21 @@ import Styled from './PokemonCreaterCss/PokemonCreater.module.css'
 import PokemonInput from './PokemonInput';
 import LM from '../../gif/LoadingM.gif'
 import { Link } from 'react-router-dom';
-const validate =(e)=>{
+import global from './../../utils/lenguaje.json'
+
+const validate =(e,s)=>{
     let error={}
 
         // console.log(e)
       
-    if(e >= 2){error.types='Only two types'}
+    if(e >= 2){error.types=s}
     
     
 
 return error}
    
 
-function PokemonCreater(props) {
+function PokemonCreater({selectLenguaje}) {
 
 
 
@@ -61,7 +63,7 @@ function PokemonCreater(props) {
     const changeCheck=(e)=>{
 
         var nombre=e.target.name
-        setError(validate(input.types.length))
+        setError(validate(input.types.length, global[selectLenguaje].CreatePokemonError))
        
 
         if(input.types.length < 2)
@@ -130,9 +132,11 @@ function PokemonCreater(props) {
             <div className={Styled.detailsPokemon}>
                 <div className={Styled.detailsPokemonleft}>
                 <PokemonInput 
+                 selectLenguaje={selectLenguaje}
+
                 state={input}
                 setState={setInput}
-                name='name'
+                name={global[selectLenguaje]?.DetailOfPokemonname}
                 type='text'
                 textError=''
                 regularExpression=''
@@ -141,6 +145,7 @@ function PokemonCreater(props) {
                 styled={error.name && Styled.error}
                 />
                  <PokemonInput 
+                 selectLenguaje={selectLenguaje}
                 state={input}
                 setState={setInput}
                 name='img'
@@ -154,9 +159,11 @@ function PokemonCreater(props) {
                 />
 
                   <PokemonInput 
+                 selectLenguaje={selectLenguaje}
+
                 state={input}
                 setState={setInput}
-                name='hp'
+                name={global[selectLenguaje]?.DetailOfPokemonhp}
                 type='number'
                 textError=''
                 regularExpression=''
@@ -167,9 +174,11 @@ function PokemonCreater(props) {
                 />
                
                   <PokemonInput 
+                 selectLenguaje={selectLenguaje}
+
                 state={input}
                 setState={setInput}
-                name='attack'
+                name={global[selectLenguaje]?.DetailOfPokemonattack}
                 type='number'
                 textError=''
                 regularExpression=''
@@ -181,9 +190,11 @@ function PokemonCreater(props) {
                 <div className={Styled.detailsPokemonrigth}>
 
                   <PokemonInput 
+                 selectLenguaje={selectLenguaje}
+
                 state={input}
                 setState={setInput}
-                name='defense'
+                name={global[selectLenguaje]?.DetailOfPokemondefense}
                 type='number'
                 textError=''
                 regularExpression=''
@@ -193,9 +204,11 @@ function PokemonCreater(props) {
 
                 />
                  <PokemonInput 
+                 selectLenguaje={selectLenguaje}
+
                 state={input}
                 setState={setInput}
-                name='speed'
+                name={global[selectLenguaje]?.DetailOfPokemonspeed}
                 type='number'
                 textError=''
                 regularExpression=''
@@ -205,9 +218,11 @@ function PokemonCreater(props) {
 
                 />
                   <PokemonInput 
+                 selectLenguaje={selectLenguaje}
+
                 state={input}
                 setState={setInput}
-                name='heigth'
+                name={global[selectLenguaje]?.DetailOfPokemonheight}
                 type='number'
                 textError=''
                 regularExpression=''
@@ -217,9 +232,11 @@ function PokemonCreater(props) {
 
                 />
                    <PokemonInput 
+                 selectLenguaje={selectLenguaje}
+
                 state={input}
                 setState={setInput}
-                name='weigth'
+                name={global[selectLenguaje]?.DetailOfPokemonweigth}
                 type='number'
                 textError=''
                 regularExpression=''
@@ -272,22 +289,22 @@ function PokemonCreater(props) {
 
             <div className={Styled.detailsView}>
                 <div className={Styled.detailsViewleft}>
-           <div> <label htmlFor="">name</label> <p>{input.name}</p></div>
-            <div><label htmlFor="">hp</label>     <p>{input.hp}</p></div>
-            <div><label htmlFor="">defense</label>     <p>{input.defense}</p></div>
-            <div><label htmlFor="">attack</label>     <p>{input.attack}</p></div>
+           <div> <label htmlFor="">{global[selectLenguaje]?.DetailOfPokemonname}</label> <p>{input.name}</p></div>
+            <div><label htmlFor="">{global[selectLenguaje]?.DetailOfPokemonhp}</label>     <p>{input.hp}</p></div>
+            <div><label htmlFor="">{global[selectLenguaje]?.DetailOfPokemondefense}</label>     <p>{input.defense}</p></div>
+            <div><label htmlFor="">{global[selectLenguaje]?.DetailOfPokemonattack}</label>     <p>{input.attack}</p></div>
             </div>
             <div className={Styled.detailsViewrigth}>
-            <div><label htmlFor="">speed</label>     <p>{input.speed}</p></div>
-            <div><label htmlFor="">weigth</label>     <p>{input.weigth}</p></div>
-            <div><label htmlFor="">heigth</label> <   p>{input.heigth}</p></div>
+            <div><label htmlFor="">{global[selectLenguaje]?.DetailOfPokemonspeed}</label>     <p>{input.speed}</p></div>
+            <div><label htmlFor="">{global[selectLenguaje]?.DetailOfPokemonweigth}</label>     <p>{input.weigth}</p></div>
+            <div><label htmlFor="">{global[selectLenguaje]?.DetailOfPokemonheight}</label> <   p>{input.heigth}</p></div>
             <Link to='/Home'><button>Home</button></Link>
             </div>
             </div>
         </div>
             <div className={Styled.ViewTypes}>
               {error.types?  <div className={Styled.errortypes2}>
-            <p  >Only two types</p>
+            <p  >{global[selectLenguaje]?.CreatePokemonError} </p>
                 </div>:null}
             {  input.types.map(e=> < img key={e.id} className={Styled[e]}/>  )}
 

@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
+    "dotenv-webpack": "^8.0.1",
+    "env-cmd": "^10.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^8.0.1",
@@ -23,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "local": "env-cmd -e production react-scripts start"
   },
   "eslintConfig": {
     "extends": [

@@ -17,11 +17,9 @@ export  const  LOADING= "LOADING";
 
 
 export const Loading= (playandstop)=>{
-  return (dispatch)=>{
+  return (dispatch)=> dispatch({type:LOADING, payload:playandstop})
 
-  return dispatch({type:LOADING, payload:playandstop})
-
-}}
+}
     
 
 

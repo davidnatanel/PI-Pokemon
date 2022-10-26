@@ -36,7 +36,7 @@ var Change;
 
 
 
-function SearchBar({paginadoo}) {
+function SearchBar({global,lenguaje,paginadoo}) {
     const [input,setInput]=useState('')
     const state = useSelector(state => state.Types)
     const [width, setWidth] = useState(window.innerWidth);
@@ -122,11 +122,12 @@ function SearchBar({paginadoo}) {
                     <input type='text' onChange={(e) => setInput(e.target.value)}></input>
                     <button onClick={() => { CallPokemonName(); } }> <img className={style.lupa} src={lupa} alt="" /></button>
                     </div>
-                  
+                    
                     <div className={style.link}>
 
-                        <Link to='PokemonCreate'><button>Crear Pokemon</button></Link>
-                        <Link to='quienEsEstePokemon'><button>VideoGame</button> </Link>
+                         
+                        <Link to='PokemonCreate'><button>{ global[lenguaje]?.SearchBarCreate}</button></Link>
+                        <Link to='quienEsEstePokemon'><button>{ global[lenguaje]?.SearchBarVideogame}</button> </Link>
 
                     </div>
 
@@ -144,9 +145,9 @@ function SearchBar({paginadoo}) {
 
 <select name="Order" onChange={e => { handlefiltreOrder(e); } }>
 
-    <option value="null">Ordenar</option>
+    <option value="null">{ global[lenguaje]?.SearchBarOrder}</option>
     <option value="Api">Api</option>
-    <option value="Created">Created</option>
+    <option value="Created">{ global[lenguaje]?.SearchBarOrderCreate}</option>
 
 </select>
 
@@ -154,18 +155,18 @@ function SearchBar({paginadoo}) {
 
 <select name="alfabético" onChange={e => { handlefiltreAZ(e); } }>
 
-    <option value="null">alfabético</option>
-    <option value="ascendentemente">ascendentemente</option>
-    <option value="descendentemente">descendentemente</option>
+    <option value="null">{ global[lenguaje]?.SearchBarAlphabetic}</option>
+    <option value="ascendentemente">{ global[lenguaje]?.SearchBarOrderascending}</option>
+    <option value="descendentemente">{ global[lenguaje]?.SearchBarOrderdescending}</option>
 
 </select>
 
 
 <select name="Fuerza" onChange={e => { handlefiltreattack(e); } }>
 
-    <option value="null">Fuerza</option>
-    <option value="ascendentemente">ascendentemente</option>
-    <option value="descendentemente">descendentemente</option>
+    <option value="null">{ global[lenguaje]?.SearchBarStrength}</option>
+    <option value="ascendentemente">{ global[lenguaje]?.SearchBarOrderascending}</option>
+    <option value="descendentemente">{ global[lenguaje]?.SearchBarOrderdescending}</option>
 
 </select>
 </div>
@@ -185,7 +186,7 @@ function SearchBar({paginadoo}) {
 
                     <select name="Type" onChange={e => { handlefiltreTypes(e); } }>
 
-                        <option value="null">Type</option>
+                        <option value="null">{ global[lenguaje]?.SearchBarType}</option>
 
                         {state && state.map(e => (<option key={e.id} value={e.name}>{e.name}</option>))}
                     </select>
@@ -193,9 +194,9 @@ function SearchBar({paginadoo}) {
 
                     <select name="Order" onChange={e => { handlefiltreOrder(e); } }>
 
-                        <option value="null">Ordenar</option>
+                        <option value="null">{ global[lenguaje]?.SearchBarOrder}</option>
                         <option value="Api">Api</option>
-                        <option value="Created">Created</option>
+                        <option value="Created">{ global[lenguaje]?.SearchBarOrderCreate}</option>
 
                     </select>
 
@@ -203,18 +204,18 @@ function SearchBar({paginadoo}) {
 
                     <select name="alfabético" onChange={e => { handlefiltreAZ(e); } }>
 
-                        <option value="null">alfabético</option>
-                        <option value="ascendentemente">ascendentemente</option>
-                        <option value="descendentemente">descendentemente</option>
+                        <option value="null">{ global[lenguaje]?.SearchBarAlphabetic}</option>
+                        <option value="ascendentemente">{ global[lenguaje]?.SearchBarOrderascending}</option>
+                        <option value="descendentemente">{ global[lenguaje]?.SearchBarOrderdescending}</option>
 
                     </select>
 
 
                     <select name="Fuerza" onChange={e => { handlefiltreattack(e); } }>
 
-                        <option value="null">Fuerza</option>
-                        <option value="ascendentemente">ascendentemente</option>
-                        <option value="descendentemente">descendentemente</option>
+                        <option value="null"> { global[lenguaje]?.SearchBarStrength}</option>
+                        <option value="ascendentemente"> { global[lenguaje]?.SearchBarOrderascending}</option>
+                        <option value="descendentemente"> { global[lenguaje]?.SearchBarOrderdescending}</option>
 
                     </select>
                 </div>
@@ -229,9 +230,11 @@ function SearchBar({paginadoo}) {
                     </div>
                     
                     <div className={style.link}>
-
-                        <Link to='PokemonCreate'><button>Crear Pokemon</button></Link>
-                        <Link to='quienEsEstePokemon'><button>VideoGame</button> </Link>
+               
+                  
+                    
+                        <Link to='PokemonCreate'><button>  { global[lenguaje]?.SearchBarCreate}</button></Link>
+                        <Link to='quienEsEstePokemon'><button>{  global[lenguaje]?.SearchBarVideogame}</button> </Link>
 
                     </div></>
          }
@@ -244,10 +247,3 @@ function SearchBar({paginadoo}) {
 
 export default SearchBar
 
-{/* <div className={style.iconsidebar}>
-<div className={style.bars__menu} >
-<span className={style.line1__barsmenu}></span>
-<span className={style.line2__barsmenu}></span>
-<span className={style.line3__barsmenu}></span>
-</div>
-</div> */}

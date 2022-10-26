@@ -4,12 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getPokemons, orderPokemon } from '../../redux/actions';
 import style from './CssEsxtras/WhoIsThisPokemon.module.css'
+import global from './../../utils/lenguaje.json'
 var indice= 0;
 var item= 0;
 var si = []
 
-function WhoIsThisPokemon(props) {
-  
+function WhoIsThisPokemon({selectLenguaje}) {
+  console.log(selectLenguaje,"qqqqqqq")
   const[pokemonInGame,setPokemonInGame]=useState([])
 
   const[pokemon,setPokemon]=useState([])
@@ -64,7 +65,7 @@ function WhoIsThisPokemon(props) {
             </div>
 
             <div>
-            <p className={style.fonts} >who is this pokemon?</p>            
+            <p className={style.fonts} >{ global[selectLenguaje].whoisthispokemon} </p>            
             </div>
           </div>
           
@@ -73,8 +74,8 @@ function WhoIsThisPokemon(props) {
           </div>
           
         {selection == pokemonInGame[match].name &&  Rigth(match,pokemonInGame)}
-
-        </div>:<h1>Loading</h1>
+        
+        </div>:<h1>{ global[selectLenguaje].whoisthispokemonLoading}</h1>
             }
             
         </div>

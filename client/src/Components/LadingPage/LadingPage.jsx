@@ -1,42 +1,64 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import style from './LadingPage.module.css'
-import video from '../LadingPage/video/videoplayback.mp4'
-import start from '../LadingPage/video/start.png'
-import pokemon from '../LadingPage/video/pokemon.png'
-import PikachuRun from '../LadingPage/video/PikachuRun.gif'
-import left from '../LadingPage/video/left.png'
-import right from '../LadingPage/video/right.png'
+
 import poke from '../../img/background/Pokeball.svg'
 
 
+import global from './../../utils/lenguaje.json'
 
 function LadingPage(props) {
-    return (
-        <div className={style.container}>
-            
-    <img className={style.poke} src={poke} alt="" />
-<Link to='Home'>
-
-<button className={style.button} >Press Start</button>
-</Link>
+   
 
 
-        {/* <video className={style.video} src={video} loop autoPlay muted type='video/mp4' /> */}
-        {/* <video className={style.videoCopia} src={video} loop autoPlay muted type='video/mp4' /> */}
 
-{/* 
-        <img src={PikachuRun} className={style.PikachuRun} alt="" />
+    useEffect(() => {
 
-           <img src={right} className={style.right}alt="" />
-           <img src={left} className={style.left} alt="" />
-          <img src={pokemon} className={style.pokemon} alt="" />
-
+    
+                localStorage.setItem('LG', navigator.language.split("-")[0]);
+                props.setSelectLenguaje(localStorage.getItem('LG'))
        
-             */}
-     
-            
-            </div>
+
+    
+
+    }, [])
+
+
+
+    const ChangeLenguaje = (e) => {
+
+
+        localStorage.setItem('LG', e.target.name);
+
+        props.setSelectLenguaje(localStorage.getItem('LG'))
+
+
+    }
+
+
+
+    return (
+    
+        <div className={style.container}>
+         {  props.selectLenguaje?
+            <div className={style.Lenguaje} >
+                <button name='es' onClick={(e)=> ChangeLenguaje(e)}>{global[props.selectLenguaje].lenguajeEs}</button>
+                <button name='en' onClick={(e)=> ChangeLenguaje(e)}>  {global[props.selectLenguaje].lenguajeEn}</button>
+         
+            </div>:null}
+  
+           
+
+                <img className={style.poke} src={poke} alt="" />
+            <Link to='Home'>
+{
+      props.selectLenguaje?       <button className={style.button} >{global[props.selectLenguaje].LadingPageStart}</button>:null}
+            </Link>
+                       
+
+
+
+        </div>
     );
 }
 

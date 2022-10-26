@@ -10,15 +10,24 @@ import Loading from '../Loading/Loading';
 import git from '../../img/IconosFooter/github.svg';
 import linkedin from '../../img/IconosFooter/linkedin.svg';
 
-
+import global from './../../utils/lenguaje.json'
 
 function Home(props) {
-    const dispatch =useDispatch()
 
+
+    const dispatch =useDispatch()
+    
 
     useEffect( ()  => {
-        dispatch( Loading(true))
-        dispatch( getPokemons())}  , [])
+
+        console.log(props)
+        console.log(localStorage.getItem('LG'))
+  dispatch( Loading(true))
+        dispatch( getPokemons())
+        
+    }
+      
+        , [])
 
 
     const loading = useSelector(state => state.loading)
@@ -42,7 +51,9 @@ function Home(props) {
 <div className={style.home}>
 
 
-<SearchBar  
+<SearchBar 
+ global={global} 
+  lenguaje={props.selectLenguaje}
 paginadoo={paginadoo}
 />
                     
@@ -56,7 +67,7 @@ paginado={paginadoo}
 <div className={style.Pokemons}>    
 
 
-{currentPokemons.length? currentPokemons.map(e=>  ( <Pokemon   key={e.id}id={e.id}attack={e.attack} gifback={e.gifback} gif={e.gif} img={e.img} types={e.types}  name={e.name}   ></Pokemon>  )      ) :
+{currentPokemons.length? currentPokemons.map(e=>  ( <Pokemon global={global}  lenguaje={props.selectLenguaje} key={e.id}id={e.id}attack={e.attack} gifback={e.gifback} gif={e.gif} img={e.img} types={e.types}  name={e.name}   ></Pokemon>  )      ) :
 <Loading></Loading>  }
 
 

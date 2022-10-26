@@ -1,6 +1,33 @@
 body{
     margin: 0px;
 }
+.Lenguaje{
+    
+    height: 50px;
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    column-gap: 10px;
+}
+.Lenguaje button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    border: none;
+    -webkit-text-stroke: 2px rgba(255, 33, 4, 0.829);
+    color: rgb(252, 252, 0);
+    height: 70%;
+    width: 50%;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 10px;
+}
+.Lenguaje button:hover{
+    cursor :pointer;
+}
+
 .container{
 
     box-sizing: border-box;
@@ -30,7 +57,7 @@ body{
 background-color: rgba(175, 159, 159, 0.267);
 -webkit-text-stroke: 2px rgba(255, 33, 4, 0.829);
 height: 70px;
-width: 200px;
+width: 400px;
 font-size: 35px;
 font-weight: bolder;
 color: transparent;
@@ -69,8 +96,7 @@ margin-top: 20px;
 
 background-color: rgba(235, 225, 225, 0.267);
 -webkit-text-stroke: 0.5px rgb(252, 0, 0);
-height: 70px;
-width: 200px;
+
 font-size: 35px;
 font-weight: bolder;
 color: transparent;

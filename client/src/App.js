@@ -10,10 +10,13 @@ import WhoIsThisPokemon from './Components/Extras/WhoIsThisPokemon';
 import Error404 from './Components/Error404/Error404';
 import LoginAdim from './Components/Extras/LoginAdim';
 import ControllerPokemon from './Components/Extras/ControllerPokemon';
+import { useState } from 'react';
 
 
 
 function App() {
+  const [selectLenguaje, setSelectLenguaje] = useState()
+
   return (
     <div className="App">
 
@@ -21,13 +24,17 @@ function App() {
       
           
     <Routes>
-      <Route   path='/' element= {<LadingPage/>}  />
+      <Route   path='/' element= {<LadingPage selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje}/>}  />
       
-      <Route exact path='/Home' element= {<Home/>} />
+      <Route exact path='/Home' element= {<Home 
+      selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje} />} />
       
-      <Route exact path='/Home/PokemonCreate' element= {<PokemonCreater/>} />
-      <Route exact path='/Home/DetailOfPokemon/:id' element= {<DetailOfPokemon/>} />
-      <Route exact path='/Home/quienEsEstePokemon' element= {<WhoIsThisPokemon/>} />
+      <Route exact path='/Home/PokemonCreate' element= {<PokemonCreater
+        selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje} />} />
+      <Route exact path='/Home/DetailOfPokemon/:id' element= {<DetailOfPokemon
+        selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje}
+      />} />
+      <Route exact path='/Home/quienEsEstePokemon' element= {<WhoIsThisPokemon selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje} />} />
       <Route exact path='/admin' element= {<LoginAdim/>} />
       <Route exact path='/ControllerPokemon' element={<ControllerPokemon/>}/>
 

@@ -1,4 +1,4 @@
-import { GETTYPES,GETPOKEMONSFORNAME,GETPOKEMONSFORID,PAGESFILTRE,FILTERTYPE,GETPOKEMONS,ORDERPOKEMON,ORDERBYFORCE,LOADING } from "./actions";
+import { LENGUAJE,GETTYPES,GETPOKEMONSFORNAME,GETPOKEMONSFORID,PAGESFILTRE,FILTERTYPE,GETPOKEMONS,ORDERPOKEMON,ORDERBYFORCE,LOADING } from "./actions";
 
 
 let initialState={
@@ -13,7 +13,8 @@ let initialState={
     Types:[],
 
     loading:false,
-    notFound:false
+    notFound:false,
+   
 
     
 };
@@ -23,7 +24,7 @@ const Reducer = (state=initialState,action)=>{
 
     switch (action.type) {
       
-      
+  
 
       case LOADING:
 

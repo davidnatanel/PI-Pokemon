@@ -9,7 +9,7 @@ import Poke from '../../img/card/deivid.png'
 
 
 
-function Pokemon({attack, defense, height,hp,id,name, speed, weigth ,types,img,gif, gifback}) {
+function Pokemon({global,lenguaje,attack, defense, height,hp,id,name, speed, weigth ,types,img,gif, gifback}) {
 
     
 const PokemonCard=styled.div`
@@ -52,7 +52,7 @@ width: 300px;
             <div className={style.detail}>
             <h1 className={style.name } >{name} </h1>
             {img && <img className={style.img} src={img} alt="" />}
-            <Link key={id} to= {`DetailOfPokemon/${id}`} > <button className={style.buttonSeeMore}>See more</button></Link>
+            {lenguaje && <Link key={id} to= {`DetailOfPokemon/${id}`} > <button className={style.buttonSeeMore}>{global[lenguaje].PokemonSee}</button></Link>}
             </div>
 
             

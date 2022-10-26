@@ -8,9 +8,9 @@ import styles from '../DetailOfpokemon/DetailOfpokemonCss/DetailOfpokemonbackgro
 import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import axios from 'axios';
+import global from './../../utils/lenguaje.json'
 
-
-function DetailOfPokemon() {
+function DetailOfPokemon({selectLenguaje}) {
     const {id} =useParams();
     const state = useSelector(state => state.PokemonsDetails)
     const [pokemon,setPokemon]= useState(null)
@@ -58,13 +58,13 @@ function DetailOfPokemon() {
         
 
         <div className={styles.d}>  <label htmlFor="">id</label><p>{pokemon.id}</p></div>
-        <div className={styles.d}>  <label htmlFor="">attack</label><p>{pokemon.attack}</p></div>
-        <div className={styles.d}>  <label htmlFor="">defense</label><p>{pokemon.defense}</p></div>
-        <div className={styles.d}>  <label htmlFor="">height</label><p>{pokemon.height}</p> </div>
-        <div className={styles.d}>  <label htmlFor="">speed</label><p>{pokemon.speed}</p></div>
-        <div className={styles.d}>  <label htmlFor="">weigth</label><p>{pokemon.weigth}</p></div>
-        <div className={styles.d}>  <label htmlFor="">hp</label><p>{pokemon.hp}</p></div>
-        <div className={styles.d}>  <label htmlFor="">name</label><p>{pokemon.name}</p></div>
+        <div className={styles.d}>  <label htmlFor="">{global[selectLenguaje].DetailOfPokemonattack}</label><p>{pokemon.attack}</p></div>
+        <div className={styles.d}>  <label htmlFor="">{global[selectLenguaje].DetailOfPokemondefense}</label><p>{pokemon.defense}</p></div>
+        <div className={styles.d}>  <label htmlFor="">{global[selectLenguaje].DetailOfPokemonheight}</label><p>{pokemon.height}</p> </div>
+        <div className={styles.d}>  <label htmlFor="">{global[selectLenguaje].DetailOfPokemonspeed}</label><p>{pokemon.speed}</p></div>
+        <div className={styles.d}>  <label htmlFor="">{global[selectLenguaje].DetailOfPokemonweigth}</label><p>{pokemon.weigth}</p></div>
+        <div className={styles.d}>  <label htmlFor="">{global[selectLenguaje].DetailOfPokemonhp}</label><p>{pokemon.hp}</p></div>
+        <div className={styles.d}>  <label htmlFor="">{global[selectLenguaje].DetailOfPokemonname}</label><p>{pokemon.name}</p></div>
 
         <div>
             <Link to='/Home'><button className={style.bottun}>Home</button></Link>

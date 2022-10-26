@@ -1,0 +1,104 @@
+{
+    "es": {
+        "lenguajeEs": "Español",
+        "lenguajeEn": "Ingles",
+        "LadingPageStart": "Preciona Start",
+    
+        "SearchBarCreate":"Crear Pokemon",
+        "SearchBarVideogame":"Videojuego",
+        "SearchBarCreate":"Crear Pokemon",
+        "SearchBarType":"Tipo",
+        "SearchBarOrder":"Ordenar",
+        "SearchBarAlphabetic":"Alfabético",
+        "PokemonSee":"Ver Mas",
+        "SearchBarStrength":"Fuerza",
+
+      
+        "SearchBarOrderCreate":"Creado",
+        "SearchBarOrderascending":"ascendentemente",
+        "SearchBarOrderdescending":"descendentemente"
+      
+        ,"whoisthispokemon":"Quien es ese Pokemon?"
+        ,"whoisthispokemonLoading":"Cargando..."
+        ,"DetailOfPokemonname":"nombre"
+        ,"DetailOfPokemonattack":"ataque"
+        ,"DetailOfPokemondefense":"defensa"
+        ,"DetailOfPokemonheight":"altura"
+        ,"DetailOfPokemonspeed":"velocidad"
+        ,"DetailOfPokemonweigth":"peso"
+        ,"DetailOfPokemonhp":"salud",
+        "CreatePokemonCreate":"Crear",
+        "CreatePokemonError":"Solor dos Tipos",
+
+        "PokemonInputErrornameisrequired":"nombre es requerido"
+        ,"PokemonInputErrornameisinvalid":"nombre es invalido"
+        ,"PokemonInputErrorimgisrequired":"imagen es requerida"
+        ,"PokemonInputErrorhpisinvalid":"salud es invalida"
+        ,"PokemonInputErrorhpisrequired":"salud es requerida"
+        ,"PokemonInputErrorattackisinvalid":"ataque es invalido"
+        ,"PokemonInputErrorattackisrequired":"ataque es requerido"
+        ,"PokemonInputErrordefenseisinvalid":"defensa es invalido"
+        ,"PokemonInputErrordefenseisrequired":"defensa es requerido"
+        ,"PokemonInputErrorspeedisinvalid":"velocidad es invalido"
+        ,"PokemonInputErrorspeedisrequired":"velocidad es requerido"
+        ,"PokemonInputErrorheigthisinvalid":"altura es invalido"
+        ,"PokemonInputErrorheigthisrequired":"altura es requerido"
+        ,"PokemonInputErrorweigthisinvalid":"peso es invalido"
+        ,"PokemonInputErrorweigthhisrequired":"peso es requerido"
+
+    },
+    "en": {
+        "lenguajeEs": "Spain",
+        "lenguajeEn": "English",
+        "LadingPageStart": "Press Start",
+        "PokemonSee":"See more",
+        "SearchBarCreate":"Create Pokemon",
+        "SearchBarVideogame":"Videogame",
+        
+    
+        "SearchBarType":"Type",
+        "SearchBarOrder":"Order",
+        "SearchBarAlphabetic":"alphabetic",
+        "SearchBarStrength":"Strength",
+
+       
+        "SearchBarOrderCreate":"Create",
+        "SearchBarOrderascending":"ascending",
+        "SearchBarOrderdescending":"descending"
+        ,"whoisthispokemon":"who is this pokemon?"
+        ,"whoisthispokemonLoading":"Loading..."
+
+        ,"DetailOfPokemonname":"name"
+        ,"DetailOfPokemonattack":"attack"
+        ,"DetailOfPokemondefense":"defense"
+        ,"DetailOfPokemonheight":"height"
+        ,"DetailOfPokemonspeed":"speed"
+        ,"DetailOfPokemonweigth":"weigth"
+        ,"DetailOfPokemonhp":"hp",
+        "CreatePokemonCreate":"Create",
+        "CreatePokemonError":"Only two types"
+
+
+
+        ,"PokemonInputErrornameisrequired":"name is required"
+        ,"PokemonInputErrornameisinvalid":"name is invalid"
+        ,"PokemonInputErrorimgisrequired":"img is required"
+        ,"PokemonInputErrorhpisinvalid":"hp is invalid"
+        ,"PokemonInputErrorhpisrequired":"hp is required"
+        ,"PokemonInputErrorattackisinvalid":"attack is invalid"
+        ,"PokemonInputErrorattackisrequired":"attack is required"
+        ,"PokemonInputErrordefenseisinvalid":"defense is invalid"
+        ,"PokemonInputErrordefenseisrequired":"defense is required"
+        ,"PokemonInputErrorspeedisinvalid":"speed is invalid"
+        ,"PokemonInputErrorspeedisrequired":"speed is required"
+        ,"PokemonInputErrorheigthisinvalid":"heigth is invalid"
+        ,"PokemonInputErrorheigthisrequired":"heigth is required"
+        ,"PokemonInputErrorweigthisinvalid":"weigth is invalid"
+        ,"PokemonInputErrorweigthhisrequired":"weigth is required"
+        
+   
+
+
+
+    }
+}
