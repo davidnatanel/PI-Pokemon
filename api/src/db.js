@@ -3,58 +3,21 @@ const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 const {
-  DB_USER, DB_PASSWORD, DB_HOST,DB_NAME,DB_PORT
+  DB_USER, DB_PASSWORD, DB_HOST, DB_DATABASE_URL
 } = process.env;
 
-
-let sequelize =new Sequelize(
-  DB_HOST,
-        { logging: false, native: false }
-      );
-
-      sequelize
-      .authenticate()
-      .then(() => {
-        console.log('Connection has been established successfully.');
-      })
-      .catch(err => {
-        console.error('Unable to connect to the database:', err);
-      });
-// let sequelize = process.env.NODE.ENV === 'production'?
-// new Sequelize({
-//   database:DB_NAME,
-//   dialect:"postgres",
-//   host:DB_HOST,
-//   port: 5432,
-//   username:DB_USER,
-//   password:DB_PASSWORD,
-//   pool:{
-//     max:3,
-//     min:1,
-//     idle:10000,
-//   },
-//   dialectOptions:{
-//     ssl:{
-//       require:true,
-//       rejectUnauthorized:false,
-//     },
-//     keepAlive:true,
-//   },
-//   ssl:true
-// }):new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`, {
-//   logging: false, // set to console.log to see the raw SQL queries
-//   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-// });
-
-
-
-
-
-// const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`, {
-//   logging: false, // set to console.log to see the raw SQL queries
-//   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-// });
-
+const sequelize = new Sequelize(DB_DATABASE_URL, {
+  logging: false, // set to console.log to see the raw SQL queries
+  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+});
+sequelize
+  .authenticate()
+  .then(function (err) {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(function (err) {
+    console.log('Unable to connect to the database:', err);
+  });
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
@@ -73,14 +36,16 @@ let entries = Object.entries(sequelize.models);
 let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].slice(1), entry[1]]);
 sequelize.models = Object.fromEntries(capsEntries);
 
+
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { Pokemon,Types } = sequelize.models;
+const { Pokemon, Types } = sequelize.models;
+
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
 
-Pokemon.belongsToMany(Types,{through:'TypePokemon'});
-Types.belongsToMany(Pokemon,{through:'TypePokemon'});
+Pokemon.belongsToMany(Types, { through: 'TypePokemon' });
+Types.belongsToMany(Pokemon, { through: 'TypePokemon' });
 
 
 
