@@ -12,7 +12,7 @@ dotenv.config()
 
 
 // axios.defaults.baseURL = 'https://pi-pokemon-production-5e72.up.railway.app' ;
-axios.defaults.baseURL = 'http://localhost:3000/';
+axios.defaults.baseURL = 'https://pipokedexservice.onrender.com/';
 
 ReactDOM.render(
   <Provider store={Store}>
