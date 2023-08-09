@@ -1,204 +1,260 @@
-.detail{
+.detail {
 
     display: flex;
     flex-direction: column;
-    gap: 1em;
     justify-content: space-around;
+    align-items: center;
+
+    width: 70%;
+
 }
-.detail a{
-    width: 5em;
-    left: 3.5em;
+
+.lin {
+    width: 100%;
+    height: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.boximg {
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lin {
+    border: 4px solid rgb(252, 245, 245);
+    width: 50%;
+    border-radius: 10px;
+}
+
+/* .detail a {
+    width: 50%;
     border-radius: 2px;
     display: flex;
-    position: relative;
     color: rgba(18, 0, 0, 0.77);
     text-decoration: none;
-    font-weight:900;
-    letter-spacing: 0.9px;    
-    border: 2px solid ;
+    font-weight: 900;
+    letter-spacing: 0.9px;
+    border: 2px solid;
     border-radius: 10px;
     padding: 2px;
-}
-
-.detail a:hover{
-    background-color: rgba(244, 248, 248, 0.726);
-}
-
-
-.name
-{
-    position: relative;
-    left: 1em;
-    height: 1px;
-    color: rgba(18, 0, 0, 0.77);
-    font-size: 20px;
     text-align: center;
+} */
+
+
+
+.detail a:hover {
+    background-color: rgba(244, 248, 248, 0.176);
+    border-radius: 3px;
 }
 
-.img
-{
-    position: relative;
-    top: 0.8em;
-    left: 2em;
-    height: 8em;
-    width: 140px;
+
+.name {
+
+    font-size: 20px;
+    color: white;
+
+    text-align: center;
+    width: 90%;
+    height: 20%;
+    text-transform: capitalize;
+}
+
+.img {
+
+    height: 100%;
+    width: 100%;
     max-width: 140px;
 }
 
 
 
-.types
-{
+.types {
     background-color: rgb(142, 7, 7);
-    width: 100px;
+    width: 30%;
+
     list-style: none;
     overflow: hidden;
 }
-.buttonSeeMore{
+
+.buttonSeeMore {
+    color: white;
+    font-weight: 900;
     background-color: transparent;
     border: none;
     text-align: center;
     font-size: large;
 }
 
-.normal{
+.buttonSeeMore:hover {
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+.normal {
     background-image: url('../../../img/types_logos/normal.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.fighting{
+
+.fighting {
     background-image: url('../../../img/types_logos/fighting.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.bug{
+
+.bug {
     background-image: url('../../../img/types_logos/bug.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.dark{
+
+.dark {
     background-image: url('../../../img/types_logos/dark.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.dragon{
+
+.dragon {
     background-image: url('../../../img/types_logos/dragon.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.electric{
+
+.electric {
     background-image: url('../../../img/types_logos/electric.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.fairy{
+
+.fairy {
     background-image: url('../../../img/types_logos/fairy.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
 
-.fire{
+.fire {
     background-image: url('../../../img/types_logos/fire.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.flying{
+
+.flying {
     background-image: url('../../../img/types_logos/flying.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.ghost{
+
+.ghost {
     background-image: url('../../../img/types_logos/ghost.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.grass{
+
+.grass {
     background-image: url('../../../img/types_logos/grass.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.ground{
+
+.ground {
     background-image: url('../../../img/types_logos/ground.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.ice{
+
+.ice {
     background-image: url('../../../img/types_logos/ice.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.poison{
+
+.poison {
     background-image: url('../../../img/types_logos/poison.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.psychic{
+
+.psychic {
     background-image: url('../../../img/types_logos/psychic.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.rock{
+
+.rock {
     background-image: url('../../../img/types_logos/rock.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.shadow{
+
+.shadow {
     background-image: url('../../../img/types_logos/shadow.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.steel{
+
+.steel {
     background-image: url('../../../img/types_logos/steel.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.unknown{
+
+.unknown {
     background-image: url('../../../img/types_logos/unknown.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.water{
+
+.water {
     background-image: url('../../../img/types_logos/water.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }

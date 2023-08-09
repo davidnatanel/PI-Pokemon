@@ -6,20 +6,24 @@ import poke from '../../img/background/Pokeball.svg'
 
 
 import global from './../../utils/lenguaje.json'
+import { LenguajeAc } from '../../redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 function LadingPage(props) {
-   
 
+
+    const dispatch = useDispatch()
+    const lenguaje = useSelector(state => state.lenguaje)
 
 
     useEffect(() => {
 
-    
-                localStorage.setItem('LG', navigator.language.split("-")[0]);
-                props.setSelectLenguaje(localStorage.getItem('LG'))
-       
 
-    
+        localStorage.setItem('LG', navigator.language.split("-")[0]);
+        props.setSelectLenguaje(localStorage.getItem('LG'))
+
+
+
 
     }, [])
 
@@ -27,6 +31,7 @@ function LadingPage(props) {
 
     const ChangeLenguaje = (e) => {
 
+        dispatch(LenguajeAc(e.target.name))
 
         localStorage.setItem('LG', e.target.name);
 
@@ -38,23 +43,23 @@ function LadingPage(props) {
 
 
     return (
-    
-        <div className={style.container}>
-         {  props.selectLenguaje?
-            <div className={style.Lenguaje} >
-                <button name='es' onClick={(e)=> ChangeLenguaje(e)}>{global[props.selectLenguaje].lenguajeEs}</button>
-                <button name='en' onClick={(e)=> ChangeLenguaje(e)}>  {global[props.selectLenguaje].lenguajeEn}</button>
-         
-            </div>:null}
-  
-           
 
-                <img className={style.poke} src={poke} alt="" />
+        <div className={style.container}>
+            {props.selectLenguaje ?
+                <div className={style.Lenguaje} >
+                    <button name='es' onClick={(e) => ChangeLenguaje(e)}>{global[lenguaje].lenguajeEs}</button>
+                    <button name='en' onClick={(e) => ChangeLenguaje(e)}>  {global[lenguaje].lenguajeEn}</button>
+
+                </div> : null}
+
+
+
+            <img className={style.poke} src={poke} alt="" />
             <Link to='Home'>
-{
-      props.selectLenguaje?       <button className={style.button} >{global[props.selectLenguaje].LadingPageStart}</button>:null}
+                {
+                    props.selectLenguaje ? <button className={style.button} >{global[props.selectLenguaje].LadingPageStart}</button> : null}
             </Link>
-                       
+
 
 
 

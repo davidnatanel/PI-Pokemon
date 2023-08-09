@@ -1,155 +1,177 @@
+.styleBackground {
+  border: solid rgba(138, 130, 130, 0.752) 1px;
+
+}
 
 .bug {
-    background: #aedf78;
-  }
+  background: #aedf78;
+}
 
 
-  
-  .water {
-    background: #43ccff;
-  }
-  
-  .grass {
-    background: #00ca91;
-  }
-  
-  .fire {
-    background: #e95c4d;
-  }
-  
-  .normal {
-    background: #a5a5a5;
-  }
-  
-  .poison {
-    background: #611380;
-  }
-  
-  .electric {
-    background: #f9be00;
-  }
-  .ground {
-    background: #bfac21;
-  }
-  
-  .fairy {
-    background: #f87ea7;
-  }
-  
-  .fighting {
-    background: #d2151b;
-  }
-  .psychic {
-    background: #8a0532;
-  }
-  
-  .ghost {
-    background: #8e55a4;
-  }
-  .rock {
-    background: #776a3e;
-  }
-  .ice {
-    background: #66d1e5;
-  }
-  .flying {
-    background: #5eb9b2;
-  }
-  .dark {
-    background: #2d221c;
-  }
-  
-  .dragon {
-    background: #29036a;
-  }
-  
-  .steel {
-    background: #7b8e8a;
-  }
-  .unknown {
-    background: #454545;
-  }
-  
-  .shadow {
-    background: #4f4f4f;
-  }
 
-  /* //////////// */
-  .bug ul{
-    background: #2b5103a0;
-  }
-  
-  
-  .water ul {
-    background: #01445db6;
-  }
-  
-  .grass ul {
-    background: #027856b7;
-  }
-  
-  .fire ul {
-    background: #94180a93;
-  }
-  
-  .normal ul {
-    background: #5453538d;
-  }
- 
-  .poison ul {
-    background: #8609b8bc;
-  }
-  
-  .electric ul {
-    background: #9c7b11de;
-  }
-  .ground ul {
-    background: #938307f9;
-  }
-  
-  .fairy ul {
-    background: #d24d79cd;
-  }
-  
-  .fighting ul {
-    background: #f03137d6;
-  }
-  .psychic ul {
-    background: #b5023edd;
-  }
-  
-  .ghost ul {
-    background: #80379daf;
-  }
-  .rock ul {
-    background: #947b27;
-  }
-  .ice ul {
-    background: #66d1e5;
-  }
-  /* // */
-  .flying ul {
-    background: #18a79b;
-  }
-  /* // */
-  
-  .dark ul {
-    background: #2d221c;
-  }
-  /* // */
-  
-  .dragon ul {
-    background: #29036a;
-  }
-  
-  .steel ul {
-    background: #7b8e8a;
-  }
-  /* // */
-  .unknown ul {
-    background: #454545;
-  }
-  
-  .shadow ul {
-    background: #4f4f4f;
-  }
+.water {
+  background: #43ccff;
+}
+
+.grass {
+  background: #00ca91;
+
+}
+
+
+
+.fire {
+  background: #e95c4d;
+}
+
+.normal {
+  background: #a5a5a5;
+}
+
+.poison {
+  background: #611380;
+}
+
+.electric {
+  background: #f9be00;
+}
+
+.ground {
+  background: #bfac21;
+}
+
+.fairy {
+  background: #f87ea7;
+}
+
+.fighting {
+  background: #d2151b;
+}
+
+.psychic {
+  background: #8a0532;
+}
+
+.ghost {
+  background: #8e55a4;
+}
+
+.rock {
+  background: #776a3e;
+}
+
+.ice {
+  background: #66d1e5;
+}
+
+.flying {
+  background: #5eb9b2;
+}
+
+.dark {
+  background: #2d221c;
+}
+
+.dragon {
+  background: #29036a;
+}
+
+.steel {
+  background: #7b8e8a;
+}
+
+.unknown {
+  background: #454545;
+}
+
+.shadow {
+  background: #4f4f4f;
+}
+
+/* //////////// */
+.bug ul {
+  background: #2b5103a0;
+}
+
+
+.water ul {
+  background: #01445db6;
+}
+
+.grass ul {
+  background: #027856b7;
+}
+
+.fire ul {
+  background: #94180a93;
+}
+
+.normal ul {
+  background: #5453538d;
+}
+
+.poison ul {
+  background: #8609b8bc;
+}
+
+.electric ul {
+  background: #9c7b11de;
+}
+
+.ground ul {
+  background: #938307f9;
+}
+
+.fairy ul {
+  background: #d24d79cd;
+}
+
+.fighting ul {
+  background: #f03137d6;
+}
+
+.psychic ul {
+  background: #b5023edd;
+}
+
+.ghost ul {
+  background: #80379daf;
+}
+
+.rock ul {
+  background: #947b27;
+}
+
+.ice ul {
+  background: #66d1e5;
+}
+
+/* // */
+.flying ul {
+  background: #18a79b;
+}
+
+/* // */
+
+.dark ul {
+  background: #2d221c;
+}
+
+/* // */
+
+.dragon ul {
+  background: #29036a;
+}
+
+.steel ul {
+  background: #7b8e8a;
+}
+
+/* // */
+.unknown ul {
+  background: #454545;
+}
+
+.shadow ul {
+  background: #4f4f4f;
+}

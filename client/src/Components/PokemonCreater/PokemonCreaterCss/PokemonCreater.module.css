@@ -1,32 +1,33 @@
 @media screen and (max-width:700px) {
-    .PokemonBody{
-    display: flex;
-    flex-direction: column;
+    .PokemonBody {
+        display: flex;
+        flex-direction: column;
 
     }
-    .PokemonCreater{
+
+    .PokemonCreater {
         height: 10px;
         overflow: hidden;
     }
 }
 
-.PokemonBody{
+.PokemonBody {
     position: relative;
     background-image: url('../../../img/background/Laboratorio1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100vw;    
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 1em 1em 4em 0.2em ;
-    
+    box-shadow: inset 1em 1em 4em 0.2em;
+
 }
 
 
 
-.PokemonCreater{
+.PokemonCreater {
     border-radius: 1em;
     box-shadow: 1em 1em 1em 0.2em;
     margin: 0.5em;
@@ -35,7 +36,7 @@
     width: 29em;
 
     display: grid;
-    grid-template-rows: repeat(auto-fit,minmax(1fr,1fr));
+    grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
     overflow: hidden;
     padding: 1em;
     justify-content: center;
@@ -47,35 +48,36 @@
 
 
 
-.detailsPokemon
-{
-    
+.detailsPokemon {
+
     /* background-color: rgb(162, 25, 187); */
- display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 
 
 }
 
-.detailsPokemon input{
+.detailsPokemon input {
 
     background-color: rgba(108, 156, 156, 0.671);
-    width:150px;
+    width: 150px;
     border: none;
     padding: 2px;
     height: max-content;
 
     border-radius: 0em 1em 0em 0em;
     align-self: center;
-    
+
 
 }
-.detailsPokemon input::placeholder{
+
+.detailsPokemon input::placeholder {
 
     color: rgba(7, 51, 53, 0.89);
 
 }
-.detailsPokemon label{
+
+.detailsPokemon label {
     display: block;
     background-color: rgba(95, 204, 206, 0.787);
     height: max-content;
@@ -87,19 +89,20 @@ justify-content: center;
     letter-spacing: 1px;
     font-size: 15px;
     margin-top: 2px;
-    
+
 }
 
 
 
-.detailsPokemonrigth{
+.detailsPokemonrigth {
     padding: 5px;
     display: flex;
     flex-direction: column;
     row-gap: 1em;
-height: cover;
+    height: cover;
 }
-.detailsPokemonleft{
+
+.detailsPokemonleft {
 
     padding: 5px;
 
@@ -109,7 +112,7 @@ height: cover;
     height: cover;
 }
 
-.detailsPokemonrigth div{
+.detailsPokemonrigth div {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
@@ -120,113 +123,116 @@ height: cover;
 
 }
 
-.detailsPokemonleft div{
+.detailsPokemonleft div {
     overflow: hidden;
-width: 200px;
+    width: 200px;
 
     row-gap: 5px;
     display: flex;
     flex-direction: column;
     background-color: rgb(239, 239, 239);
     border-radius: 1em 6em;
-    
+
 
 }
 
 /* verrrrrrrrrr */
-.Types
-{  
+.Types {
     /* overflow: hidden; */
     width: 9em;
     height: 7em;
-  
+
     display: flex;
-   
-     /* animation-name: ani;
+
+    /* animation-name: ani;
     animation-duration: 2s;
     animation-duration: infinite; */
 }
- 
- /* @keyframes ani {
+
+/* @keyframes ani {
     2%{margin-left: 12em;}
     
 }  */
- /* verrrrrrrrr */
+/* verrrrrrrrr */
 
- .TypesContainer
- {
+.TypesContainer {
     background-color: rgb(239, 239, 239);
 
-     overflow-x: scroll;
-     display: flex;
-     margin: 10px;
-     
- }
+    overflow-x: scroll;
+    display: flex;
+    margin: 10px;
 
- .TypesContainer::-webkit-scrollbar{
+}
+
+.TypesContainer::-webkit-scrollbar {
     background-color: rgb(239, 239, 239);
 
- }
- .TypesContainer::-webkit-scrollbar-thumb{
+}
+
+.TypesContainer::-webkit-scrollbar-thumb {
     background-color: rgba(14, 81, 83, 0.787);
     border-radius: 10px;
- }
- .TypesContainer::-webkit-scrollbar-thumb:active{
+}
+
+.TypesContainer::-webkit-scrollbar-thumb:active {
     border: 2px solid black;
- }
+}
 
 
- .TypesContainer::-webkit-scrollbar-track{
+.TypesContainer::-webkit-scrollbar-track {
     background-color: rgb(174, 216, 217);
 
 
- }
- /* .TypesContainer::-webkit-scrollbar-button{
+}
+
+/* .TypesContainer::-webkit-scrollbar-button{
     background-color: rgba(99, 221, 223, 0.787);
     border: 2px solid rgba(14, 81, 83, 0.787);
 
  } */
- .Types{
+.Types {
     background-color: rgba(14, 81, 83, 0.787);
 
-    width: max-content ;
-    
- }
+    width: max-content;
 
-.Types div{
-    width: contain    ;
-/* background-color: gray; */
+}
+
+.Types div {
+    width: contain;
+    /* background-color: gray; */
     /* background-color: rgba(95, 204, 206, 0.787); */
     display: flex;
     flex-direction: column;
     height: 8em;
 
 }
-.Types img{
-    
+
+.Types img {
+
     height: 100%;
     width: 4em;
 }
-.Types img:hover
-{  
+
+.Types img:hover {
     cursor: pointer;
     /* overflow: hidden; */
     background-color: rgb(174, 216, 217);
 
-   
+
 }
-.Types div div{
-    height:fit-content;
+
+.Types div div {
+    height: fit-content;
     padding: 10px;
     background-color: rgb(174, 216, 217);
-    border: 1px solid  gray;
+    border: 1px solid gray;
 }
 
 
 
 
 
-.button{
+.button {
 
     width: 30em;
     height: 5em;
@@ -234,13 +240,14 @@ width: 200px;
     justify-content: center;
     align-items: center;
 }
-.button input{
+
+.button input {
     height: 3em;
     width: 10em;
 
     background-color: rgb(174, 216, 217);
 
-    font-weight:bolder;
+    font-weight: bolder;
     font-size: large;
     letter-spacing: 1px;
     color: rgb(10, 73, 75);
@@ -249,11 +256,13 @@ width: 200px;
     border: none;
     cursor: pointer;
 }
-.button input:hover{
+
+.button input:hover {
     transform: scale(1.1);
-    
+
 }
-.buttonerror{
+
+.buttonerror {
     display: none;
     background-color: rgb(40, 12, 12);
 
@@ -261,7 +270,7 @@ width: 200px;
     width: 10em;
 
 
-    font-weight:bolder;
+    font-weight: bolder;
     font-size: large;
     letter-spacing: 1px;
     color: rgb(10, 73, 75);
@@ -274,19 +283,19 @@ width: 200px;
 
 /*  */
 
-.ViewPokemonCreated{
+.ViewPokemonCreated {
     border-radius: 10px;
-    
+
     background-color: rgb(14, 47, 48);
 
     height: 38em;
     width: 29em;
     box-shadow: 2em 2em 2em 0.1em;
     margin-left: 0.6em;
-    
+
 }
 
-.detailsView{
+.detailsView {
     position: relative;
     height: 20em;
     width: 10;
@@ -297,30 +306,33 @@ width: 200px;
 
 }
 
-.detailsView div{
+.detailsView div {
     margin: 1em;
     height: 300px;
 
     display: flex;
 }
 
-.detailsView div label{
+.detailsView div label {
     background-color: rgb(251, 74, 74);
-    display:block;
-    width: 5em;
-    height: 25.9px;
+    display: block;
+    width: 80%;
+    height: 30px;
     border-radius: 0.5em 0em 0em 0em;
     color: rgb(197, 231, 236);
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.detailsView div a{    
+.detailsView div a {
     display: flex;
     justify-content: center;
 }
-.detailsView div a button{
+
+.detailsView div a button {
     height: 30px;
     width: 50px;
     margin: 5px;
@@ -333,19 +345,23 @@ width: 200px;
 
 
 
-.detailsView p{
+.detailsView p {
     overflow: hidden;
     display: block;
     background-color: bisque;
     border-radius: 0em 1em 0em 0em;
 
     width: 9em;
-    height: 1.6em;
-    text-align: center;
+    height: 30px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.detailsViewleft{
+.detailsViewleft {
     width: 200px;
     height: 200px;
 
@@ -355,10 +371,11 @@ width: 200px;
     border-radius: 0.5em 1em 0.5em 1em;
 
 }
-.detailsViewrigth{
+
+.detailsViewrigth {
     width: 200px;
     height: 200px;
-    
+
 
 
     background-color: rgb(6, 34, 30);
@@ -372,7 +389,7 @@ width: 200px;
 
 
 
-.ViewTypes{
+.ViewTypes {
     background-color: antiquewhite;
     height: 5.8em;
     width: 29em;
@@ -384,10 +401,10 @@ width: 200px;
     align-items: center;
 
     position: relative;
-    
+
 }
 
-.errortypes2{
+.errortypes2 {
     position: absolute;
     font-size: larger;
     font-weight: bolder;
@@ -398,56 +415,64 @@ width: 200px;
     /* background-color: rgba(180, 179, 189, 0.445); */
     padding-left: 50px;
     padding-right: 50px;
-    padding-top:30px ;
-    padding-bottom:30px ;
-    
+    padding-top: 30px;
+    padding-bottom: 30px;
+
 }
-.errortypes2 p{
-   color: red;
-   font-size: larger;
-   animation-name:errorr ;
-   animation-duration: 2s;
-   animation-iteration-count:infinite;
-   animation-direction:alternate;
+
+.errortypes2 p {
+    color: red;
+    font-size: larger;
+    animation-name: errorr;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 
 
 }
 
 @keyframes errorr {
-    0%{transform: translateX(10px);}
-   100%{transform: translateX(-10px);}
-   
-    
+    0% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(-10px);
+    }
+
+
 }
-.ViewPokemonCreatedcontainer{
+
+.ViewPokemonCreatedcontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.ViewTypes img{
+.ViewTypes img {
     background-size: 4.9em;
-    background-position: center ;
+    background-position: center;
     width: 6em;
     height: 6em;
 
 }
-.img1{
+
+.img1 {
     box-sizing: border-box;
     box-sizing: content-box;
 
     margin: 10px;
     height: 8em;
     width: 10em;
-    max-height:8em ;
-    min-height:8em ;
+    max-height: 8em;
+    min-height: 8em;
 
-    max-width:10em ;
-    min-width:10em ;
+    max-width: 10em;
+    min-width: 10em;
     background-color: rgb(49, 105, 105);
 
 
-    border: 1em ridge  rgb(6, 34, 30);
+    border: 1em ridge rgb(6, 34, 30);
     ;
 }
 
@@ -457,8 +482,8 @@ width: 200px;
 
 
 
-.errorInput{
-    
+.errorInput {
+
     background-color: rgb(239, 239, 239);
     display: flex;
     justify-content: center;
@@ -468,166 +493,190 @@ width: 200px;
 
 
 }
-.errorInput p{
-    animation-name:error ;
+
+.errorInput p {
+    animation-name: error;
     animation-duration: 2s;
-    animation-iteration-count:infinite;
+    animation-iteration-count: infinite;
     font-size: 30px;
-    animation-direction:alternate;
+    animation-direction: alternate;
     color: red;
     font-size: bolder;
 
 }
 
 @keyframes error {
-    0%{transform: translateX(10px);}
-   100%{transform: translateX(-10px);}
-   
-    
+    0% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(-10px);
+    }
+
+
 }
 
 
 
 
 /* //////////////////// */
-.normal{
+.normal {
     background-image: url('../../../img/types_logos/normal.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.fighting{
+
+.fighting {
     background-image: url('../../../img/types_logos/fighting.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.bug{
+
+.bug {
     background-image: url('../../../img/types_logos/bug.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.dark{
+
+.dark {
     background-image: url('../../../img/types_logos/dark.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.dragon{
+
+.dragon {
     background-image: url('../../../img/types_logos/dragon.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.electric{
+
+.electric {
     background-image: url('../../../img/types_logos/electric.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.fairy{
+
+.fairy {
     background-image: url('../../../img/types_logos/fairy.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
 
-.fire{
+.fire {
     background-image: url('../../../img/types_logos/fire.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.flying{
+
+.flying {
     background-image: url('../../../img/types_logos/flying.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.ghost{
+
+.ghost {
     background-image: url('../../../img/types_logos/ghost.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.grass{
+
+.grass {
     background-image: url('../../../img/types_logos/grass.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.ground{
+
+.ground {
     background-image: url('../../../img/types_logos/ground.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.ice{
+
+.ice {
     background-image: url('../../../img/types_logos/ice.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.poison{
+
+.poison {
     background-image: url('../../../img/types_logos/poison.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.psychic{
+
+.psychic {
     background-image: url('../../../img/types_logos/psychic.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.rock{
+
+.rock {
     background-image: url('../../../img/types_logos/rock.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.shadow{
+
+.shadow {
     background-image: url('../../../img/types_logos/shadow.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.steel{
+
+.steel {
     background-image: url('../../../img/types_logos/steel.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.unknown{
+
+.unknown {
     background-image: url('../../../img/types_logos/unknown.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }
-.water{
+
+.water {
     background-image: url('../../../img/types_logos/water.png');
     background-position: center;
     background-size: 4em;
     background-repeat: no-repeat;
-    height: 7em; 
+    height: 7em;
 }

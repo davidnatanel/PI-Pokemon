@@ -1,9 +1,9 @@
-.grass{
+.grass {
     background-image: url('../../../img/types_logos/grass.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 
     /* background-position: center;
@@ -11,168 +11,186 @@
     background-repeat: no-repeat;
     height: 7em;  */
 }
-.poison{
+
+.poison {
     background-image: url('../../../img/types_logos/poison.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 
 
 }
-.normal{
+
+.normal {
     background-image: url('../../../img/types_logos/normal.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.fighting{
+
+.fighting {
     background-image: url('../../../img/types_logos/fighting.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.bug{
+
+.bug {
     background-image: url('../../../img/types_logos/bug.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.dark{
+
+.dark {
     background-image: url('../../../img/types_logos/dark.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.dragon{
+
+.dragon {
     background-image: url('../../../img/types_logos/dragon.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.electric{
+
+.electric {
     background-image: url('../../../img/types_logos/electric.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 
 }
-.fairy{
+
+.fairy {
     background-image: url('../../../img/types_logos/fairy.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
 
-.fire{
+.fire {
     background-image: url('../../../img/types_logos/fire.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.flying{
+
+.flying {
     background-image: url('../../../img/types_logos/flying.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.ghost{
+
+.ghost {
     background-image: url('../../../img/types_logos/ghost.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
 
-.ground{
+.ground {
     background-image: url('../../../img/types_logos/ground.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.ice{
+
+.ice {
     background-image: url('../../../img/types_logos/ice.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.poison{
+
+.poison {
     background-image: url('../../../img/types_logos/poison.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.psychic{
+
+.psychic {
     background-image: url('../../../img/types_logos/psychic.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.rock{
+
+.rock {
     background-image: url('../../../img/types_logos/rock.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.shadow{
+
+.shadow {
     background-image: url('../../../img/types_logos/shadow.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.steel{
+
+.steel {
     background-image: url('../../../img/types_logos/steel.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.unknown{
+
+.unknown {
     background-image: url('../../../img/types_logos/unknown.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }
-.water{
+
+.water {
     background-image: url('../../../img/types_logos/water.png');
     background-position: center;
     background-size: 80px;
     background-repeat: no-repeat;
-    height: 100px; 
+    height: 100px;
     width: 250px;
 }

@@ -11,13 +11,14 @@ import dotenv from 'dotenv';
 dotenv.config()
 
 
-axios.defaults.baseURL = 'https://pi-pokemon-production-5e72.up.railway.app' ;
+// axios.defaults.baseURL = 'https://pi-pokemon-production-5e72.up.railway.app' ;
+axios.defaults.baseURL = 'http://localhost:3000/';
 
 ReactDOM.render(
   <Provider store={Store}>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>
   ,
 

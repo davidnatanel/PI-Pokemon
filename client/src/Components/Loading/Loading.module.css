@@ -1,4 +1,29 @@
-.Loading{
-    width: 400px;
-    height: 400px;
+.container {
+    height: 100%;
+    width: 100%;
+    background: url('../../img/background/Detail.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 0px 30px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Loading {
+    height: 50%;
+
+}
+
+
+.containerC {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

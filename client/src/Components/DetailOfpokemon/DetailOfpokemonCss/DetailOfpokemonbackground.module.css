@@ -1,6 +1,225 @@
+.containerDetail {
+  /* background-color: #114b3a; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+@media screen and (max-width:700px) {
+
+
+  .containerDetail {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+  .nameandimg {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .containerName {
+    height: 50%;
+    width: 100%;
+
+  }
+
+  .containerDetailImg {
+    height: 50%;
+    width: 100%;
+
+  }
+
+
+
+  .containerAbility {
+
+    display: flex;
+    flex-direction: column-reverse;
+    height: 50%;
+    width: 100%;
+  }
+
+}
+
+.nameandimg {
+  height: 50%;
+  width: 100%;
+  display: flex;
+
+
+}
+
+.container {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(168, 163, 174, 0.171);
+}
+
+.containerAbility {
+
+  height: 50%;
+
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+.containerAbility h2 {
+  color: white;
+  height: 100%;
+  width: 20%;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 3em;
+  margin-right: 70px;
+}
+
+.containerAbility li {
+  list-style: none;
+
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+
+
+}
+
+.containerAbility li p {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  color: white;
+
+  display: flex;
+  justify-content: flex-start;
+
+  width: 900px;
+
+}
+
+.containerAbility ul {
+  display: flex;
+  height: 40px;
+
+}
+
+.containerAbility ul div {
+  width: 500%;
+  height: 100%;
+
+
+
+}
+
+.containerAbility ul div div {
+
+  background-color: white;
+  border-radius: 9px;
+  height: 100%;
+}
+
+.containerName {
+
+
+  width: 50%;
+  height: 100%;
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: end;
+  flex-direction: column;
+
+
+
+}
+
+.containerName h2 {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+
+
+}
+
+.containerName ul {
+  height: 60%;
+  width: 80%;
+  font-size: larger;
+
+
+}
+
+.containerName p {
+
+  text-transform: capitalize;
+  font-weight: bolder;
+  color: white;
+  text-align: start;
+
+  width: 100px;
+}
+
+.containerName li {
+
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+
+}
+
+.containerDetailImg {
+
+
+  width: 50%;
+  height: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.containerDetailImg div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerDetailImg div img {
+  width: 70%;
+  height: 70%;
+}
+
+/* ////////////// */
 
 :root {
-    
+
   --grass-light: #00ca91;
   --grass-normal: #4ca88d;
   --grass-dark: #114b3a;
@@ -82,8 +301,9 @@
   --shadow-dark: #302f2f;
 
 }
-.detail{
-box-sizing: border-box;
+
+.detail {
+  box-sizing: border-box;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -97,21 +317,44 @@ box-sizing: border-box;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0px 0px 30px 20px;
+
 }
 
+.boton {
+  background-color: transparent;
+  color: white;
+  font-weight: bolder;
+  padding: 10px;
+  height: 70px;
+  width: 200px;
+  font-size: larger;
+  border: 5px solid white;
+
+}
+
+.boton:hover {
+
+  background-color: rgba(168, 163, 174, 0.171);
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 1s all;
+}
 
 /* grass */
 
 .grass {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--grass-light);
-  border: 1em ridge var(--grass-dark) ;
+  border: 1em ridge var(--grass-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+  background: linear-gradient(360deg, var(--grass-normal) 42%, var(--grass-light) 57%);
+
 }
 
-.grass .viewDetail{
+/* 
+.grass .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -119,84 +362,98 @@ box-sizing: border-box;
   justify-content: space-between;
   margin: 2px;
 }
-.grass .content{
+
+.grass .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.grass .content div:first-of-type{
+
+.grass .content div:first-of-type {
   background-color: var(--grass-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.grass .content div:first-of-type img{
+
+.grass .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--grass-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--grass-light));
 }
-.grass .content div:last-of-type{
-  height:50%;
+
+.grass .content div:last-of-type {
+  height: 50%;
   background-color: var(--grass-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.grass .content div:last-of-type ul{
+
+.grass .content div:last-of-type ul {
   background-color: var(--grass-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .grass ul li {
-    background-color:  var(--grass-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.grass > .viewDetail div{
+
+.grass ul li {
+  background-color: var(--grass-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.grass>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--grass-dark) ridge ;
+  border: 6px var(--grass-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.grass > .viewDetail  p{
+
+.grass>.viewDetail p {
   background-color: var(--grass-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.grass > .viewDetail label{
+
+.grass>.viewDetail label {
   background-color: var(--grass-light);
   width: 4em;
 }
-.grass > .viewDetail div:last-of-type{
+
+.grass>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.grass > .viewDetail div:last-of-type a{
+
+.grass>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.grass > .viewDetail div:last-of-type a button{
+
+.grass>.viewDetail div:last-of-type a button {
   background-color: var(--grass-dark);
-  color:  var(--grass-light);;
+  color: var(--grass-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--grass-dark);
-}
+} */
+
 /* grass */
 
 
@@ -206,15 +463,16 @@ border-radius: 0px 00px 10px 0px;
 /* Fire */
 
 .fire {
-  margin: 10px;
-  background: var(--fire-light);
-  border: 1em ridge var(--fire-dark) ;
-  height: 500px;
-  width: 400px;
-  display: flex;
+
+  /* background-color: var(--fire-light);
+  background-color: red; */
+  /* border: 1em ridge var(--fire-dark); */
+
+  background: linear-gradient(360deg, var(--fire-normal) 42%, var(--fire-light) 57%);
+
 }
 
-.fire .viewDetail{
+/* .fire .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -222,98 +480,116 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.fire .content{
+
+.fire .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.fire .content div:first-of-type{
+
+.fire .content div:first-of-type {
   background-color: var(--fire-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.fire .content div:first-of-type img{
+
+.fire .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--fire-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--fire-light));
 }
-.fire .content div:last-of-type{
-  height:50%;
+
+.fire .content div:last-of-type {
+  height: 50%;
   background-color: var(--fire-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.fire .content div:last-of-type ul{
+
+.fire .content div:last-of-type ul {
   background-color: var(--fire-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .fire ul li {
-    background-color:  var(--fire-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.fire > .viewDetail div{
+
+.fire ul li {
+  background-color: var(--fire-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.fire>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--fire-dark) ridge ;
+  border: 6px var(--fire-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.fire > .viewDetail  p{
+
+.fire>.viewDetail p {
   background-color: var(--fire-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.fire > .viewDetail label{
+
+.fire>.viewDetail label {
   background-color: var(--fire-light);
   width: 4em;
 }
-.fire > .viewDetail div:last-of-type{
+
+.fire>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.fire > .viewDetail div:last-of-type a{
+
+.fire>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.fire > .viewDetail div:last-of-type a button{
+
+.fire>.viewDetail div:last-of-type a button {
   background-color: var(--fire-dark);
-  color:  var(--fire-light);;
+  color: var(--fire-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--fire-dark);
-}
+} */
+
 /* Fire */
 
 
 /* Bug */
 .bug {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--bug-light);
-  border: 1em ridge var(--bug-dark) ;
+  border: 1em ridge var(--bug-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--bug-normal) 42%, var(--bug-light) 57%);
+
 }
 
-.bug .viewDetail{
+/* 
+.bug .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -321,98 +597,116 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.bug .content{
+
+.bug .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.bug .content div:first-of-type{
+
+.bug .content div:first-of-type {
   background-color: var(--bug-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.bug .content div:first-of-type img{
+
+.bug .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--bug-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--bug-light));
 }
-.bug .content div:last-of-type{
-  height:50%;
+
+.bug .content div:last-of-type {
+  height: 50%;
   background-color: var(--bug-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.bug .content div:last-of-type ul{
+
+.bug .content div:last-of-type ul {
   background-color: var(--bug-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .bug ul li {
-    background-color:  var(--bug-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.bug > .viewDetail div{
+
+.bug ul li {
+  background-color: var(--bug-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.bug>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--bug-dark) ridge ;
+  border: 6px var(--bug-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.bug > .viewDetail  p{
+
+.bug>.viewDetail p {
   background-color: var(--bug-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.bug > .viewDetail label{
+
+.bug>.viewDetail label {
   background-color: var(--bug-light);
   width: 4em;
 }
-.bug > .viewDetail div:last-of-type{
+
+.bug>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.bug > .viewDetail div:last-of-type a{
+
+.bug>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.bug > .viewDetail div:last-of-type a button{
+
+.bug>.viewDetail div:last-of-type a button {
   background-color: var(--bug-dark);
-  color:  var(--bug-light);;
+  color: var(--bug-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--bug-dark);
-}
+} */
+
 /* Bug */
 
 
 /* Water */
 .water {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--water-light);
-  border: 1em ridge var(--water-dark) ;
+  border: 1em ridge var(--water-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--water-normal) 42%, var(--water-light) 57%);
+
 }
 
-.water .viewDetail{
+/* 
+.water .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -420,99 +714,117 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.water .content{
+
+.water .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.water .content div:first-of-type{
+
+.water .content div:first-of-type {
   background-color: var(--water-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.water .content div:first-of-type img{
+
+.water .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--water-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--water-light));
 }
-.water .content div:last-of-type{
-  height:50%;
+
+.water .content div:last-of-type {
+  height: 50%;
   background-color: var(--water-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.water .content div:last-of-type ul{
+
+.water .content div:last-of-type ul {
   background-color: var(--water-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .water ul li {
-    background-color:  var(--water-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.water > .viewDetail div{
+
+.water ul li {
+  background-color: var(--water-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.water>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--water-dark) ridge ;
+  border: 6px var(--water-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.water > .viewDetail  p{
+
+.water>.viewDetail p {
   background-color: var(--water-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.water > .viewDetail label{
+
+.water>.viewDetail label {
   background-color: var(--water-light);
   width: 4em;
 }
-.water > .viewDetail div:last-of-type{
+
+.water>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.water > .viewDetail div:last-of-type a{
+
+.water>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.water > .viewDetail div:last-of-type a button{
+
+.water>.viewDetail div:last-of-type a button {
   background-color: var(--water-dark);
-  color:  var(--water-light);;
+  color: var(--water-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--water-dark);
-}
+} */
+
 /* Water */
 
-  
+
 /* Normal */
-  
+
 .normal {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--normal-light);
-  border: 1em ridge var(--normal-dark) ;
+  border: 1em ridge var(--normal-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--normal-normal) 42%, var(--normal-light) 57%);
+
 }
 
-.normal .viewDetail{
+/* 
+.normal .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -520,98 +832,116 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.normal .content{
+
+.normal .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.normal .content div:first-of-type{
+
+.normal .content div:first-of-type {
   background-color: var(--normal-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.normal .content div:first-of-type img{
+
+.normal .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--normal-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--normal-light));
 }
-.normal .content div:last-of-type{
-  height:50%;
+
+.normal .content div:last-of-type {
+  height: 50%;
   background-color: var(--normal-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.normal .content div:last-of-type ul{
+
+.normal .content div:last-of-type ul {
   background-color: var(--normal-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .normal ul li {
-    background-color:  var(--normal-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.normal > .viewDetail div{
+
+.normal ul li {
+  background-color: var(--normal-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.normal>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--normal-dark) ridge ;
+  border: 6px var(--normal-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.normal > .viewDetail  p{
+
+.normal>.viewDetail p {
   background-color: var(--normal-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.normal > .viewDetail label{
+
+.normal>.viewDetail label {
   background-color: var(--normal-light);
   width: 4em;
 }
-.normal > .viewDetail div:last-of-type{
+
+.normal>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.normal > .viewDetail div:last-of-type a{
+
+.normal>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.normal > .viewDetail div:last-of-type a button{
+
+.normal>.viewDetail div:last-of-type a button {
   background-color: var(--normal-dark);
-  color:  var(--normal-light);;
+  color: var(--normal-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--normal-dark);
-}
+} */
+
 /* Normal */
 
 /* Poison ver*/
-    
+
 .poison {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--poison-light);
-  border: 1em ridge var(--poison-dark) ;
+  border: 1em ridge var(--poison-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--poison-normal) 42%, var(--poison-light) 57%);
+
 }
 
-.poison .viewDetail{
+/* 
+.poison .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -619,98 +949,116 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.poison .content{
+
+.poison .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.poison .content div:first-of-type{
+
+.poison .content div:first-of-type {
   background-color: var(--poison-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.poison .content div:first-of-type img{
+
+.poison .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--poison-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--poison-light));
 }
-.poison .content div:last-of-type{
-  height:50%;
+
+.poison .content div:last-of-type {
+  height: 50%;
   background-color: var(--poison-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.poison .content div:last-of-type ul{
+
+.poison .content div:last-of-type ul {
   background-color: var(--poison-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .poison ul li {
-    background-color:  var(--poison-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.poison > .viewDetail div{
+
+.poison ul li {
+  background-color: var(--poison-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.poison>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--poison-dark) ridge ;
+  border: 6px var(--poison-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.poison > .viewDetail  p{
+
+.poison>.viewDetail p {
   background-color: var(--poison-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.poison > .viewDetail label{
+
+.poison>.viewDetail label {
   background-color: var(--poison-light);
   width: 4em;
 }
-.poison > .viewDetail div:last-of-type{
+
+.poison>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.poison > .viewDetail div:last-of-type a{
+
+.poison>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.poison > .viewDetail div:last-of-type a button{
+
+.poison>.viewDetail div:last-of-type a button {
   background-color: var(--poison-dark);
-  color:  var(--poison-light);;
+  color: var(--poison-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--poison-dark);
-}
+} */
+
 /* Poison */
 
 
 /* Eletric */
-  .eletric {
-  margin: 10px;
+.eletric {
+  /* margin: 10px;
   background: var(--eletric-light);
-  border: 1em ridge var(--eletric-dark) ;
+  border: 1em ridge var(--eletric-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--eletric-normal) 42%, var(--eletric-light) 57%);
+
 }
 
-.eletric .viewDetail{
+/* 
+.eletric .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -718,97 +1066,115 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.eletric .content{
+
+.eletric .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.eletric .content div:first-of-type{
+
+.eletric .content div:first-of-type {
   background-color: var(--eletric-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.eletric .content div:first-of-type img{
+
+.eletric .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--eletric-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--eletric-light));
 }
-.eletric .content div:last-of-type{
-  height:50%;
+
+.eletric .content div:last-of-type {
+  height: 50%;
   background-color: var(--eletric-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.eletric .content div:last-of-type ul{
+
+.eletric .content div:last-of-type ul {
   background-color: var(--eletric-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .eletric ul li {
-    background-color:  var(--eletric-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.eletric > .viewDetail div{
+
+.eletric ul li {
+  background-color: var(--eletric-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.eletric>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--eletric-dark) ridge ;
+  border: 6px var(--eletric-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.eletric > .viewDetail  p{
+
+.eletric>.viewDetail p {
   background-color: var(--eletric-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.eletric > .viewDetail label{
+
+.eletric>.viewDetail label {
   background-color: var(--eletric-light);
   width: 4em;
 }
-.eletric > .viewDetail div:last-of-type{
+
+.eletric>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.eletric > .viewDetail div:last-of-type a{
+
+.eletric>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.eletric > .viewDetail div:last-of-type a button{
+
+.eletric>.viewDetail div:last-of-type a button {
   background-color: var(--eletric-dark);
-  color:  var(--eletric-light);;
+  color: var(--eletric-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--eletric-dark);
-}
+} */
+
 /* Eletric */
 
 /* Ground */
 .ground {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--ground-light);
-  border: 1em ridge var(--ground-dark) ;
+  border: 1em ridge var(--ground-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--ground-normal) 42%, var(--ground-light) 57%);
+
 }
 
-.ground .viewDetail{
+/* 
+.ground .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -816,98 +1182,116 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.ground .content{
+
+.ground .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.ground .content div:first-of-type{
+
+.ground .content div:first-of-type {
   background-color: var(--ground-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.ground .content div:first-of-type img{
+
+.ground .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--ground-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--ground-light));
 }
-.ground .content div:last-of-type{
-  height:50%;
+
+.ground .content div:last-of-type {
+  height: 50%;
   background-color: var(--ground-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.ground .content div:last-of-type ul{
+
+.ground .content div:last-of-type ul {
   background-color: var(--ground-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .ground ul li {
-    background-color:  var(--ground-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.ground > .viewDetail div{
+
+.ground ul li {
+  background-color: var(--ground-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.ground>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--ground-dark) ridge ;
+  border: 6px var(--ground-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.ground > .viewDetail  p{
+
+.ground>.viewDetail p {
   background-color: var(--ground-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.ground > .viewDetail label{
+
+.ground>.viewDetail label {
   background-color: var(--ground-light);
   width: 4em;
 }
-.ground > .viewDetail div:last-of-type{
+
+.ground>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.ground > .viewDetail div:last-of-type a{
+
+.ground>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.ground > .viewDetail div:last-of-type a button{
+
+.ground>.viewDetail div:last-of-type a button {
   background-color: var(--ground-dark);
-  color:  var(--ground-light);;
+  color: var(--ground-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--ground-dark);
-}
+} */
+
 /* Ground */
 
 
 /* Fairy */
 .fairy {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--fairy-light);
-  border: 1em ridge var(--fairy-dark) ;
+  border: 1em ridge var(--fairy-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--fairy-normal) 42%, var(--fairy-light) 57%);
+
 }
 
-.fairy .viewDetail{
+/* 
+.fairy .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -915,98 +1299,116 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.fairy .content{
+
+.fairy .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.fairy .content div:first-of-type{
+
+.fairy .content div:first-of-type {
   background-color: var(--fairy-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.fairy .content div:first-of-type img{
+
+.fairy .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--fairy-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--fairy-light));
 }
-.fairy .content div:last-of-type{
-  height:50%;
+
+.fairy .content div:last-of-type {
+  height: 50%;
   background-color: var(--fairy-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.fairy .content div:last-of-type ul{
+
+.fairy .content div:last-of-type ul {
   background-color: var(--fairy-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .fairy ul li {
-    background-color:  var(--fairy-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.fairy > .viewDetail div{
+
+.fairy ul li {
+  background-color: var(--fairy-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.fairy>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--fairy-dark) ridge ;
+  border: 6px var(--fairy-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.fairy > .viewDetail  p{
+
+.fairy>.viewDetail p {
   background-color: var(--fairy-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.fairy > .viewDetail label{
+
+.fairy>.viewDetail label {
   background-color: var(--fairy-light);
   width: 4em;
 }
-.fairy > .viewDetail div:last-of-type{
+
+.fairy>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.fairy > .viewDetail div:last-of-type a{
+
+.fairy>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.fairy > .viewDetail div:last-of-type a button{
+
+.fairy>.viewDetail div:last-of-type a button {
   background-color: var(--fairy-dark);
-  color:  var(--fairy-light);;
+  color: var(--fairy-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--fairy-dark);
-}
+} */
+
 /* Fairy */
-  
+
 
 /* Fighting */
 .fighting {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--fighting-light);
-  border: 1em ridge var(--fighting-dark) ;
+  border: 1em ridge var(--fighting-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--fighting-normal) 42%, var(--fighting-light) 57%);
+
 }
 
-.fighting .viewDetail{
+/* 
+.fighting .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -1014,98 +1416,115 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.fighting .content{
+
+.fighting .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.fighting .content div:first-of-type{
+
+.fighting .content div:first-of-type {
   background-color: var(--fighting-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.fighting .content div:first-of-type img{
+
+.fighting .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--fighting-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--fighting-light));
 }
-.fighting .content div:last-of-type{
-  height:50%;
+
+.fighting .content div:last-of-type {
+  height: 50%;
   background-color: var(--fighting-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.fighting .content div:last-of-type ul{
+
+.fighting .content div:last-of-type ul {
   background-color: var(--fighting-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .fighting ul li {
-    background-color:  var(--fighting-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.fighting > .viewDetail div{
+
+.fighting ul li {
+  background-color: var(--fighting-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.fighting>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--fighting-dark) ridge ;
+  border: 6px var(--fighting-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.fighting > .viewDetail  p{
+
+.fighting>.viewDetail p {
   background-color: var(--fighting-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.fighting > .viewDetail label{
+
+.fighting>.viewDetail label {
   background-color: var(--fighting-light);
   width: 4em;
 }
-.fighting > .viewDetail div:last-of-type{
+
+.fighting>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.fighting > .viewDetail div:last-of-type a{
+
+.fighting>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.fighting > .viewDetail div:last-of-type a button{
+
+.fighting>.viewDetail div:last-of-type a button {
   background-color: var(--fighting-dark);
-  color:  var(--fighting-light);;
+  color: var(--fighting-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--fighting-dark);
-}
+} */
 
 /* Fighting */
 
 /* PSYCHIC */
 .psychic {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--psychic-light);
-  border: 1em ridge var(--psychic-dark) ;
+  border: 1em ridge var(--psychic-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--psychic-normal) 42%, var(--psychic-light) 57%);
+
 }
 
-.psychic .viewDetail{
+/* 
+.psychic .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -1113,97 +1532,115 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.psychic .content{
+
+.psychic .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.psychic .content div:first-of-type{
+
+.psychic .content div:first-of-type {
   background-color: var(--psychic-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.psychic .content div:first-of-type img{
+
+.psychic .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--psychic-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--psychic-light));
 }
-.psychic .content div:last-of-type{
-  height:50%;
+
+.psychic .content div:last-of-type {
+  height: 50%;
   background-color: var(--psychic-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.psychic .content div:last-of-type ul{
+
+.psychic .content div:last-of-type ul {
   background-color: var(--psychic-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .psychic ul li {
-    background-color:  var(--psychic-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.psychic > .viewDetail div{
+
+.psychic ul li {
+  background-color: var(--psychic-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.psychic>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--psychic-dark) ridge ;
+  border: 6px var(--psychic-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.psychic > .viewDetail  p{
+
+.psychic>.viewDetail p {
   background-color: var(--psychic-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.psychic > .viewDetail label{
+
+.psychic>.viewDetail label {
   background-color: var(--psychic-light);
   width: 4em;
 }
-.psychic > .viewDetail div:last-of-type{
+
+.psychic>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.psychic > .viewDetail div:last-of-type a{
+
+.psychic>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.psychic > .viewDetail div:last-of-type a button{
+
+.psychic>.viewDetail div:last-of-type a button {
   background-color: var(--psychic-dark);
-  color:  var(--psychic-light);;
+  color: var(--psychic-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--psychic-dark);
-}
+} */
+
 /* PSYCHIC */
 
 /* Ghost */
 .ghost {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--ghost-light);
-  border: 1em ridge var(--ghost-dark) ;
+  border: 1em ridge var(--ghost-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--ghost-normal) 42%, var(--ghost-light) 57%);
+
 }
 
-.ghost .viewDetail{
+/* 
+.ghost .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -1211,98 +1648,115 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.ghost .content{
+
+.ghost .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.ghost .content div:first-of-type{
+
+.ghost .content div:first-of-type {
   background-color: var(--ghost-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.ghost .content div:first-of-type img{
+
+.ghost .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--ghost-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--ghost-light));
 }
-.ghost .content div:last-of-type{
-  height:50%;
+
+.ghost .content div:last-of-type {
+  height: 50%;
   background-color: var(--ghost-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.ghost .content div:last-of-type ul{
+
+.ghost .content div:last-of-type ul {
   background-color: var(--ghost-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .ghost ul li {
-    background-color:  var(--ghost-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.ghost > .viewDetail div{
+
+.ghost ul li {
+  background-color: var(--ghost-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.ghost>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--ghost-dark) ridge ;
+  border: 6px var(--ghost-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.ghost > .viewDetail  p{
+
+.ghost>.viewDetail p {
   background-color: var(--ghost-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.ghost > .viewDetail label{
+
+.ghost>.viewDetail label {
   background-color: var(--ghost-light);
   width: 4em;
 }
-.ghost > .viewDetail div:last-of-type{
+
+.ghost>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.ghost > .viewDetail div:last-of-type a{
+
+.ghost>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.ghost > .viewDetail div:last-of-type a button{
+
+.ghost>.viewDetail div:last-of-type a button {
   background-color: var(--ghost-dark);
-  color:  var(--ghost-light);;
+  color: var(--ghost-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--ghost-dark);
-}
+} */
 
 /* Ghost */
 
 /* Rock */
 .rock {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--rock-light);
-  border: 1em ridge var(--rock-dark) ;
+  border: 1em ridge var(--rock-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--rock-normal) 42%, var(--rock-light) 57%);
+
 }
 
-.rock .viewDetail{
+/* 
+.rock .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -1310,98 +1764,116 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.rock .content{
+
+.rock .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.rock .content div:first-of-type{
+
+.rock .content div:first-of-type {
   background-color: var(--rock-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.rock .content div:first-of-type img{
+
+.rock .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--rock-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--rock-light));
 }
-.rock .content div:last-of-type{
-  height:50%;
+
+.rock .content div:last-of-type {
+  height: 50%;
   background-color: var(--rock-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.rock .content div:last-of-type ul{
+
+.rock .content div:last-of-type ul {
   background-color: var(--rock-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .rock ul li {
-    background-color:  var(--rock-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.rock > .viewDetail div{
+
+.rock ul li {
+  background-color: var(--rock-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.rock>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--rock-dark) ridge ;
+  border: 6px var(--rock-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.rock > .viewDetail  p{
+
+.rock>.viewDetail p {
   background-color: var(--rock-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.rock > .viewDetail label{
+
+.rock>.viewDetail label {
   background-color: var(--rock-light);
   width: 4em;
 }
-.rock > .viewDetail div:last-of-type{
+
+.rock>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.rock > .viewDetail div:last-of-type a{
+
+.rock>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.rock > .viewDetail div:last-of-type a button{
+
+.rock>.viewDetail div:last-of-type a button {
   background-color: var(--rock-dark);
-  color:  var(--rock-light);;
+  color: var(--rock-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--rock-dark);
-}
+} */
+
 /* Rock */
 
 
 /* Ice */
 .ice {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--ice-light);
-  border: 1em ridge var(--ice-dark) ;
+  border: 1em ridge var(--ice-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--ice-normal) 42%, var(--ice-light) 57%);
+
 }
 
-.ice .viewDetail{
+/* 
+.ice .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -1409,97 +1881,115 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.ice .content{
+
+.ice .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.ice .content div:first-of-type{
+
+.ice .content div:first-of-type {
   background-color: var(--ice-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.ice .content div:first-of-type img{
+
+.ice .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--ice-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--ice-light));
 }
-.ice .content div:last-of-type{
-  height:50%;
+
+.ice .content div:last-of-type {
+  height: 50%;
   background-color: var(--ice-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.ice .content div:last-of-type ul{
+
+.ice .content div:last-of-type ul {
   background-color: var(--ice-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .ice ul li {
-    background-color:  var(--ice-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.ice > .viewDetail div{
+
+.ice ul li {
+  background-color: var(--ice-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.ice>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--ice-dark) ridge ;
+  border: 6px var(--ice-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.ice > .viewDetail  p{
+
+.ice>.viewDetail p {
   background-color: var(--ice-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.ice > .viewDetail label{
+
+.ice>.viewDetail label {
   background-color: var(--ice-light);
   width: 4em;
 }
-.ice > .viewDetail div:last-of-type{
+
+.ice>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.ice > .viewDetail div:last-of-type a{
+
+.ice>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.ice > .viewDetail div:last-of-type a button{
+
+.ice>.viewDetail div:last-of-type a button {
   background-color: var(--ice-dark);
-  color:  var(--ice-light);;
+  color: var(--ice-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--ice-dark);
-}
+} */
+
 /* Ice */
 
 /* Flying */
 .flying {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--flying-light);
-  border: 1em ridge var(--flying-dark) ;
+  border: 1em ridge var(--flying-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--flying-normal) 42%, var(--flying-light) 57%);
+
 }
 
-.flying .viewDetail{
+/* 
+.flying .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -1507,96 +1997,114 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.flying .content{
+
+.flying .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.flying .content div:first-of-type{
+
+.flying .content div:first-of-type {
   background-color: var(--flying-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.flying .content div:first-of-type img{
+
+.flying .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--flying-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--flying-light));
 }
-.flying .content div:last-of-type{
-  height:50%;
+
+.flying .content div:last-of-type {
+  height: 50%;
   background-color: var(--flying-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.flying .content div:last-of-type ul{
+
+.flying .content div:last-of-type ul {
   background-color: var(--flying-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .flying ul li {
-    background-color:  var(--flying-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.flying > .viewDetail div{
+
+.flying ul li {
+  background-color: var(--flying-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.flying>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--flying-dark) ridge ;
+  border: 6px var(--flying-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.flying > .viewDetail  p{
+
+.flying>.viewDetail p {
   background-color: var(--flying-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.flying > .viewDetail label{
+
+.flying>.viewDetail label {
   background-color: var(--flying-light);
   width: 4em;
 }
-.flying > .viewDetail div:last-of-type{
+
+.flying>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.flying > .viewDetail div:last-of-type a{
+
+.flying>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.flying > .viewDetail div:last-of-type a button{
+
+.flying>.viewDetail div:last-of-type a button {
   background-color: var(--flying-dark);
-  color:  var(--flying-light);;
+  color: var(--flying-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--flying-dark);
-}
+} */
+
 /* Flying  */
 /* Dark */
 .dark {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--dark-light);
-  border: 1em ridge var(--dark-dark) ;
+  border: 1em ridge var(--dark-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--dark-normal) 42%, var(--dark-light) 57%);
+
 }
 
-.dark .viewDetail{
+/* 
+.dark .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -1604,99 +2112,116 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.dark .content{
+
+.dark .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.dark .content div:first-of-type{
+
+.dark .content div:first-of-type {
   background-color: var(--dark-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.dark .content div:first-of-type img{
+
+.dark .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--dark-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--dark-light));
 }
-.dark .content div:last-of-type{
-  height:50%;
+
+.dark .content div:last-of-type {
+  height: 50%;
   background-color: var(--dark-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.dark .content div:last-of-type ul{
+
+.dark .content div:last-of-type ul {
   background-color: var(--dark-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .dark ul li {
-    background-color:  var(--dark-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.dark > .viewDetail div{
+
+.dark ul li {
+  background-color: var(--dark-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.dark>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--dark-dark) ridge ;
+  border: 6px var(--dark-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.dark > .viewDetail  p{
+
+.dark>.viewDetail p {
   background-color: var(--dark-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.dark > .viewDetail label{
+
+.dark>.viewDetail label {
   background-color: var(--dark-light);
   width: 4em;
 }
-.dark > .viewDetail div:last-of-type{
+
+.dark>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.dark > .viewDetail div:last-of-type a{
+
+.dark>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.dark > .viewDetail div:last-of-type a button{
+
+.dark>.viewDetail div:last-of-type a button {
   background-color: var(--dark-dark);
-  color:  var(--dark-light);;
+  color: var(--dark-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--dark-dark);
-}
+} */
 
 /* Dark */
-  
+
 
 /* Dragon */
 .dragon {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--dragon-light);
-  border: 1em ridge var(--dragon-dark) ;
+  border: 1em ridge var(--dragon-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--dragon-normal) 42%, var(--dragon-light) 57%);
+
 }
 
-.dragon .viewDetail{
+/* 
+.dragon .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -1704,97 +2229,115 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.dragon .content{
+
+.dragon .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.dragon .content div:first-of-type{
+
+.dragon .content div:first-of-type {
   background-color: var(--dragon-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.dragon .content div:first-of-type img{
+
+.dragon .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--dragon-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--dragon-light));
 }
-.dragon .content div:last-of-type{
-  height:50%;
+
+.dragon .content div:last-of-type {
+  height: 50%;
   background-color: var(--dragon-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.dragon .content div:last-of-type ul{
+
+.dragon .content div:last-of-type ul {
   background-color: var(--dragon-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .dragon ul li {
-    background-color:  var(--dragon-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.dragon > .viewDetail div{
+
+.dragon ul li {
+  background-color: var(--dragon-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.dragon>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--dragon-dark) ridge ;
+  border: 6px var(--dragon-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.dragon > .viewDetail  p{
+
+.dragon>.viewDetail p {
   background-color: var(--dragon-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.dragon > .viewDetail label{
+
+.dragon>.viewDetail label {
   background-color: var(--dragon-light);
   width: 4em;
 }
-.dragon > .viewDetail div:last-of-type{
+
+.dragon>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.dragon > .viewDetail div:last-of-type a{
+
+.dragon>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.dragon > .viewDetail div:last-of-type a button{
+
+.dragon>.viewDetail div:last-of-type a button {
   background-color: var(--dragon-dark);
-  color:  var(--dragon-light);;
+  color: var(--dragon-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--dragon-dark);
-}
-  /* Dragon */
-  
-  /* Steel */
+} */
+
+/* Dragon */
+
+/* Steel */
 .steel {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--steel-light);
-  border: 1em ridge var(--steel-dark) ;
+  border: 1em ridge var(--steel-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--steel-normal) 42%, var(--steel-light) 57%);
+
 }
 
-.steel .viewDetail{
+/* 
+.steel .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -1802,97 +2345,115 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.steel .content{
+
+.steel .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.steel .content div:first-of-type{
+
+.steel .content div:first-of-type {
   background-color: var(--steel-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.steel .content div:first-of-type img{
+
+.steel .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--steel-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--steel-light));
 }
-.steel .content div:last-of-type{
-  height:50%;
+
+.steel .content div:last-of-type {
+  height: 50%;
   background-color: var(--steel-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.steel .content div:last-of-type ul{
+
+.steel .content div:last-of-type ul {
   background-color: var(--steel-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .steel ul li {
-    background-color:  var(--steel-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.steel > .viewDetail div{
+
+.steel ul li {
+  background-color: var(--steel-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.steel>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--steel-dark) ridge ;
+  border: 6px var(--steel-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.steel > .viewDetail  p{
+
+.steel>.viewDetail p {
   background-color: var(--steel-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.steel > .viewDetail label{
+
+.steel>.viewDetail label {
   background-color: var(--steel-light);
   width: 4em;
 }
-.steel > .viewDetail div:last-of-type{
+
+.steel>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.steel > .viewDetail div:last-of-type a{
+
+.steel>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.steel > .viewDetail div:last-of-type a button{
+
+.steel>.viewDetail div:last-of-type a button {
   background-color: var(--steel-dark);
-  color:  var(--steel-light);;
+  color: var(--steel-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--steel-dark);
-}
-  /* Steel */
+} */
 
-  /* Unknown */
+/* Steel */
+
+/* Unknown */
 .unknown {
-  margin: 10px;
+  /* margin: 10px;
   background: var(--unknown-light);
-  border: 1em ridge var(--unknown-dark) ;
+  border: 1em ridge var(--unknown-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--unknown-normal) 42%, var(--unknown-light) 57%);
+
 }
 
-.unknown .viewDetail{
+/* 
+.unknown .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -1900,99 +2461,116 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.unknown .content{
+
+.unknown .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.unknown .content div:first-of-type{
+
+.unknown .content div:first-of-type {
   background-color: var(--unknown-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.unknown .content div:first-of-type img{
+
+.unknown .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--unknown-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--unknown-light));
 }
-.unknown .content div:last-of-type{
-  height:50%;
+
+.unknown .content div:last-of-type {
+  height: 50%;
   background-color: var(--unknown-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.unknown .content div:last-of-type ul{
+
+.unknown .content div:last-of-type ul {
   background-color: var(--unknown-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .unknown ul li {
-    background-color:  var(--unknown-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.unknown > .viewDetail div{
+
+.unknown ul li {
+  background-color: var(--unknown-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.unknown>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--unknown-dark) ridge ;
+  border: 6px var(--unknown-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.unknown > .viewDetail  p{
+
+.unknown>.viewDetail p {
   background-color: var(--unknown-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.unknown > .viewDetail label{
+
+.unknown>.viewDetail label {
   background-color: var(--unknown-light);
   width: 4em;
 }
-.unknown > .viewDetail div:last-of-type{
+
+.unknown>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.unknown > .viewDetail div:last-of-type a{
+
+.unknown>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.unknown > .viewDetail div:last-of-type a button{
+
+.unknown>.viewDetail div:last-of-type a button {
   background-color: var(--unknown-dark);
-  color:  var(--unknown-light);;
+  color: var(--unknown-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--unknown-dark);
-}
+} */
 
-  /* Unknown */
+/* Unknown */
 
 
-  /* Shadow */
-  .shadow {
-  margin: 10px;
+/* Shadow */
+.shadow {
+  /* margin: 10px;
   background: var(--shadow-light);
-  border: 1em ridge var(--shadow-dark) ;
+  border: 1em ridge var(--shadow-dark);
   height: 500px;
   width: 400px;
-  display: flex;
+  display: flex; */
+
+  background: linear-gradient(360deg, var(--shadow-normal) 42%, var(--shadow-light) 57%);
+
 }
 
-.shadow .viewDetail{
+/* 
+.shadow .viewDetail {
   height: 100%;
   width: 50%;
   display: flex;
@@ -2000,167 +2578,189 @@ border-radius: 0px 00px 10px 0px;
   justify-content: space-between;
   margin: 2px;
 }
-.shadow .content{
+
+.shadow .content {
   height: 100%;
   width: 50%;
-  
+
 }
-.shadow .content div:first-of-type{
+
+.shadow .content div:first-of-type {
   background-color: var(--shadow-dark);
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 0px 00px 10px 0px;
+  border-radius: 0px 00px 10px 0px;
 }
-.shadow .content div:first-of-type img{
+
+.shadow .content div:first-of-type img {
   height: 150px;
-  width:  150px;
-  filter:   drop-shadow(8px 9px 1px var(--shadow-light));
+  width: 150px;
+  filter: drop-shadow(8px 9px 1px var(--shadow-light));
 }
-.shadow .content div:last-of-type{
-  height:50%;
+
+.shadow .content div:last-of-type {
+  height: 50%;
   background-color: var(--shadow-light);
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.shadow .content div:last-of-type ul{
+
+.shadow .content div:last-of-type ul {
   background-color: var(--shadow-dark);
   overflow: hidden;
   height: 60%;
   display: flex;
 }
-  .shadow ul li {
-    background-color:  var(--shadow-normal);
-    border-radius: 50px 50px 10px 10px;
-    margin: 10px;
-    list-style: none;
-  }
-.shadow > .viewDetail div{
+
+.shadow ul li {
+  background-color: var(--shadow-normal);
+  border-radius: 50px 50px 10px 10px;
+  margin: 10px;
+  list-style: none;
+}
+
+.shadow>.viewDetail div {
   margin-left: 1em;
   display: flex;
-  border: 6px var(--shadow-dark) ridge ;
+  border: 6px var(--shadow-dark) ridge;
   border-radius: 5px;
   overflow: hidden;
   width: 10em;
   height: 1.4em;
 }
-.shadow > .viewDetail  p{
+
+.shadow>.viewDetail p {
   background-color: var(--shadow-dark);
-  width: 4em;  
+  width: 4em;
   width: 7em;
 }
-.shadow > .viewDetail label{
+
+.shadow>.viewDetail label {
   background-color: var(--shadow-light);
   width: 4em;
 }
-.shadow > .viewDetail div:last-of-type{
+
+.shadow>.viewDetail div:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   border: none;
 }
-.shadow > .viewDetail div:last-of-type a{
+
+.shadow>.viewDetail div:last-of-type a {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.shadow > .viewDetail div:last-of-type a button{
+
+.shadow>.viewDetail div:last-of-type a button {
   background-color: var(--shadow-dark);
-  color:  var(--shadow-light);;
+  color: var(--shadow-light);
+  ;
   border: none;
   height: 70%;
   width: 70%;
   border: 5px ridge var(--shadow-dark);
+} */
+
+/* Shadow */
+
+/* //////////// */
+
+
+/* .bug ul {
+  background: #2b5103a0;
 }
- 
-  /* Shadow */
-
-  /* //////////// */
 
 
-  .bug ul{
-    background: #2b5103a0;
-  }
-  
-  
-  .water ul {
-    background: #01445db6;
-  }
-  /*  */
+.water ul {
+  background: #01445db6;
+} */
+
+/*  */
 
 
-  /*  */
+/*  */
 
 
-  
-  .fire ul {
-    background: #94180a93;
-  }
-  
-  .normal ul {
-    background: #5453538d;
-  }
- 
-  .poison ul {
-    background: #8609b8bc;
-  }
-  
-  .electric ul {
-    background: #9c7b11de;
-  }
-  .ground ul {
-    background: #938307f9;
-  }
-  
-  .fairy ul {
-    background: #d24d79cd;
-  }
-  
-  .fighting ul {
-    background: #f03137d6;
-  }
-  .psychic ul {
-    background: #b5023edd;
-  }
-  
-  .ghost ul {
-    background: #80379daf;
-  }
-  .rock ul {
-    background: #947b27;
-  }
-  .ice ul {
-    background: #66d1e5;
-  }
-  /* // */
-  .flying ul {
-    background: #18a79b;
-  }
-  /* // */
-  
-  .dark ul {
-    background: #2d221c;
-  }
-  /* // */
-  
-  .dragon ul {
-    background: #29036a;
-  }
-  
-  .steel ul {
-    background: #7b8e8a;
-  }
-  /* // */
-  .unknown ul {
-    background: #454545;
-  }
-  
-  .shadow ul {
-    background: #4f4f4f;
-  }
+
+/* .fire ul {
+  background: #94180a93;
+} */
+/* 
+.normal ul {
+  background: #5453538d;
+}
+
+.poison ul {
+  background: #8609b8bc;
+}
+
+.electric ul {
+  background: #9c7b11de;
+}
+
+.ground ul {
+  background: #938307f9;
+}
+
+.fairy ul {
+  background: #d24d79cd;
+}
+
+.fighting ul {
+  background: #f03137d6;
+}
+
+.psychic ul {
+  background: #b5023edd;
+}
+
+.ghost ul {
+  background: #80379daf;
+}
+
+.rock ul {
+  background: #947b27;
+}
+
+.ice ul {
+  background: #66d1e5;
+} */
+
+/* // */
+/* .flying ul {
+  background: #18a79b;
+} */
+
+/* // */
+
+/* .dark ul {
+  background: #2d221c;
+} */
+
+/* // */
+
+/* .dragon ul {
+  background: #29036a;
+}
+
+.steel ul {
+  background: #7b8e8a;
+} */
+
+/* // */
+/* .unknown ul {
+  background: #454545;
+}
+
+.shadow ul {
+  background: #4f4f4f;
+} */

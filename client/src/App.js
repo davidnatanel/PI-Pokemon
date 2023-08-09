@@ -1,6 +1,6 @@
 
 
-import { Navigate, Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router';
 import './App.css';
 import LadingPage from './Components/LadingPage/LadingPage';
 import Home from './Components/Home/Home';
@@ -21,28 +21,28 @@ function App() {
     <div className="App">
 
 
-      
-          
-    <Routes>
-      <Route   path='/' element= {<LadingPage selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje}/>}  />
-      
-      <Route exact path='/Home' element= {<Home 
-      selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje} />} />
-      
-      <Route exact path='/Home/PokemonCreate' element= {<PokemonCreater
-        selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje} />} />
-      <Route exact path='/Home/DetailOfPokemon/:id' element= {<DetailOfPokemon
-        selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje}
-      />} />
-      <Route exact path='/Home/quienEsEstePokemon' element= {<WhoIsThisPokemon selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje} />} />
-      <Route exact path='/admin' element= {<LoginAdim/>} />
-      <Route exact path='/ControllerPokemon' element={<ControllerPokemon/>}/>
-
-      
-      <Route exact path='*' element= {<Error404/>} />
 
 
-    </Routes>
+      <Routes>
+        <Route path='/' element={<LadingPage selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje} />} />
+
+        <Route exact path='/Home' element={<Home
+          selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje} />} />
+
+        <Route exact path='/Home/PokemonCreate' element={<PokemonCreater
+          selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje} />} />
+        <Route exact path='/Home/DetailOfPokemon/:id' element={<DetailOfPokemon
+          selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje}
+        />} />
+        <Route exact path='/Home/quienEsEstePokemon' element={<WhoIsThisPokemon selectLenguaje={selectLenguaje} setSelectLenguaje={setSelectLenguaje} />} />
+        <Route exact path='/admin' element={<LoginAdim />} />
+        <Route exact path='/ControllerPokemon' element={<ControllerPokemon />} />
+
+
+        <Route exact path='*' element={<Error404 />} />
+
+
+      </Routes>
 
 
     </div>
